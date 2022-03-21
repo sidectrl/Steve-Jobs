@@ -4,7 +4,7 @@
     // Per altre informazioni, visitare: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-        {
+      {
             "type": "pwa-chrome",
             "request": "launch",
             "name": "Open Test.html",
