@@ -2,6 +2,11 @@ body{
     background-color: beige;
 }
 div{
-    height: 50px;
+    height: 30px;
+}
+
+button{
+    height: 30px; 
+    width:50px;
 }
 
