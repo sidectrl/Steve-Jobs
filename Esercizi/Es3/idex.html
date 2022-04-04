@@ -1,10 +1,49 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <h1>Test</h1>
+        <meta charset="UTF-8">
+        <title>Form</title>
     </head>
     
     <body>
-
+        <h1>Form Div</h1>
+        <form id="FormDiv" action="#" method="get">
+            <div>
+                <label for="text">Nome:</label>
+                <input type="text" id="nome" name="nome" placeholder="Nome">
+            </div>
+            <div>
+                <label for="cognome">Cognome:</label>
+                <input type="text" id="cognome" name="cognome" placeholder="Cognome">
+            </div>
+            <div>
+                <label for="data">Data di nascita:</label>
+                <input type="date" id="data" name="data" > 
+            </div>
+            <div>
+                <label for="stud">Titolo di studio:</label>
+                <select name="stud" id="stud" >
+                    <option value="Elementare">Elementare</option>
+                    <option value="Licenza Media">Licenza Media</option>
+                    <option value="Licenza Superiore">Licenza Superiore</option>
+                    <option value="Laurea">Laurea</option>
+                </select>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required placeholder="Inserisci email">   
+            </div>
+            <div>
+                <label for="Password">Password:</label>
+                <input type="password" name="pwd" id="pwd" placeholder="Inserisci password" required>
+            </div>
+            <div>
+                <input type="checkbox" name="prsdata" id="prsdata">
+                <label for="prsdata">Autorizzazione trattamento dei dati personali</label>
+            </div>
+            <div>
+                <button id="invio" name="invio" action style="height: 30px; width:50px;">Invia</button>
+            </div>
+        </form>
     </body> 
 </html>
