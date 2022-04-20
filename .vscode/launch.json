@@ -3,6 +3,13 @@
     // Al passaggio del mouse vengono visualizzate le descrizioni degli attributi esistenti.
     // Per altre informazioni, visitare: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
+    "command": "Opera",
+    "windows": {
+        "command": "C:/Users/acer/AppData/Local/Programs/Opera GX/opera.exe"
+    },
+    "args": [
+        "${file}"
+    ],
     "configurations": [
         {
             "name": "Listen for Xdebug",
@@ -44,15 +51,5 @@
                 "action": "openExternally"
             }
         },
-        {
-            "version": "0.1.0",
-    "command": "Opera",
-    "windows": {
-        "command": "C:/Users/acer/AppData/Local/Programs/Opera GX/opera.exe"
-    },
-    "args": [
-        "${file}"
-    ],
-        }
     ]
 }
