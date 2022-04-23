@@ -50,7 +50,7 @@ function Pari_Dispari($vettore)
     $count_dispari = 0;
     foreach ($vettore as $value)
     {
-        if ($value % 0)
+        if ($value % 2 == 0)    
             $count_pari++;
         else
             $count_dispari++;
