@@ -1,3 +1,20 @@
 body {
-    background: lightblue url("/WebFrontEnd/Esercizi/Es1/doge.jpg") no-repeat fixed center;
-  }
+    background-color:bisque;
+}
+img {
+  height: 100px;
+}
+div {
+  display: inline-block;
+    margin: 10px;
+    border-style: outset;
+    border-color: whitesmoke;
+    width: 200px;
+    text-align: center;
+    background-image: url("img/biscuit.png");
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: arial;
+    
+}

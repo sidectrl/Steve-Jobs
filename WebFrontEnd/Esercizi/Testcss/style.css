@@ -1,3 +1,22 @@
 body{
     background-color: bisque;
 }
+p {
+    /*font-family:Georgia, 'Times New Roman', Times, serif;
+    font-style: oblique;
+    font-weight: 200;*/
+    font: italic normal bold 90px "Times New Roman", serif;
+}
+div{
+    height: 250px;
+    background-color: aquamarine;
+    background-image: url("/WebFrontEnd/Esercizi/Es1/doge.jpg");
+    background-size: cover; /*fa vedere bene l'immagine ma non la parte esterna della cornice */
+    background-position: center;
+    padding: 20px;
+    margin: 10px;
+    border-style: outset;
+    border-color: whitesmoke;
+    
+    
+}
