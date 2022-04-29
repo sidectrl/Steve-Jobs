@@ -1,8 +1,8 @@
 .square {
     height: 50px;
     width: 50px;
-    background-color: #555;
+    background-color: black;
   }
   body {
-    background: lightblue url("img_tree.gif") no-repeat fixed center;
+    background: lightblue url("/WebFrontEnd/Esercizi/Es1/doge.jpg") no-repeat fixed center;
   }
