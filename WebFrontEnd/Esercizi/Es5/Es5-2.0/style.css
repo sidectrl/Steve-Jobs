@@ -1,0 +1,30 @@
+.box{
+    background-color: blue;
+    height: 20rem;
+}
+.colonna {
+    background-color: aqua;
+    width: 13rem;
+    height: 14rem;
+    margin: 1.5rem;
+    display: inline-block;
+}
+.intestazione{
+    background-color: aquamarine;
+    margin: 1.5rem;
+}
+.titolo{
+    background-color: blueviolet;
+    margin-top: 1.5rem;
+}
+.foto{
+    background-color: antiquewhite;
+    margin-top: 1.5rem;
+}
+.paragrafo{
+    background-color: beige;
+    margin-top: 1.5rem;
+}
+img{
+    height: 5em;
+}
