@@ -1,30 +1,43 @@
+body{
+    background-color: bisque;
+}
 .box{
-    background-color: blue;
+    /*background-color: blue; */
     height: 20rem;
+    
 }
 .colonna {
-    background-color: aqua;
-    width: 13rem;
-    height: 14rem;
-    margin: 1.5rem;
+   /* background-color: aqua;*/
+    width: 17rem;
+    height: 18.2rem;
+    margin: 0.5rem;
     display: inline-block;
+    border-style: outset;
+    border-color: whitesmoke;
+    text-align: center;
+    background-image: url("/WebFrontEnd/Esercizi/Es5/img/biscuit.png");
+    background-size:contain;
+    background-repeat: repeat;
+    background-position: center;
+    font-family:'Times New Roman', Times, serif;
 }
 .intestazione{
-    background-color: aquamarine;
+   /* background-color: aquamarine;*/
     margin: 1.5rem;
 }
 .titolo{
-    background-color: blueviolet;
-    margin-top: 1.5rem;
+    /*background-color: blueviolet;*/
+    margin-top: 1rem;
 }
 .foto{
-    background-color: antiquewhite;
-    margin-top: 1.5rem;
+    /*background-color: antiquewhite;*/
+    margin-top: 1rem;
 }
 .paragrafo{
-    background-color: beige;
-    margin-top: 1.5rem;
+   /* background-color: beige;*/
+    font-size: 1.8rem;
 }
 img{
-    height: 5em;
+    height: 8em;
+    position:initial;
 }
