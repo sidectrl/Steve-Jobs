@@ -15,7 +15,7 @@ body{
     border-style: outset;
     border-color: whitesmoke;
     text-align: center;
-    background-image: url("/WebFrontEnd/Esercizi/Es5/img/biscuit.png");
+    background-image: url("img/biscuit.png");
     background-size:contain;
     background-repeat: repeat;
     background-position: center;
