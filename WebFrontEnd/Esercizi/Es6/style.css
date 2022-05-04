@@ -1,26 +1,88 @@
+body {
+    margin: 0;
+    font-family: Verdana, sans-serif;
+}
+
 .container {
     width: 1200px;
     margin: 0 auto;
     background-color: red;
-    }
-.navbar{
-    height: 4rem;
-    background-color: beige;
-    position: relative;
-        width: 100%;
-       
-}
-.logo  img{
-	width: 2.5rem;
-	float: left;
-	display: inline-block;
-    font-size: 1.5rem;	
-}
-.indice{
-	float: right;
-    font-size: 2.5rem;
-}
-li{
-    display: inline-block;
+    height: 1000px;
 }
 
+.navbar {
+    height: 5rem;
+    background-color: beige;
+    width: 100%;
+}
+
+.logo img {
+    margin: 1px;
+    height: 4.9rem;
+    width: auto;
+    float: left;
+}
+
+.allineamento {
+    float: right;
+}
+
+.sito {
+    display: inline-block;
+    float: left;
+    margin-top: 2rem;
+    font-size: 20px;
+    font-family: Verdana, sans-serif;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: sticky;
+}
+
+ul#menu {
+    font-family: Verdana, sans-serif;
+    font-size: 25px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+ul#menu li {
+    padding: 2rem;
+}
+
+ul#menu li a {
+    display: block;
+    text-decoration: none;
+    width: 150px;
+    height: 30px;
+    text-align: center;
+}
+
+li {
+    display: inline-block;
+}
+.box{
+    background-color: aqua;
+    float: left;
+    width: 100%;
+}
+.box .foto{
+    height: 400px;
+    width: 400px;
+    background-color: blue;
+    float: left
+}
+.box .desc{
+    display: inline-block;
+    width: 600px;
+    height: 400px;
+    background-color: yellow;
+    text-align: center;
+}
+.colonna{
+    margin: 0.5rem
+}
