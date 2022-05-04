@@ -8,7 +8,14 @@
     background-color: beige;
     position: relative;
 }
-img{
-    height: 40px;
-    margin-top: 5px;
+.Logo  img{
+	width: 15vw;
+	height: 9vw;
+	float: left;
+	display: inline-block;
+	
+	
+}
+.Allineamneto{
+	float: right;
 }
