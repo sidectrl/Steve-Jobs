@@ -3,3 +3,12 @@
     margin: 0 auto;
     background-color: red;
     }
+.navbar{
+    height: 3rem;
+    background-color: beige;
+    position: relative;
+}
+img{
+    height: 40px;
+    margin-top: 5px;
+}
