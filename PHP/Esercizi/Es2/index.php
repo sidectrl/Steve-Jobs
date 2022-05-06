@@ -24,6 +24,7 @@
     </div>
     <input type="submit" value="Esegui"/><br>
     <?php
+    #region Main
     if (isset($_GET["vettore"])) {
         $dummy = $_GET["vettore"];
         $array = explode(', ', $dummy);
@@ -75,6 +76,7 @@
                 break;
         }
     }
+    #endregion
     #region Function
     function Sum($vettore)
     {
