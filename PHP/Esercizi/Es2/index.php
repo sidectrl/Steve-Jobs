@@ -1,21 +1,31 @@
 <form method="GET" action="index.php">
-    <label for="input">Valori vettore</label>
-    <input type="text" name="vettore" />
-    <input type="submit" value="Inserimento valori" />
-    <select name="operazione" id="">
-        <option value="Somma">Somma</option>
-        <option value="Max_Value">Valore massimo</option>
-        <option value="Min_Value">Valore minimo</option>
-        <option value="Med_Value">Valore medio</option>
-        <option value="Pari_dispari">Pari/Disparità numeri</option>
-        <option value="Search">Trova un valore</option>
-        <option value="Remove">Rimuovi un valore</option>
-        <option value="CheckCrescente">Controlla la crescenza</option>
-    </select><br>
-    <input type="text" name="search_or_remove"><br>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <div>
+        <label for="input">Inserire i valori del vettore: </label>
+        <input type="text" name="vettore" />
+        <input type="submit" value="Inserimento valori" />
+    </div>
+    <div>
+        <label for="input">Operazione da eseguire: </label>
+        <select name="operazione" id="">
+            <option value="Somma">Somma</option>
+            <option value="Max_Value">Valore massimo</option>
+            <option value="Min_Value">Valore minimo</option>
+            <option value="Med_Value">Valore medio</option>
+            <option value="Pari_dispari">Pari/Disparità numeri</option>
+            <option value="Search">Trova un valore</option>
+            <option value="Remove">Rimuovi un valore</option>
+            <option value="CheckCrescente">Controlla la crescenza</option>
+        </select>
+    </div>
+    <div>
+        <label for="input">Inserire il valore da cercare o rimuovere: </label>
+        <input type="text" name="search_or_remove">
+    </div>
     <?php
     if (isset($_GET["vettore"])) {
         $dummy = $_GET["vettore"];
+
         $array = explode(', ', $dummy);
         ShowVector($array);
     }
