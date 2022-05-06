@@ -3,7 +3,7 @@
     <div>
         <label for="input">Inserire i valori del vettore: </label>
         <input type="text" name="vettore" />
-        <input type="submit" value="Inserimento valori" />
+        
     </div>
     <div>
         <label for="input">Operazione da eseguire: </label>
@@ -22,10 +22,10 @@
         <label for="input">Inserire il valore da cercare o rimuovere: </label>
         <input type="text" name="search_or_remove">
     </div>
+    <input type="submit" value="Esegui"/><br>
     <?php
     if (isset($_GET["vettore"])) {
         $dummy = $_GET["vettore"];
-
         $array = explode(', ', $dummy);
         ShowVector($array);
     }
