@@ -49,7 +49,7 @@ function Max_Value($vettore)
 }
 function Min_Value($vettore)
 {
-    $min = $vettore[1];
+    $min = $vettore[0];
     foreach ($vettore as $value) {
         if ($min > $value)
             $min = $value;
