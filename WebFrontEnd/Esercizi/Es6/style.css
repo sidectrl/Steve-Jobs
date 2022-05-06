@@ -2,25 +2,27 @@ body {
     margin: 0;
     font-family: Verdana, sans-serif;
 }
-
+.container {
+    --container--width: 1200px;
+    width: var(--container--width);
+    margin: 0 auto;
+    background-color: red;
+}
 footer{
     height: 200px;
     background-color: bisque;
     clear:both;
     border-top-style:outset;
     border-color:red;
+    width: var(--container--width);
 }
-.container {
-    width: 1200px;
-    margin: 0 auto;
-    background-color: red;
-    height: 1000px;
-}
+
 
 .navbar {
     height: 5rem;
     background-color: beige;
-    width: 100%;   
+    width: 1200px;  
+    position:fixed; 
 }
 
 .logo img {
@@ -72,11 +74,20 @@ ul#menu li a {
 li {
     display: inline-block;
 }
+
+.container .img__container{
+    height: 400px;
+}
+.img__container .img__box{
+    background-image: url(img/qualcosa.png);
+    background-repeat: no-repeat;
+}
 .box{
     background-color: aqua;
     float: left;
     width: 100%;
 }
+
 .box .foto{
     height: 400px;
     width: 400px;
@@ -86,7 +97,7 @@ li {
 .box .desc{
     display: inline-block;
     width: 600px;
-    height: 400px;
+    height: 300px;
     background-color: yellow;
     text-align: center;
     border-style: outset;
@@ -103,5 +114,10 @@ li {
 .footer--column{
     margin: 5px;
     background-color: aquamarine;
-    width: 300px;
+    width: 100px;
+}
+.colonna__button{
+    height: 50px;
+    width: 70px;
+    display: inline;
 }
