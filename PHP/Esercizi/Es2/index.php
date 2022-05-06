@@ -75,6 +75,7 @@
                 break;
         }
     }
+    #region 
     function Sum($vettore)
     {
         $sum = 0;
@@ -188,5 +189,6 @@
         }
         return $vettore2;
     }
+    #endregion
     ?>
 </form>
