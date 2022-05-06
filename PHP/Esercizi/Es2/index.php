@@ -75,7 +75,7 @@
                 break;
         }
     }
-    #region 
+    #region Function
     function Sum($vettore)
     {
         $sum = 0;
