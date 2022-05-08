@@ -61,7 +61,7 @@ ul#menu {
     list-style: none;
 }
 ul#menu li:hover {
-    height: 41px; 
+    height: 25px; 
     background-color: #ddd;
     color: black;
   }
