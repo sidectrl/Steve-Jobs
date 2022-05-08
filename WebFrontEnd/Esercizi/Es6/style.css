@@ -9,8 +9,8 @@ body {
     background-color: red;
 }
 footer{
-    --footer-height: 200px;
-    height: 200px;
+    --footer-height: 150px;
+    height: 150px;
     background-color: bisque;
     clear:both;
     border-top-style:outset;
@@ -119,7 +119,7 @@ ul#menu li a {
 
 .footer--logo{
     height: 100px;
-    margin-top: 50px;
+    margin-top: 25px;
     margin-left: 2px;
 }
 .footer--column{
@@ -127,7 +127,7 @@ ul#menu li a {
     background-color: aquamarine;
     width: 390px;
     display: inline-block;
-    height: 200px;
+    height: 150px;
     float: left;
 }
 .colonna__button{
@@ -138,10 +138,22 @@ ul#menu li a {
 }
 ul#footer_menu li{
     text-align: center;
-    padding: 15px;
+    padding: 9px;
+}
+ul#footer_menu li:hover{
+    background-color: grey;
 }
 .social img{
-    height: 100px;
-    padding: 13px;
-    margin-top: 45px;
+    margin-left: 15px;
+    height: 80px;
+    padding: 15px;
+}
+.social span{
+    font-size:20px;
+}
+.contacts {
+    text-align: center;
+    float: right;
+    font-size: 17px;
+    margin-right: 15px;
 }
