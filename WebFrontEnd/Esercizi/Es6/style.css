@@ -105,7 +105,7 @@ ul#menu li a {
 .box .desc {
     display: inline-block;
     width: 600px;
-    height: 300px;
+    height: 400px;
     background-color: yellow;
     text-align: justify;
     border-style: outset;
@@ -116,14 +116,26 @@ ul#menu li a {
     float: right;
     margin-right: 50px;
 }
-
+.desc_and_button{
+    height: 700px;
+    display: inline-block;
+    width: 600px;
+    border-left: outset;
+    
+    margin-left: 50px;
+}
+.right_part{
+    border-right: outset;
+    border-left: none;
+    border-color: white;
+}
 .box .foto__right {
     float: right;
 }
 
 .colonna {
     margin: 0.5rem;
-    height: 400px;
+    height: 700px;
 }
 
 .footer--logo {
@@ -147,7 +159,10 @@ ul#menu li a {
     display: inline;
     margin-left: 130px;
 }
-
+.button_right{
+    float: right;
+    margin-right: 250px;
+}
 ul#footer_menu li {
     text-align: center;
     padding: 9px;
