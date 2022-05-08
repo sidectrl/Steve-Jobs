@@ -9,6 +9,7 @@ body {
     background-color: red;
 }
 footer{
+    --footer-height: 200px;
     height: 200px;
     background-color: bisque;
     clear:both;
@@ -17,17 +18,19 @@ footer{
     width: var(--container--width);
 }
 
-
-.navbar {
-    height: 5rem;
-    background-color: beige;
+.navbar_container{
+    height: 4rem;
     width: 1200px;  
+    
+}
+.navbar {
+    background-color: beige;
     position:fixed; 
 }
 
 .logo img {
     margin: 1px;
-    height: 4.9rem;
+    height: 4rem;
     width: auto;
     float: left;
 }
@@ -39,7 +42,7 @@ footer{
 .sito {
     display: inline-block;
     float: left;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
     font-size: 20px;
     font-family: Verdana, sans-serif;
 }
@@ -48,7 +51,6 @@ ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    position: sticky;
 }
 
 ul#menu {
@@ -58,9 +60,14 @@ ul#menu {
     padding: 0;
     list-style: none;
 }
-
+ul#menu li:hover {
+    height: 41px; 
+    background-color: #ddd;
+    color: black;
+  }
 ul#menu li {
-    padding: 2rem;
+    padding: 1.2rem;
+    display: inline-block;
 }
 
 ul#menu li a {
@@ -71,17 +78,12 @@ ul#menu li a {
     text-align: center;
 }
 
-li {
-    display: inline-block;
-}
+
 
 .container .img__container{
     height: 400px;
 }
-.img__container .img__box{
-    background-image: url(img/qualcosa.png);
-    background-repeat: no-repeat;
-}
+
 .box{
     background-color: aqua;
     float: left;
@@ -99,25 +101,47 @@ li {
     width: 600px;
     height: 300px;
     background-color: yellow;
-    text-align: center;
+    text-align: justify;
     border-style: outset;
+    margin-left: 50px;
+}
+.box .desc__right{
+    float: right;
+    margin-right: 50px;
+}
+.box .foto__right{
+    float: right;
 }
 .colonna{
     margin: 0.5rem;
     height: 400px;
 }
 
-.footer--logo img{
+.footer--logo{
     height: 100px;
     margin-top: 50px;
+    margin-left: 2px;
 }
 .footer--column{
-    margin: 5px;
+    margin-left: 8px;
     background-color: aquamarine;
-    width: 100px;
+    width: 390px;
+    display: inline-block;
+    height: 200px;
+    float: left;
 }
 .colonna__button{
-    height: 50px;
+    height: 40px;
     width: 70px;
     display: inline;
+    margin-left: 130px;
+}
+ul#footer_menu li{
+    text-align: center;
+    padding: 15px;
+}
+.social img{
+    height: 100px;
+    padding: 13px;
+    margin-top: 45px;
 }
