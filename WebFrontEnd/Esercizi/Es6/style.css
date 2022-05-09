@@ -98,18 +98,18 @@ ul#menu li a {
 .box .foto {
     height: 400px;
     width: 400px;
-    background-color: blue;
     float: left;
 }
 
 .box .desc {
     display: inline-block;
     width: 600px;
-    height: 400px;
+    height: 600px;
     background-color: yellow;
     text-align: justify;
     border-style: outset;
     margin-left: 50px;
+    font-size: 20px;
 }
 
 .box .desc__right {
@@ -121,7 +121,6 @@ ul#menu li a {
     display: inline-block;
     width: 600px;
     border-left: outset;
-    
     margin-left: 50px;
 }
 .right_part{
@@ -146,7 +145,6 @@ ul#menu li a {
 
 .footer--column {
     margin-left: 8px;
-    background-color: aquamarine;
     width: 390px;
     display: inline-block;
     height: 150px;
@@ -178,10 +176,12 @@ ul#footer_menu li:hover {
 
 .social img {
     margin-left: 15px;
-    height: 80px;
-    padding: 15px;
+    height: 50px;
+    padding: 30px;
 }
-
+.social{
+    text-align: center;
+}
 .social span {
     font-size: 20px;
 }
