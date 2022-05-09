@@ -1,6 +1,7 @@
 body {
     margin: 0;
     font-family: Verdana, sans-serif;
+    color: #3d5a80;
 }
 
 .container {
@@ -13,29 +14,29 @@ body {
 footer {
     --footer-height: 150px;
     height: 150px;
-    background-color: bisque;
+    background-color: #3d5a80;
     clear: both;
     border-top-style: outset;
-    border-color: red;
     width: var(--container--width);
 }
 
 .navbar_container {
-    height: 4rem;
+    height: 4.5rem;
     width: 1200px;
 
 }
 
 .navbar {
-    background-color: beige;
+    background-color: #3d5a80;
     position: fixed;
 }
 
 .logo img {
-    margin: 1px;
+    margin: 3px;
     height: 4rem;
     width: auto;
     float: left;
+    margin-left: 20px;
 }
 
 .allineamento {
@@ -62,12 +63,13 @@ ul#menu {
     margin: 0;
     padding: 0;
     list-style: none;
+
 }
 
 ul#menu li:hover {
-    height: 25px;
-    background-color: #ddd;
-    color: black;
+    height: 33px;
+    background-color: #293241;
+    color: #ee6c4d;
 }
 
 ul#menu li {
@@ -81,6 +83,7 @@ ul#menu li a {
     width: 150px;
     height: 30px;
     text-align: center;
+    color: #98c1d9;
 }
 
 
@@ -90,46 +93,49 @@ ul#menu li a {
 }
 
 .box {
-    background-color: aqua;
+    background-color: #98c1d9;
     float: left;
     width: 100%;
 }
 
-.box .foto {
+.foto {
     height: 400px;
     width: 400px;
+    margin-left: 40px;
+}
+
+.img_div {
+    height: 500px;
+    width: 500px;
     float: left;
+    vertical-align: middle;
+}
+
+.img_div_right {
+    float: right;
 }
 
 .box .desc {
     display: inline-block;
     width: 600px;
     height: 600px;
-    background-color: yellow;
     text-align: justify;
-    border-style: outset;
-    margin-left: 50px;
     font-size: 20px;
 }
 
-.box .desc__right {
-    float: right;
-    margin-right: 50px;
+.desc__right {
+
+    margin-left: 40px;
 }
-.desc_and_button{
-    height: 700px;
+
+.desc_and_button {
+    height: 710px;
     display: inline-block;
     width: 600px;
-    border-left: outset;
-    margin-left: 50px;
 }
-.right_part{
-    border-right: outset;
-    border-left: none;
-    border-color: white;
-}
-.box .foto__right {
-    float: right;
+
+.foto__right {
+    vertical-align: middle;
 }
 
 .colonna {
@@ -149,6 +155,7 @@ ul#menu li a {
     display: inline-block;
     height: 150px;
     float: left;
+    color: #F0F8FF;
 }
 
 .colonna__button {
@@ -157,10 +164,11 @@ ul#menu li a {
     display: inline;
     margin-left: 130px;
 }
-.button_right{
+
+.button_right {
     float: right;
-    margin-right: 250px;
 }
+
 ul#footer_menu li {
     text-align: center;
     padding: 9px;
@@ -168,20 +176,25 @@ ul#footer_menu li {
 
 ul#footer_menu li a {
     text-decoration: none;
+    color: #F0F8FF;
 }
 
 ul#footer_menu li:hover {
-    background-color: grey;
+    background-color: #293241;
+    color: #F0F8FF;
 }
 
 .social img {
     margin-left: 15px;
-    height: 50px;
-    padding: 30px;
+    height: 30px;
+    margin-top: 20px;
 }
-.social{
+
+.social {
     text-align: center;
+    margin-top: 30px;
 }
+
 .social span {
     font-size: 20px;
 }
@@ -192,4 +205,57 @@ ul#footer_menu li:hover {
     font-size: 17px;
     margin-right: 10px;
     margin-top: 20px;
+
+}
+
+.contacts a:link {
+    color: #c0d2e2;
+}
+
+.contacts a:visited {
+    color: #ADD8E6;
+}
+
+.contacts a:hover {
+    color: #8cbaca;
+}
+
+.contacts a:active {
+    color: #F0F8FF;
+}
+
+.newsletter__box {
+    width: var(--container--width);
+    height: 380px;
+    border-top-style: outset;
+}
+
+.newsletter__column {
+    height: 300px;
+    width: 300px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.newsletter__column p {
+    color: #293241;
+}
+
+button {
+    margin-top: 20px;
+    height: 50px;
+    width: 90px;
+    background-color: #F0F8FF;
+    color: #293241;
+    border: 2px solid #008CBA;
+}
+
+button:hover {
+    background-color: #008CBA;
+    color: #F0F8FF;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.newsletter_email {
+    width: 200px;
 }
