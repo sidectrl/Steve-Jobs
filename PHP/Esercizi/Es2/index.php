@@ -9,7 +9,9 @@
     <form method="GET" action="index.php">
         <div>
             <label for="input">Inserire i valori del vettore: </label>
-            <input type="text" name="vettore" value="<?php if(isset($_GET['vettore'])) { echo $_GET['vettore'];} ?>"/>
+            <input type="text" name="vettore" value="<?php if (isset($_GET['vettore'])) {
+                                                            echo $_GET['vettore'];
+                                                        } ?>" />
         </div>
         <div>
             <label for="input">Operazione da eseguire: </label>
