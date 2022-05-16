@@ -9,7 +9,7 @@ body{
 .colonna {
    /* background-color: aqua;*/
     width: 17rem;
-    height: 18.2rem;
+    min-height: 18.2rem;
     margin: 0.5rem;
     display: inline-block;
     border-style: outset;

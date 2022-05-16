@@ -118,7 +118,7 @@ ul#menu li a {
 .box .desc {
     display: inline-block;
     width: 600px;
-    height: 600px;
+    min-height: 400px;
     text-align: justify;
     font-size: 20px;
 }
@@ -129,7 +129,7 @@ ul#menu li a {
 }
 
 .desc_and_button {
-    height: 710px;
+    min-height: 400px;
     display: inline-block;
     width: 600px;
 }
@@ -140,7 +140,7 @@ ul#menu li a {
 
 .colonna {
     margin: 0.5rem;
-    height: 700px;
+    min-height: 400px;
 }
 
 .footer--logo {
