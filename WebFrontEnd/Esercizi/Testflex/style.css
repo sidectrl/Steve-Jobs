@@ -1,0 +1,37 @@
+body{
+    background-color: gray;
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    min-height: 300px;
+    width: 50%;
+    background-color: bisque;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+.box{
+    height: 50px;
+    width: 20%;
+    
+}
+.box-red{
+    background-color: red;
+}
+.box-yellow{
+    background-color: yellow;
+}
+.box-green{
+    background-color: green;
+}
+.position-center{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
