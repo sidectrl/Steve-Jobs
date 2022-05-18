@@ -1,0 +1,14 @@
+body{
+    display: flex;
+    justify-content: center;
+    background-color: bisque;
+}
+.registrazione{
+    display: flex;
+    align-items: center;
+    width: 300px;
+    min-height: 300px;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-style: outset;
+}
