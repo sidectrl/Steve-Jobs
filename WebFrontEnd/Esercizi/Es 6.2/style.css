@@ -20,6 +20,7 @@ footer {
     display: flex;
     flex-wrap: nowrap;
     justify-content:space-around;
+    flex: 1;
 }
 .navbar {
     background-color: #3d5a80;
@@ -37,11 +38,6 @@ footer {
     float: left;
     margin-left: 20px;
 }
-
-.allineamento {
-    float: right;
-}
-
 .sito {
     display: inline-block;
     margin-top: 1.5rem;
@@ -65,9 +61,9 @@ ul#menu {
 }
 
 ul#menu li:hover {
-    height: 33px;
+    height: 35px;
     background-color: #293241;
-    color: #ee6c4d;
+    color: #ee6c4d; 
 }
 
 ul#menu li {
@@ -188,17 +184,22 @@ button:hover {
 .column {
     width: 100%;
     display: flex;
+    justify-content: space-evenly;
 }
 .column--image{
     display: flex;
     justify-content: center;
-    width: 50%;
+    width: 45%;
 }
 .description{
-    width: 50%;
-    justify-content: center;
+    width: 45%;
+    align-items: center;
 }
 .img--box{
     height: 400px;
     width: 400px;
+}
+.img--container_title img{
+    height: 400px;
+    margin-top: 4.4rem;
 }
