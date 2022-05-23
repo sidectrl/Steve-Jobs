@@ -10,6 +10,7 @@
 <body>
     <form method="POST" action="registration.php">
         <div class="registrazione">
+            <h1>Registration page</h1>
             <div>
                 <label for="text">Nome:</label><br>
                 <input type="text" id="nome" name="nome" placeholder="Nome" required>

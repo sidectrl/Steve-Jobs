@@ -6,9 +6,10 @@ body{
 .registrazione{
     display: flex;
     align-items: center;
+    justify-content: space-evenly;
     width: 300px;
-    min-height: 300px;
+    min-height: 200px;
     flex-wrap: wrap;
-    justify-content: center;
     border-style: outset;
 }
+
