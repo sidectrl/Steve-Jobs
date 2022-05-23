@@ -1,44 +1,35 @@
 body {
     margin: 0;
     font-family: Verdana, sans-serif;
-    color: #3d5a80;
 }
-
 .container {
     width: 1200px;
     margin: 0 auto;
-    background-color: #3d5a80;
+    background-color: #98c1d9;;
 }
-footer{
+
+footer {
     height: 150px;
     background-color: #3d5a80;
     border-top-style: outset;
     width: 1200px;
-    margin: 0  auto;
+    margin: 0 auto;
 }
+
 .footer--box {
-    
     display: flex;
     flex-wrap: nowrap;
-    flex-direction: row;
-    align-items: flex-end;
-    justify-content: center;
-    flex-wrap: nowrap;
+    justify-content:space-around;
 }
-
-.navbar_container {
-    height: 4.5rem;
-    width: 1200px;
-    display: flex;
-    flex-wrap: wrap;
-
-}
-
 .navbar {
     background-color: #3d5a80;
     position: fixed;
+    width: 1200px;
+    display: flex;
 }
-
+.logo{
+    width: 35%;
+}
 .logo img {
     margin: 3px;
     height: 4rem;
@@ -53,7 +44,6 @@ footer{
 
 .sito {
     display: inline-block;
-    float: left;
     margin-top: 1.5rem;
     font-size: 20px;
     font-family: Verdana, sans-serif;
@@ -103,20 +93,9 @@ ul#menu li a {
 
 .footer--column {
     margin-left: 8px;
-    width: 390px;
+    width: 100%;
     height: 150px;
     color: #F0F8FF;
-}
-
-.colonna__button {
-    height: 40px;
-    width: 70px;
-    display: inline;
-    margin-left: 130px;
-}
-
-.button_right {
-    float: right;
 }
 
 ul#footer_menu li {
@@ -137,7 +116,6 @@ ul#footer_menu li:hover {
 .social img {
     margin-left: 15px;
     height: 30px;
-    margin-top: 20px;
 }
 
 .social {
@@ -145,17 +123,14 @@ ul#footer_menu li:hover {
     margin-top: 30px;
 }
 
-.social span {
+.social p {
     font-size: 20px;
 }
 
 .contacts {
-    text-align: justify;
-    float: right;
+    display: inline-block;
     font-size: 17px;
-    margin-right: 10px;
-    margin-top: 20px;
-
+    margin-left: 10px;
 }
 
 .contacts a:link {
@@ -175,6 +150,7 @@ ul#footer_menu li:hover {
 }
 
 .newsletter__box {
+    margin-top: 2%;
     width: 100%;
     height: 380px;
     border-top-style: outset;
@@ -192,7 +168,6 @@ ul#footer_menu li:hover {
 }
 
 button {
-    margin-top: 20px;
     height: 50px;
     width: 90px;
     background-color: #F0F8FF;
@@ -208,4 +183,22 @@ button:hover {
 
 .newsletter_email {
     width: 200px;
+}
+
+.column {
+    width: 100%;
+    display: flex;
+}
+.column--image{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+.description{
+    width: 50%;
+    justify-content: center;
+}
+.img--box{
+    height: 400px;
+    width: 400px;
 }
