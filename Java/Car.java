@@ -17,7 +17,7 @@ public class Car {
         this.type = type;
     }
 
-    public Car(String model, String producer, String type, double weight) {
+    public Car(String producer, String model,  String type, double weight) {
         this.model = model;
         this.producer = producer;
         this.weight = weight;
@@ -31,7 +31,7 @@ public class Car {
         this.type = type;
     }
 
-    public Car(String model, String producer, String type, double displacement, double weight, String color) {
+    public Car(String producer, String model,  String type, double displacement, double weight, String color) {
         this.model = model;
         this.producer = producer;
         this.displacement = displacement;
