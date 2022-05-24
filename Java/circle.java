@@ -9,8 +9,7 @@ public class circle {
     public circle(double value) {
         if (this.radius > 0) {
             this.radius = value;
-        } else
-            System.out.println("Il valore è minore di 0.");
+        }
     }
 
     // #endregion
@@ -19,8 +18,7 @@ public class circle {
     public void setRadius(double value) {
         if (this.radius > 0) {
             this.radius = value;
-        } else
-            System.out.println("Il valore è minore di 0.");
+        }
     }
 
     public double getPerimeter() {
