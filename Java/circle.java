@@ -25,13 +25,13 @@ public class circle {
 
     public double getPerimeter() {
         double perimeter = 0;
-        perimeter = (3.14 * 2) * radius;
+        perimeter = (Math.PI * 2) * radius;
         return perimeter;
     }
 
     public double getArea() {
         double area = 0;
-        area = (radius * radius) * 3.14;
+        area = (radius * radius) * Math.PI;
         return area;
     }
     // #endregion
