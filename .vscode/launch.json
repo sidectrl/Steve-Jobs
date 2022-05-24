@@ -13,6 +13,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch mainProgram",
+            "request": "launch",
+            "mainClass": "Java.mainProgram",
+            "projectName": "Università_c5d3a17a"
+        },
+        {
+            "type": "java",
             "name": "Launch MyClass",
             "request": "launch",
             "mainClass": "Java.MyClass",
