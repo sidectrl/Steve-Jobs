@@ -13,19 +13,19 @@ public class circle {
     }
 
     // #endregion
-    
+
     // #region Methods
-    public void SetRadius(double value) {
+    public void setRadius(double value) {
         this.radius = value;
     }
 
-    public double GetPerimeter() {
+    public double getPerimeter() {
         double perimeter = 0;
         perimeter = (3.14 * 2) * radius;
         return perimeter;
     }
 
-    public double GetArea() {
+    public double getArea() {
         double area = 0;
         area = (radius * radius) * 3.14;
         return area;
