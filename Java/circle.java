@@ -13,6 +13,7 @@ public class circle {
     }
 
     // #endregion
+    
     // #region Methods
     public void SetRadius(double value) {
         this.radius = value;
