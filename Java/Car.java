@@ -92,11 +92,18 @@ public class Car {
     // #endregion
 
     // #region Methods
+    public double getAcceleration() {
+        return (this.weight / this.displacement) * 100/10;
+    }
+    public double getAcceleration(double value) {
+        return (this.weight / this.displacement) * value/10;
+    }
+
     public String toString() {
         return this.getProducer() + " " + this.getModel() + "\n\rType: " + this.getType() + " - " + "Weight: "
                 + this.getWeight() + " - "
-                + "displacement: "
-                + this.getDisplacement() + " - " + "color: " + this.getColor() + ".";
+                + "Displacement: "
+                + this.getDisplacement() + " - " + "Color: " + this.getColor() + " - " + "Acceleration: " + this.getAcceleration() + ".";
     }
     // #endregion
 }
