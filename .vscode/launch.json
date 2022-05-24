@@ -12,6 +12,13 @@
     ],
     "configurations": [
         {
+            "type": "java",
+            "name": "Launch MyClass",
+            "request": "launch",
+            "mainClass": "Java.MyClass",
+            "projectName": "Università_c5d3a17a"
+        },
+        {
             "name": "Listen for Xdebug",
             "type": "php",
             "request": "launch",
@@ -50,6 +57,6 @@
                 "uriFormat": "http://localhost:%s",
                 "action": "openExternally"
             }
-        },
+        }
     ]
 }
