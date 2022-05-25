@@ -6,18 +6,17 @@
 </head>
 
 <body>
-    <a href="login.php">Logout</a>
-    <?php
-    $users = $_SESSION;
-    if (isset($_POST['email']) && isset($_POST['pwd'])) {
+    <p>
+        <?php
+        session_start();
         foreach ($_SESSION as $user) {
-            if ($_SESSION[$user['user_logged']] == "true") {
-                
-            } else
-                echo "<script type='text/javascript'>alert('Inserire i dati correttamentex');</script>";
+            if ($user["user_logged"] == "true") {
+                echo "Nome: " . $user['Nome'] . "<br>Cognome:" . $user['Cognome'] . "<br>Codice fiscale:" . $user['codice_fiscale'] .
+                    "<br>Email:" . $user['email'] . "<br>Telefono: " . $user['telefono'] . "cell:" . $user['cell'];
+            }
         }
-    }
-    ?>
+        ?>
+    </p>
 </body>
 
 </html>
