@@ -40,11 +40,14 @@
                 <input type="cell" name="cell" placeholder="Inserisci cellulare">
             </div>
             <div>
-                <input type="checkbox" name="prsdata" id="prsdata" required>
-                <label for="prsdata">Autorizzazione trattamento dei dati personali</label>
+                <input type="checkbox" name="authdata" id="authdata" required>
+                <label for="authdata">Autorizzazione trattamento dei dati personali</label>
             </div>
             <div>
-                <input type="submit" name="invio">
+                <input class="button" type="submit" name="invio">
+            </div>
+            <div>
+                <p>Sei già registrato? <a href="login.php">Effettua il login.</a></p>
             </div>
         </div>
         <?php
@@ -56,8 +59,10 @@
             if (!isset($_SESSION[$_POST['cod_fiscale']])) {
                 $_SESSION[$_POST['cod_fiscale']] =  array(
                     "Nome" => $_POST['nome'], "Cognome" => $_POST['cognome'], "codice_fiscale" => $_POST['cod_fiscale'],
-                    "email" => $_POST['email'], "password" => $_POST['pwd'], "telefono" => $_POST['tel'], "cell" => $_POST['cell']
+                    "email" => $_POST['email'], "password" => $_POST['pwd'], "telefono" => $_POST['tel'], "cell" => $_POST['cell'],
+                    "user_logged" => "false"
                 );
+                header("Location: login.php");
             } else
                 echo "<script type='text/javascript'>alert('Utente già esistente');</script>";
         }
