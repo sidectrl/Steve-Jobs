@@ -1,18 +1,23 @@
 <?php
         session_start();
-        $users = $_SESSION;
+        $flag=false;
         if (isset($_POST['email']) && isset($_POST['pwd'])) {
-            foreach ($users as $cf => $user) {
+            foreach ($_SESSION as $cf) {
                 if ($cf['email'] == $_POST['email'] && $cf['password'] == $_POST['pwd']) {
-                    $_SESSION[$cf]["user_logged"] = "true";
+                    $cf['user_logged'] = "true";
                     header("Location: profile.php");
-                } else
+                    exit();
+                }
+                else
                 {
-                    echo "<script type='text/javascript'>alert('Inserire i dati correttamente');</script>";
-                    header("Location: login.html");
+                    $flag = true;
                 }
                     
             }
         }
-        print_r($_SESSION);
+        if($flag)
+        {
+            header("Location: login.html");
+            exit();
+        }
         ?>
