@@ -10,7 +10,6 @@ body{
     width: 50%;
     background-color: bisque;
     display: flex;
-    flex-wrap: nowrap;
     flex-direction: row;
     align-items: flex-end;
     justify-content: center;

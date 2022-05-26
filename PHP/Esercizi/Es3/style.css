@@ -1,9 +1,11 @@
-body{
+body {
     display: flex;
     justify-content: center;
     background-color: bisque;
+    flex-wrap: wrap;
 }
-.registrazione{
+
+.registrazione {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -12,8 +14,18 @@ body{
     flex-wrap: wrap;
     border-style: outset;
 }
-.button{
-    height: 50px;
-    width: 70px;
+
+.container {
+    border-style: outset;
+    width: 400px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
+.profile--container {
+    width: 100%;
+    min-height: 50px;
+    display: flex;
+    justify-content: space-evenly;
+}
