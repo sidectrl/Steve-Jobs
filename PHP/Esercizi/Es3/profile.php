@@ -1,7 +1,9 @@
 <?php
 session_start();
+if(isset($_SESSION['login'])){
 $login = $_SESSION['login'];
 unset($_SESSION['login']);
+}
 ?>
 <!DOCTYPE html>
 <html>
