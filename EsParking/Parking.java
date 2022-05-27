@@ -43,7 +43,7 @@ public class Parking {
     } else System.out.println("Impossible to insert.");
     }
 
-    public void removeCar(int place) {
+    public void removeCarAt(int place) {
         if (place < cars.length)
             if (this.cars[place] != null) {
                 this.cars[place] = null;

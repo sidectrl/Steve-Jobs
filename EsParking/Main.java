@@ -29,7 +29,7 @@ public class Main {
                 case 3:
                     System.out.println("Type the position:");
                     position = input.nextInt();
-                    parking1.removeCar(position);
+                    parking1.removeCarAt(position);
                     break;
                 case 4:
                     if (parking1.empty() == null) {
