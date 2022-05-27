@@ -24,7 +24,6 @@ public class mainProgram {
         double weight = input.nextDouble();
         System.out.println("Insert the color: ");
         String color = input.next();
-
         return car1 = new Car(producer,model, type, displacement, weight, color);
     }
 }
