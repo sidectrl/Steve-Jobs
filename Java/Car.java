@@ -5,7 +5,7 @@ public class Car {
     private double weight = 0;
     private double displacement = 0;
     private String model = "";
-    private String producer = "";
+    private String brand = "";
     private String type = "";
     private String color = "";
     // #endregion
@@ -13,27 +13,27 @@ public class Car {
     // #region Costructor
     public Car(String model, String type, String producer) {
         this.model = model;
-        this.producer = producer;
+        this.brand = producer;
         this.type = type;
     }
 
-    public Car(String producer, String model,  String type, double weight) {
+    public Car(String brand, String model,  String type, double weight) {
         this.model = model;
-        this.producer = producer;
+        this.brand = brand;
         this.weight = weight;
         this.type = type;
     }
 
-    public Car(String model, String type, double displacement, String producer) {
+    public Car(String model, String type, double displacement, String brand) {
         this.model = model;
-        this.producer = producer;
+        this.brand = brand;
         this.displacement = displacement;
         this.type = type;
     }
 
-    public Car(String producer, String model,  String type, double displacement, double weight, String color) {
+    public Car(String brand, String model,  String type, double displacement, double weight, String color) {
         this.model = model;
-        this.producer = producer;
+        this.brand = brand;
         this.displacement = displacement;
         this.weight = weight;
         this.type = type;
@@ -54,8 +54,8 @@ public class Car {
         return model;
     }
 
-    public String getProducer() {
-        return producer;
+    public String getBrand() {
+        return brand;
     }
 
     public double getWeight() {
@@ -70,8 +70,8 @@ public class Car {
         this.color = color;
     }
 
-    public void setProducer(String producer) {
-        this.producer = producer;
+    public void setBrand(String brand) {
+        this.brand = brand;
     }
 
     public void setType(String type) {
@@ -96,11 +96,12 @@ public class Car {
         return (this.weight / this.displacement) * 100/10;
     }
     public double getAcceleration(double value) {
-        return (this.weight / this.displacement) * value/10;
+        
+        return Math.round((this.weight / this.displacement) * value/10);
     }
 
     public String toString() {
-        return this.getProducer() + " " + this.getModel() + "\n\rType: " + this.getType() + " - " + "Weight: "
+        return this.getBrand() + " " + this.getModel() + "\n\rType: " + this.getType() + " - " + "Weight: "
                 + this.getWeight() + " - "
                 + "Displacement: "
                 + this.getDisplacement() + " - " + "Color: " + this.getColor() + " - " + "Acceleration: " + this.getAcceleration() + ".";
