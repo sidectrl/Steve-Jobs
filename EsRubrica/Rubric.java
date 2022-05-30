@@ -24,22 +24,27 @@ public class Rubric {
         if (contact[index] != null && index < contact.length) {
             contact[index] = null;
             pplNumber--;
-        } else System.out.println("Cannot remove.");
+        } else
+            System.out.println("Cannot remove.");
     }
-    public void searchContact(String name){
-        for(int count = 0; count < contact.length; count++)
-        {
-            if(contact[count] != null && this.contact[count].getName() == name)
-            {
+
+    public void searchContact(String name) {
+        for (int count = 0; count < contact.length; count++) {
+            if (contact[count] != null && this.contact[count].getName() == name) {
                 System.out.println(this.contact[count]);
             }
         }
     }
+
     public String toString() {
         String tostring = "";
-        for (int count = 0; count < this.contact.length; count++) {
-            if(this.contact[count] != null)
-            tostring += count + " - " + this.contact[count].getName() +" "+ this.contact[count].getSurname() + "\n\r";
+        int count = 0;
+        while (count < this.contact.length && count < pplNumber) {
+            if (this.contact[count] != null) {
+                tostring += count + " - " + this.contact[count].getName() + " " + this.contact[count].getSurname()
+                        + "\n\r";
+                count++;
+            }
         }
         return tostring;
     }

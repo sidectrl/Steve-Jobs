@@ -24,6 +24,7 @@ public class Main {
                     System.out.println("Type the index of the ppl to remove:");
                     int index = inputScanner.nextInt();
                     myRubric.removeContact(index);
+                    System.out.println(myRubric);
                     break;
                     case 3: 
                     System.out.println(myRubric);
