@@ -2,7 +2,7 @@ package EsRubrica;
 
 public class Rubric {
     // #region Attributes
-    private Person[] contact = new Person[10];
+    private Person[] contacts = new Person[10];
     private int pplNumber = 0;
     // #endregion
 
@@ -13,9 +13,9 @@ public class Rubric {
     // #endregion
 
     // #region Methods
-    public void setContact(Person contact) {
-        if (pplNumber < this.contact.length) {
-            this.contact[pplNumber] = contact;
+    public void addContact(Person contact) {
+        if (pplNumber < this.contacts.length) {
+            this.contacts[pplNumber] = contact;
             pplNumber++;
         }
     }
@@ -23,36 +23,36 @@ public class Rubric {
     public void removeContact(int index) {
         int counter = 0;
         Person[] dummy = new Person[10];
-        if (index < contact.length && contact[index] != null) {
-            contact[index] = null;
+        if (index < contacts.length && contacts[index] != null) {
+            contacts[index] = null;
             pplNumber--;
-            for (int count = 0; count < contact.length; count++) {
-                if (contact[count] != null) {
-                    dummy[counter] = contact[count];
+            for (int count = 0; count < contacts.length; count++) {
+                if (contacts[count] != null) {
+                    dummy[counter] = contacts[count];
                     counter++;
                 }
             }
-            contact = dummy;
+            contacts = dummy;
         } else
             System.out.println("Cannot remove.");
 
     }
 
     public void searchContact(String name) {
-        for (int count = 0; count < contact.length; count++) {
-            if (this.contact[count] != null && (this.contact[count].getName().equalsIgnoreCase(name)
-                    || this.contact[count].getSurname().equalsIgnoreCase(name)
-                    || this.contact[count].getTelNumber().equalsIgnoreCase(name))) {
-                System.out.println(this.contact[count].toString());
+        for (int count = 0; count < contacts.length; count++) {
+            if (this.contacts[count] != null && (this.contacts[count].getName().equalsIgnoreCase(name)
+                    || this.contacts[count].getSurname().equalsIgnoreCase(name)
+                    || this.contacts[count].getTelNumber().equalsIgnoreCase(name))) {
+                System.out.println(this.contacts[count].toString());
             }
         }
     }
 
     public String toString() {
         String tostring = "";
-        for (int count = 0; count < this.contact.length; count++) {
-            if (this.contact[count] != null) {
-                tostring += count + " - " + this.contact[count].getName() + " " + this.contact[count].getSurname()
+        for (int count = 0; count < this.contacts.length; count++) {
+            if (this.contacts[count] != null) {
+                tostring += count + " - " + this.contacts[count].getName() + " " + this.contacts[count].getSurname()
                         + "\n\r";
             }
         }

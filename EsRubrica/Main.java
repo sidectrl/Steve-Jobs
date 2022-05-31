@@ -19,7 +19,7 @@ public class Main {
                     System.out.println("Closing...");
                     break;
                 case 1:
-                    myRubric.setContact(inputValues(inputScanner));
+                    myRubric.addContact(inputValues(inputScanner));
                     System.out.println(myRubric);
                     break;
                 case 2:
