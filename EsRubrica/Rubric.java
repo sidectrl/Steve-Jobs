@@ -23,7 +23,7 @@ public class Rubric {
     public void removeContact(int index) {
         int counter = 0;
         Person[] dummy = new Person[10];
-        if (index < contacts.length && contacts[index] != null) {
+        if ( index >= 0 && index < contacts.length && contacts[index] != null) {
             contacts[index] = null;
             pplNumber--;
             for (int count = 0; count < contacts.length; count++) {
