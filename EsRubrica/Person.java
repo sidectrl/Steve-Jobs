@@ -44,7 +44,7 @@ public class Person {
     
     //#region Methods
     public String toString(){
-        return this.name + " " + this.surname;
+        return this.name + " " + this.surname +  " - " + this.telNumber;
     }
     //#endregion
 }

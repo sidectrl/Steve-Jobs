@@ -52,8 +52,7 @@ public class Rubric {
         String tostring = "";
         for (int count = 0; count < this.contacts.length; count++) {
             if (this.contacts[count] != null) {
-                tostring += count + " - " + this.contacts[count].getName() + " " + this.contacts[count].getSurname()
-                        + "\n\r";
+                tostring += count + " - " + contacts[count].toString() + "\n\r";
             }
         }
         return tostring;
