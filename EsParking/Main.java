@@ -1,6 +1,4 @@
 package EsParking;
-
-import java.security.Principal;
 import java.util.Scanner;
 
 public class Main {
@@ -60,7 +58,8 @@ public class Main {
         double weight = input.nextDouble();
         System.out.println("Insert the color: ");
         String color = input.next();
-        return car1 = new Car(brand, model, type, cc, weight, color);
+        car1= new Car(brand, model, type, cc, weight, color);
+        return car1;
     }
     // #endregion
 

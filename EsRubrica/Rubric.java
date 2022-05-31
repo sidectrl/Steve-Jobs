@@ -12,7 +12,7 @@ public class Rubric {
     }
     // #endregion
 
-    // #region Attributes
+    // #region Methods
     public void setContact(Person contact) {
         if (pplNumber < this.contact.length) {
             this.contact[pplNumber] = contact;
@@ -23,7 +23,7 @@ public class Rubric {
     public void removeContact(int index) {
         int counter = 0;
         Person[] dummy = new Person[10];
-        if (index < contact.length && contact[index] != null  ) {
+        if (index < contact.length && contact[index] != null) {
             contact[index] = null;
             pplNumber--;
             for (int count = 0; count < contact.length; count++) {
@@ -40,7 +40,9 @@ public class Rubric {
 
     public void searchContact(String name) {
         for (int count = 0; count < contact.length; count++) {
-            if (this.contact[count] != null && this.contact[count].getName().equalsIgnoreCase(name)) {
+            if (this.contact[count] != null && (this.contact[count].getName().equalsIgnoreCase(name)
+                    || this.contact[count].getSurname().equalsIgnoreCase(name)
+                    || this.contact[count].getTelNumber().equalsIgnoreCase(name))) {
                 System.out.println(this.contact[count].toString());
             }
         }

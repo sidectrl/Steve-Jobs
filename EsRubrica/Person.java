@@ -4,11 +4,11 @@ public class Person {
     // #region Attributes
     private String name = "";
     private String surname = "";
-    private int telNumber = 0;
+    private String telNumber = "";
     // #endregion
 
     // #region Costructor
-    public Person(String name, String surname, int telNumber) {
+    public Person(String name, String surname, String telNumber) {
         this.name = name;
         this.surname = surname;
         this.telNumber = telNumber;
@@ -17,7 +17,7 @@ public class Person {
     // #endregion
 
     // #region Set and Get methods
-    public int getTelNumber() {
+    public String getTelNumber() {
         return telNumber;
     }
 
@@ -37,12 +37,14 @@ public class Person {
         this.name = name;
     }
 
-    public void setTelNumber(int telNumber) {
+    public void setTelNumber(String telNumber) {
         this.telNumber = telNumber;
     }
     // #endregion
+    
+    //#region Methods
     public String toString(){
         return this.name + " " + this.surname;
     }
-
+    //#endregion
 }

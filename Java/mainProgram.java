@@ -1,4 +1,5 @@
 package Java;
+
 import java.util.Scanner;
 
 import EsParking.Car;
@@ -37,6 +38,7 @@ public class mainProgram {
         double weight = input.nextDouble();
         System.out.println("Insert the color: ");
         String color = input.next();
-        return car1 = new Car(brand, model, type, displacement, weight, color);
+        car1 = new Car(brand, model, type, displacement, weight, color);
+        return car1;
     }
 }

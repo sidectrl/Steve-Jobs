@@ -49,7 +49,7 @@ public class Main {
         System.out.println("Insert the surname: ");
         String surname = input.next();
         System.out.println("Insert the telephone number: ");
-        int telNumber = input.nextInt();
+        String telNumber = input.next();
         Person contact = new Person(name, surname, telNumber);
         return contact;
     }
