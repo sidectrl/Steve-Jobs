@@ -1,26 +1,92 @@
-.banner {
-    width: 100%;
-    position: relative;
-    text-align: center;
-    background-color: black;
-    color: white;
-}
-
-.banner img {
-    width: calc(100% - 4px);
+body {
+    margin: 0;
 }
 
 .contenuti {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
     width: 100%;
 }
-.banner a {
+
+.section1 a {
     color: white;
+}
+
+.banner {
+    width: 100%;
+    position: relative;
+}
+
+.banner img {
+    width: 100%;
+}
+
+.banner--figure a {
+
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    font-size: 15px;
 }
-.banner a img{
-    width: 50px;
 
+.section1 h1 {
+    transform: translate(0, 20%);
+    font-size: 46px;
+}
+
+.banner a img {
+    width: 50px;
+}
+
+.section1 {
+    background-color: #000000cf;
+    font-size: 16px;
+    color: white;
+}
+
+.section2 {
+    text-align: center;
+    margin-top: 50px;
+    color: black;
+    font-size: 16px;
+}
+
+.section3 {
+    padding-top: 96px;
+}
+
+.section3 a {
+    color: #107c10;
+    text-decoration: none;
+}
+
+.card {
+    background-color: #e6e6e6e6;
+    width: calc(100% - 10px);
+    text-align: center;
+    padding: 5px;
+    padding-bottom: 20px;
+}
+.card a{
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+.panel--content h3 {
+    font-size: 26px;
+}
+
+.panel--content p {
+    font-size: 16px;
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-top: 10px;
+}
+
+.card--container {
+    margin-top: 20px;
+}
+.section4{
+    padding-top: 48px;
 }
