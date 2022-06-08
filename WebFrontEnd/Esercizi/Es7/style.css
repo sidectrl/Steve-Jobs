@@ -1,0 +1,26 @@
+.banner {
+    width: 100%;
+    position: relative;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+.banner img {
+    width: calc(100% - 4px);
+}
+
+.contenuti {
+    width: 100%;
+}
+.banner a {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.banner a img{
+    width: 50px;
+
+}
