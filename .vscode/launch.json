@@ -15,6 +15,13 @@
             "type": "java",
             "name": "Launch Main",
             "request": "launch",
+            "mainClass": "Main",
+            "projectName": "Università_c5d3a17a"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
             "mainClass": "EsRubrica.Main",
             "projectName": "Università_c5d3a17a"
         },

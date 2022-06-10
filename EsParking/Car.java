@@ -1,4 +1,3 @@
-package EsParking;
 
 public class Car {
     // #region Attributes
