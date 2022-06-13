@@ -7,9 +7,11 @@ body {
     text-align: center;
     width: 100%;
 }
-.contenuti p{
+
+.contenuti p {
     font-size: 18px;
 }
+
 .section1 a {
     color: white;
 }
@@ -18,18 +20,20 @@ body {
     width: 100%;
     position: relative;
 }
-.xbox--info{
+
+.xbox--info {
     width: 100%;
 }
-.xbox--info img{
+
+.xbox--info img {
     width: 100%;
 }
+
 .banner img {
     width: 100%;
 }
 
 .banner--figure a {
-
     position: absolute;
     top: 50%;
     left: 50%;
@@ -50,6 +54,7 @@ body {
     background-color: #000000cf;
     font-size: 16px;
     color: white;
+    padding-bottom: 5%;
 }
 
 .section2 {
@@ -70,16 +75,18 @@ body {
 
 .card {
     background-color: #e6e6e6e6;
-    width: calc(100% - 10px);
+    padding: 5%;
+    width: calc(100% - 10%);
     text-align: center;
-    padding: 5px;
     padding-bottom: 20px;
 }
-.card a{
+
+.card a {
     color: black;
     text-decoration: none;
     font-weight: bold;
 }
+
 .panel--content h3 {
     font-size: 26px;
 }
@@ -94,51 +101,71 @@ body {
 .card--container {
     margin-top: 20px;
 }
-.section4{
+
+.section4 {
     padding-top: 48px;
 }
-.section5{
+
+.section5 {
     padding-top: 48px;
     padding-right: 5px;
     padding-left: 5px;
     width: calc(100% - 10px);
 }
-.section5 h1{
+
+.section5 h1 {
     font-size: 36px;
 }
-.gamepass--subscription{
+
+.gamepass--section img {
+    width: 252.74px;
+}
+
+.gamepass--section {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.gamepass--subscription {
     color: white;
-    
+    padding-left: 5%;
+    padding-right: 5%;
     font-size: 18px;
 }
-.sub--link{
+
+.sub--link {
     color: white;
 }
-.subscribe--button{
+
+.subscribe--button {
     font-size: 15px;
     background-color: #9bf00b;
     text-decoration: none;
     padding: 5px 5px 5px 10px;
     color: black;
 }
-.card--gamepass{
+
+.card--gamepass {
     margin-bottom: 34px;
     padding: 33px 12% 70px 12%;
-    background-color: #107c10;   
+    background-color: #107c10;
     font-size: 18px;
 }
 
-.gamepass--subscription img{
+.gamepass--subscription img {
     width: 90px;
 }
-.card1{
+
+.card1 {
     background-color: #000000cf;
 }
-.section6{
+
+.section6 {
     padding: 5px;
     width: calc(100% - 10px);
 }
-.section6 .icons img{
+
+.section6 .icons img {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -146,53 +173,179 @@ body {
     margin-top: 48px;
     width: 64px;
 }
-.section6 .icons{
+
+.section6 .icons {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     flex-direction: column;
 }
-.card4{
+
+.icon--box {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+}
+
+.card4 {
     padding: 48px 16px;
 }
-.card4 h2{
+
+.card4 h2 {
     font-size: 34px;
 }
-.card4 p{
+
+.card4 p {
     padding-top: 24px;
     padding-bottom: 24px;
 }
 
-footer{
+footer {
     width: 100%;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 15px;
     background-color: #f2f2f2;
 }
-.social{
+
+.social {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
 }
-.social ul{
+
+.social ul {
     list-style-type: none;
     display: flex;
     flex-wrap: wrap;
     padding: 0;
 }
-.social ul li img{
+
+.social ul li img {
     padding: 5px;
 }
-.footer--column{
-padding: 0 12px;
+
+.footer--column {
+    color: #616161;
+    padding: 0 12px;
 }
-.footer--column h4{
-    padding-top:  36px;
+
+.footer--column h4 {
+    padding-top: 36px;
 }
-.footer--column li{
+
+.footer--column li {
     font-size: 11px;
+    padding: 8px 0px;
     list-style-type: none;
 }
 
+.footer--column li a {
+    color: #616161;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 768px) {
+    .contenuti h1 {
+        font-size: 46px;
+    }
+
+    .card--gamepass {
+        padding: 33px 48.375px;
+    }
+
+    #horizon {
+        content: url("img/asset-horizontal.jpg");
+    }
+
+    #fox {
+        content: url("img/fox-horizontal.jpg");
+    }
+
+    #dinosaur {
+        content: url("img/dinosaur-horizontal.jpg");
+    }
+
+    #madden {
+        content: url("img/madden-horizontal.jpg");
+    }
+
+    #halo {
+        content: url("img/halo-horizontal.jpg");
+    }
+
+    .section6 .icons {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    .footer--container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .footer--column {
+        width: 30%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .card--container {
+        display: flex;
+    }
+
+    .card {
+        width: calc(33% - 10%);
+    }
+
+    .gamepass--subscription {
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+}
+
+@media screen and (min-width: 1084px) {
+    #horizon {
+        content: url("img/asset-vertical.jpg");
+    }
+
+    #fox {
+        content: url("img/fox-vertical.jpg");
+    }
+
+    #dinosaur {
+        content: url("img/dinosaur-vertical.jpg");
+    }
+
+    #madden {
+        content: url("img/madden-vertical.jpg");
+    }
+
+    #halo {
+        content: url("img/halo-vertical.jpg");
+    }
+
+    .banner--container {
+        display: flex;
+    }
+
+    .banner--figure a {
+        top: 90%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .gamepass--subscription{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .card--gamepass{
+        width: 25%;
+    }
+}
