@@ -331,7 +331,9 @@ footer {
     #halo {
         content: url("img/halo-vertical.jpg");
     }
-
+    #ppl{
+        content: url("img/ppl-1084px.jpg");
+    }
     .banner--container {
         display: flex;
     }
