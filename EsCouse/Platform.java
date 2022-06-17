@@ -66,6 +66,7 @@ public class Platform {
             for (Category iesimCategory : categories) {
                 if (iesimCategory.equals(category))
                     resultCourses.add(iesimCourse);
+                    break;
             }
         }
         return resultCourses;

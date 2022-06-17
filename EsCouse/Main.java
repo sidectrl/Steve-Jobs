@@ -29,7 +29,7 @@ public class Main {
         c4.addCategory(Category.Informatics);
         c4.addCategory(Category.Database);
         ArrayList<Course> coursesFilteredByCategory = p.searchByCategory(Category.Science);
-        ArrayList<Course> coursesFilteredByName = p.searchByName("data");
+        ArrayList<Course> coursesFilteredByName = p.searchByName("dat");
         System.out.println(coursesFilteredByCategory);
         System.out.println(coursesFilteredByName);
     }
