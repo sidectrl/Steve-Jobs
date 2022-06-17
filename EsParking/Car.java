@@ -1,4 +1,4 @@
-
+package EsParking;
 public class Car {
     // #region Attributes
     private double weight = 0;

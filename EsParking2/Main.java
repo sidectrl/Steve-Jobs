@@ -1,3 +1,4 @@
+package EsParking2;
 import java.util.Scanner;
 
 public class Main {
