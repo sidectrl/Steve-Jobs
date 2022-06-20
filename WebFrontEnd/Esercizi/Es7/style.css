@@ -1,7 +1,16 @@
 body {
     margin: 0;
 }
-
+nav{
+    background-color: #616161;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+nav img{
+    width: 35%;
+}
 .contenuti {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
@@ -19,6 +28,7 @@ body {
 .banner {
     width: 100%;
     position: relative;
+    z-index: -1;
 }
 
 .xbox--info {
@@ -51,10 +61,17 @@ body {
     color: white;
     padding-bottom: 5%;
     width: 100%;
+    z-index: 2;
 }
+
 .section1 h1 {
-    transform: translate(0, 80%);
+    font-size: 46px;
+    margin-bottom: 0;
 }
+.section1--title{
+    transform: translate(0, 40%);
+}
+
 .second {
     margin-top: -5px;
 }
@@ -63,11 +80,20 @@ body {
     margin-top: 0;
     padding: 27px 0 1px;
 }
+
 .section2 {
     text-align: center;
     margin-top: 50px;
     color: black;
     font-size: 16px;
+}
+
+.section2 img {
+    width: 100%;
+}
+
+.section2 video {
+    display: none;
 }
 
 .section3 {
@@ -300,10 +326,7 @@ footer {
     .footer--column {
         width: 30%;
     }
-    .section1 h1 { 
-        transform: translate(0, 100%);
-        font-size: 62px;
-    }
+
 }
 
 @media screen and (min-width: 1024px) {
@@ -364,6 +387,10 @@ footer {
     .card--gamepass {
         width: 25%;
     }
+
+    #minecraft {
+        content: url("img/minecraft-1920x1080.jpg");
+    }
 }
 
 @media screen and (min-width: 1440px) {
@@ -408,13 +435,23 @@ footer {
         padding-left: 20%;
         padding-right: 20%;
     }
-    .section6{
+
+    .section6 {
         margin: 0 auto;
         width: 70%;
     }
-    .gamepass--section{
+
+    .gamepass--section {
         margin: 0 auto;
         width: 70%;
     }
-    
+
+    .section2 video {
+        display: block;
+        width: 1440px;
+    }
+
+    .section2 img {
+        display: none;
+    }
 }
