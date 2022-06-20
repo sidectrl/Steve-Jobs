@@ -12,7 +12,7 @@ body {
     font-size: 18px;
 }
 
-.section1 a {
+.banner a {
     color: white;
 }
 
@@ -55,8 +55,16 @@ body {
     font-size: 16px;
     color: white;
     padding-bottom: 5%;
+    width: 100%;
+}
+.second {
+    margin-top: -5px;
 }
 
+.second p {
+    margin-top: 0;
+    padding: 27px 0 1px;
+}
 .section2 {
     text-align: center;
     margin-top: 50px;
@@ -331,9 +339,11 @@ footer {
     #halo {
         content: url("img/halo-vertical.jpg");
     }
-    #ppl{
+
+    #ppl {
         content: url("img/ppl-1084px.jpg")
     }
+
     .banner--container {
         display: flex;
     }
@@ -343,11 +353,57 @@ footer {
         left: 50%;
         transform: translate(-50%, -50%);
     }
-    .gamepass--subscription{
+
+    .gamepass--subscription {
         display: flex;
         justify-content: space-evenly;
     }
-    .card--gamepass{
+
+    .card--gamepass {
         width: 25%;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .section2 {
+        position: relative;
+    }
+
+    .text--minecraft {
+        position: absolute;
+        width: 520px;
+        top: 40%;
+        left: 75%;
+        transform: translate(-50%, -50%);
+        text-align: left;
+    }
+
+    .section3 {
+        position: relative;
+    }
+
+    .text--xbox_cloud {
+        position: absolute;
+        width: 520px;
+        text-align: left;
+        top: 30%;
+        left: 25%;
+        transform: translate(-50%, -50%);
+    }
+
+    .section1 {
+        margin: 0 auto;
+        width: 80%;
+    }
+
+    .second {
+        margin-top: -5px;
+    }
+
+    .second p {
+        margin-top: 0;
+        padding-top: 27px;
+        padding-left: 20%;
+        padding-right: 20%;
     }
 }
