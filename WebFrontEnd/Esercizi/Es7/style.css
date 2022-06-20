@@ -41,11 +41,6 @@ body {
     font-size: 15px;
 }
 
-.section1 h1 {
-    transform: translate(0, 20%);
-    font-size: 46px;
-}
-
 .banner a img {
     width: 50px;
 }
@@ -56,6 +51,9 @@ body {
     color: white;
     padding-bottom: 5%;
     width: 100%;
+}
+.section1 h1 {
+    transform: translate(0, 80%);
 }
 .second {
     margin-top: -5px;
@@ -302,6 +300,10 @@ footer {
     .footer--column {
         width: 30%;
     }
+    .section1 h1 { 
+        transform: translate(0, 100%);
+        font-size: 62px;
+    }
 }
 
 @media screen and (min-width: 1024px) {
@@ -406,4 +408,13 @@ footer {
         padding-left: 20%;
         padding-right: 20%;
     }
+    .section6{
+        margin: 0 auto;
+        width: 70%;
+    }
+    .gamepass--section{
+        margin: 0 auto;
+        width: 70%;
+    }
+    
 }
