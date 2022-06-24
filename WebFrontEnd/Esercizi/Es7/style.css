@@ -29,6 +29,10 @@ nav img{
     width: 100%;
     position: relative;
     z-index: -1;
+    
+}
+.banner:hover{
+    transform: scale(2, 3);
 }
 
 .xbox--info {
