@@ -13,6 +13,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "Dame.Main",
+            "projectName": "Università_c5d3a17a"
+        },
+        {
+            "type": "java",
             "name": "Launch Main2",
             "request": "launch",
             "mainClass": "EsMachine.Main2",
