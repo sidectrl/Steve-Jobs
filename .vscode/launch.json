@@ -15,6 +15,13 @@
             "type": "java",
             "name": "Launch Main",
             "request": "launch",
+            "mainClass": "Checkers.Main",
+            "projectName": "Università_c5d3a17a"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
             "mainClass": "Dame.Main",
             "projectName": "Università_c5d3a17a"
         },
