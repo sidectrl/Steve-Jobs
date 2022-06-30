@@ -7,29 +7,14 @@ body {
     background-color: #98c1d9;
 }
 
-footer {
-    background-color: #3d5a80;
+footer{
+    background-color: #3d5a80; 
     border-top-style: outset;
     width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-}
-
-.footer--box {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    flex: 1;
-}
-
+} 
 nav {
     background-color: #3d5a80;
     position: fixed;
-    width: 100%;
-}
-
-.logo {
     width: 100%;
 }
 
@@ -64,15 +49,8 @@ ul#menu li a {
 
 
 .footer--logo {
-    width: 20%;
+    height: 50px;
     margin-left: 2px;
-}
-
-.footer--column {
-    width: 100%;
-    color: #F0F8FF;
-    align-items: center;
-    justify-content: space-evenly;
 }
 
 ul#footer_menu {
@@ -109,8 +87,6 @@ ul#footer_menu li:hover {
 
 .contacts {
     font-size: 17px;
-    width: 70%;
-    padding-left: 20px;
 }
 
 .contacts a:link {
@@ -165,39 +141,9 @@ button:hover {
     width: 200px;
 }
 
-/*.column {
-    margin-top: 1vh;
-    min-width: 20vh;
-    justify-content: center;
-}
-
-.column--image {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
-
-.description {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    text-align: justify;
-    padding: 15px;
-    width: calc(100% - 30px);
-}
-
-
-
-*/
 .img--container_title img {
     width: 100%;
-    margin-top: 5.2%;
-}
-
-.first {
-    order: 3;
-    display: flex;
+    margin-top: 139px;
 }
 
 .section--icon {
@@ -232,140 +178,39 @@ button:hover {
     background: #293241ca;
 }
 
-/*@media screen and (min-width: 375px) {
-    .img--box {
-        height: 40vh;
-        width: 40vh;
+
+@media screen and (min-width: 375px) {
+    .img--container_title img {
+        margin-top: 146.15px;
+    }
+
+}
+
+@media screen and (min-width: 425px) {
+    .img--container_title img {
+        margin-top: 152.71px;   
+    }
+    .social p {
+        font-size: 18px;
+        margin-top: 0;
     }
 }
-*/
+
 @media screen and (min-width: 768px) {
 
+    .img--container_title img {
+        margin-top: 80px;
+    }
 
-    .logo{
+    .logo {
         max-height: 80px;
     }
+
     nav {
         max-height: 80px;
     }
-}
-
-/*
-    .sito {
-        font-size: 20px;
-    }
-
-    .img--container_title img {
-        width: 100%;
-        margin-top: 8.2vh;
-    }
-
-    footer {
-        flex-wrap: nowrap;
-        font-size: 15px;
-    }
-
-    .footer--column {
-        width: 33%;
-    }
-
-    .first {
-        order: 0;
-        display: flex;
-    }
-
-    .contacts {
-        margin: 0;
-        font-size: 15px;
-    }
-
-    .footer--logo {
-        height: 60px;
-    }
-
     .social p {
-        font-size: 20px;
+        font-size: 21px;
         margin-top: 0;
     }
-
-    ul#footer_menu li {
-        padding: 7px;
-    }
-
-    button {
-        height: 7vh;
-        width: 12vh;
-    }
-
-    .section--icon img {
-        width: 150px;
-    }
-
-    .img--box {
-        height: 52.4vh;
-        width: 52.4vh;
-    }
 }
-
-@media screen and (min-width: 1024px) {
-    .column {
-        display: flex;
-        justify-content: space-evenly;
-    }
-
-    .section--icon img {
-        width: 200px;
-    }
-}
-
-@media screen and (min-width: 1200px) {
-    .container {
-        width: 1200px;
-        margin: 0 auto;
-    }
-
-    footer {
-        width: 1200px;
-        margin: 0 auto;
-    }
-
-    .navbar {
-        margin: 0 auto;
-        width: 1200px;
-        justify-content: space-between;
-    }
-
-    .sito {
-        display: inline-block;
-        margin-top: 1.5rem;
-        font-size: 20px;
-        font-family: Verdana, sans-serif;
-    }
-
-    ul#menu {
-        font-size: 25px;
-        margin: 0;
-        padding: 0;
-    }
-
-    .footer--logo {
-        height: 13vh;
-    }
-
-    .social {
-        text-align: center;
-        margin-top: 30px;
-    }
-
-    .contacts {
-        font-size: 17px;
-    }
-
-    ul#footer_menu {
-        margin: 0;
-    }
-
-    .section--icon img {
-        width: 250px;
-    }
-}*/
