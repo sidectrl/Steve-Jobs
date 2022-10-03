@@ -27,12 +27,11 @@ public class Main {
         // System.out.println("The winner is :" + b.getWinner());
 
         try {
-            UtilSave us = new UtilSave("path.csv");
-            System.out.println(us.getPeople().size());
+            System.out.println(UtilSave.people.size());
             Scanner s = new Scanner(System.in);
             Person p = new Person(s.nextLine(), s.nextLine(), s.nextLine());
-            us.savePerson(p);
-            System.out.println(us.getPeople().size());
+            UtilSave.savePerson(p);
+            System.out.println(UtilSave.people.size());
             s.close();
 
         } catch (Exception e) {

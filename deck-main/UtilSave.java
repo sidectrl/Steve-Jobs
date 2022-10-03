@@ -3,34 +3,33 @@ import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class UtilSave {
-    private String path;
-    private ArrayList<Person> people = new ArrayList<>();
+public final class UtilSave {
+    public static String path = "deck-main/path.csv";
+    public  static ArrayList<Person> people = new ArrayList<>();
 
-    public UtilSave(String path) throws Exception {
-        this.path = path;
-        this.readFile();
+    private UtilSave(){
+
     }
 
-    private void readFile() throws Exception {
-        File f = new File(this.path);
+    private static void readFile() throws Exception {
+        File f = new File(UtilSave.path);
         Scanner scanner = new Scanner(f);
-        this.people.clear();
+        UtilSave.people.clear();
         while (scanner.hasNextLine()) {
             String data = scanner.nextLine();
             String[] rows = data.split(";");
             Person p = new Person(rows[0], rows[1], rows[2]);
-            this.people.add(p);
+            UtilSave.people.add(p);
         }
         scanner.close();
     }
 
-    public void savePerson(Person p) throws Exception {
-        FileWriter f = new FileWriter(this.path, true);
+    public static void savePerson(Person p) throws Exception {
+        FileWriter f = new FileWriter(UtilSave.path, true);
         f.append(p.toCsv());
         f.close();
-        // this.people.add(p);
-        this.readFile();
+        UtilSave.people.add(p);
+        UtilSave.readFile();
 
     }
 
