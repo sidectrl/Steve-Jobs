@@ -27,6 +27,7 @@ public class Main {
         // System.out.println("The winner is :" + b.getWinner());
 
         try {
+            UtilSave.readFile();
             System.out.println(UtilSave.people.size());
             Scanner s = new Scanner(System.in);
             Person p = new Person(s.nextLine(), s.nextLine(), s.nextLine());

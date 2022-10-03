@@ -4,14 +4,13 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public final class UtilSave {
-    public static String path = "deck-main/path.csv";
-    public  static ArrayList<Person> people = new ArrayList<>();
+    private static String path = "deck-main/path.csv";
+    public static ArrayList<Person> people = new ArrayList<>();
 
     private UtilSave(){
-
     }
 
-    private static void readFile() throws Exception {
+    public static void readFile() throws Exception {
         File f = new File(UtilSave.path);
         Scanner scanner = new Scanner(f);
         UtilSave.people.clear();
@@ -30,7 +29,6 @@ public final class UtilSave {
         f.close();
         UtilSave.people.add(p);
         UtilSave.readFile();
-
     }
 
     public ArrayList<Person> getPeople() {
