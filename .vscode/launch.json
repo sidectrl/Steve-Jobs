@@ -13,6 +13,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch MainRace",
+            "request": "launch",
+            "mainClass": "ThreadCar.MainRace",
+            "projectName": "Università_c5d3a17a"
+        },
+        {
+            "type": "java",
             "name": "Launch Main",
             "request": "launch",
             "mainClass": "Recupero.Main",
