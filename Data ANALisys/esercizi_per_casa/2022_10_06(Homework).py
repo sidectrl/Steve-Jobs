@@ -1,4 +1,3 @@
-from itertools import count
 import random
 
 # counter[0] = numero 1, counter[1] = numero 2, counter[2] = numero 3,
@@ -24,9 +23,13 @@ for number in range(1000000):
 
 for counting in range(len(counter)):
     print("numero", counting+1, counter[counting])
-maximum = max(counter)
-print("Il numero lanciato più  frequentemente è:", counter.index(maximum)+1, "uscito", maximum, "volte")
+    maximum = max(counter)
+
+print("Il numero lanciato più  frequentemente è:",
+      counter.index(maximum)+1, "uscito", maximum, "volte")
 minor = min(counter)
-print("Il numero lanciato meno frequentemente è:", counter.index(minor)+1, "uscito", minor, "volte")
+print("Il numero lanciato meno frequentemente è:",
+      counter.index(minor)+1, "uscito", minor, "volte")
 
-
+for i in range(6):
+    print("il numero {} è uscito {}% volte".format(i+1, (counter[i]/10**6)*100))
