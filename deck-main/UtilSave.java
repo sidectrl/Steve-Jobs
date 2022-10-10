@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public final class UtilSave {
-    private static String path = "deck-main/path.csv";
+    private static String path = "/path.csv";
     public static ArrayList<Person> people = new ArrayList<>();
 
     private UtilSave(){

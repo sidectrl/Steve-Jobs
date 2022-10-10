@@ -13,6 +13,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch MainParking",
+            "request": "launch",
+            "mainClass": "MainParking",
+            "projectName": "Università_c5d3a17a"
+        },
+        {
+            "type": "java",
             "name": "Launch MainRace",
             "request": "launch",
             "mainClass": "ThreadCar.MainRace",
