@@ -9,7 +9,7 @@ class MainParking {
         System.out.println(parking1);
         while (programRun) {
             System.out.println(
-                    "Type: \n\r 0 - Exit. \n\r 1 - Start a break.\n\r 2 - Stop a break.\n\r 3 - Get the profit. \n\r 4 - Parking history.");
+                    "Type: \n\r 0 - Exit. \n\r 1 - Start a break.\n\r 2 - Stop a break.\n\r 3 - Get the profit.");
             choice = input.nextInt();
             switch (choice) {
                 case 0:
@@ -32,8 +32,6 @@ class MainParking {
                 case 3:
                     System.out.println("The profit is:" + parking1.getProfit());
                     break;
-                case 4: 
-                break;
             }
         }
 

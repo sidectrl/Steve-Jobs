@@ -20,7 +20,7 @@ public class Break {
         return plate;
     }
 
-    public String getType() {
+    public String getVeicleType() {
         return this.type;
     }
 

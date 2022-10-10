@@ -23,7 +23,7 @@ public class Parking {
     private void getParkingSize() {
         for (Break iesimBreak : breaks) {
             if (iesimBreak.getStop() == 0) {
-                this.parkingSize += iesimBreak.getType()  == "truck" ? 2 : 1;
+                this.parkingSize += iesimBreak.getVeicleType()  == "truck" ? 2 : 1;
             }
         }
     }
@@ -31,7 +31,7 @@ public class Parking {
     public void setBreak(Break break1) {
         if (this.parkingSize <= 100) {
             this.breaks.add(break1);
-            this.parkingSize += break1.getType().toLowerCase() == "truck" ? 2 : 1;
+            this.parkingSize += break1.getVeicleType().toLowerCase() == "truck" ? 2 : 1;
         }
     }
 
@@ -39,7 +39,7 @@ public class Parking {
         for (Break iesimBreak : this.breaks) {
             if (iesimBreak.getPlate().equals(plate.toLowerCase())) {
                 iesimBreak.setStop();
-                parkingSize -= iesimBreak.getType().toLowerCase() == "truck" ? 2 : 1;
+                parkingSize -= iesimBreak.getVeicleType().toLowerCase() == "truck" ? 2 : 1;
             }
         }
 
@@ -48,7 +48,7 @@ public class Parking {
     public double getProfit() {
         double profit = 0;
         for (Break breakIesim : this.breaks)
-            if (breakIesim.getType().toLowerCase() == "truck") {
+            if (breakIesim.getVeicleType().toLowerCase() == "truck") {
                 profit += breakIesim.getPriece(this.cost[0]);
             } else
                 profit += breakIesim.getPriece(this.cost[1]);
@@ -77,7 +77,7 @@ public class Parking {
         for (Break breakIesim : this.breaks) {
             response += breakIesim.toString() + "\n\r";
             response += "Price: ";
-            response += breakIesim.getType() == "truck" ? breakIesim.getPriece(this.cost[0])
+            response += breakIesim.getVeicleType() == "truck" ? breakIesim.getPriece(this.cost[0])
                     : breakIesim.getPriece(this.cost[1]) + "\n\r";
         }
         response += "\n\r] Space occupated: ";
