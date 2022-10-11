@@ -23,7 +23,7 @@ public class Parking {
     private void getParkingSize() {
         for (Break iesimBreak : breaks) {
             if (iesimBreak.getStop() == 0) {
-                this.parkingSize += iesimBreak.getVeicleType()  == "truck" ? 2 : 1;
+                this.parkingSize += iesimBreak.getVeicleType().equals("truck") ? 2 : 1;
             }
         }
     }
@@ -31,7 +31,7 @@ public class Parking {
     public void setBreak(Break break1) {
         if (this.parkingSize <= 100) {
             this.breaks.add(break1);
-            this.parkingSize += break1.getVeicleType().toLowerCase() == "truck" ? 2 : 1;
+            this.parkingSize += break1.getVeicleType().equals("truck") ? 2 : 1;
         }
     }
 
@@ -39,7 +39,7 @@ public class Parking {
         for (Break iesimBreak : this.breaks) {
             if (iesimBreak.getPlate().equals(plate.toLowerCase())) {
                 iesimBreak.setStop();
-                parkingSize -= iesimBreak.getVeicleType().toLowerCase() == "truck" ? 2 : 1;
+                parkingSize -= iesimBreak.getVeicleType().equals("truck") ? 2 : 1;
             }
         }
 
