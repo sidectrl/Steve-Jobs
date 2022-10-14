@@ -59,8 +59,8 @@ def test(S):
 
 def percentualeVaccinati(S):
     count = 0
-    for p in S:
-        if p["test"]:
+    for p in S: # sta prendendo le chiavi in S
+        if S[p]["test"]:
             count += 1
     return count/len(S)*100
 
