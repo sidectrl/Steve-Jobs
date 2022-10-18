@@ -59,10 +59,22 @@ def test(S):
 
 def percentualeVaccinati(S):
     count = 0
-    for p in S: # sta prendendo le chiavi in S
+    for p in S:  # sta prendendo le chiavi in S
         if S[p]["test"]:
             count += 1
     return count/len(S)*100
+
+
+def aggiungiPaziente(S, p):
+    S[max(S.keys())+1] = p
+
+
+def togliPaziente(S, chiavePaziente):
+    try:
+        S.pop(chiavePaziente)
+    except:
+        print("Chiave paziente sconosciuta")
+
 
 
 studio = {}
@@ -78,4 +90,8 @@ K = len(studio)//2  # // <-- divisione intere
 for i in range(K):
     test(studio)
 
-print("Il {}% dei pazienti è stato vaccinato".format(percentualeVaccinati(studio)))
+print("Il {}% dei pazienti è stato vaccinato".format(
+    percentualeVaccinati(studio)))
+
+aggiungiPaziente(studio, creaPaziente())
+
