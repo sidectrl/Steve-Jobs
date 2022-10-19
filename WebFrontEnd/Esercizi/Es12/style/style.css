@@ -1,0 +1,68 @@
+@media (min-width: 320px) {
+  .btnSign {
+    margin-bottom: 5%;
+  }
+  .btn {
+    color: white;
+    background-color: #2ade2a;
+    border-radius: 5%;
+  }
+  .navbar {
+    margin-bottom: 5%;
+  }
+  .navbar #brand {
+    font-size: 1.25rem;
+  }
+  .navbar a {
+    font-size: 0.9375rem;
+  }
+  body .container-fluid h1 {
+    font-size: 2.5rem;
+    width: 100%;
+  }
+  body h3 {
+    font-size: 1.25rem;
+    width: 100%;
+  }
+  body #green {
+    color: #2ade2a;
+  }
+  .img-card img {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .navbar #brand {
+    font-size: 2.1875rem;
+  }
+  .navbar a {
+    font-size: 1.5625rem;
+  }
+  body .container-fluid h1 {
+    font-size: 2.8125rem;
+  }
+  body .container-fluid h3 {
+    font-size: 1.4375rem;
+  }
+  body .container-fluid #green {
+    color: #2ade2a;
+  }
+}
+@media (min-width: 1440px) {
+  body {
+    margin: 0 auto;
+    width: 75%;
+  }
+  body .container-fluid h1 {
+    font-size: 3.4375rem;
+  }
+  body .container-fluid h3 {
+    font-size: 1.875rem;
+  }
+  body .container-fluid #green {
+    color: #2ade2a;
+  }
+  .btn {
+    font-size: 1.25rem;
+  }
+}/*# sourceMappingURL=style.css.map */
