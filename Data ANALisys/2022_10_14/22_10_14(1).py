@@ -95,3 +95,5 @@ print("Il {}% dei pazienti è stato vaccinato".format(
 
 aggiungiPaziente(studio, creaPaziente())
 
+print(studio)
+
