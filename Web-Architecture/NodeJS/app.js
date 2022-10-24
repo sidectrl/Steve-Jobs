@@ -12,9 +12,13 @@ app.get('/', (req, res) => {
 });
 
 app.put('/', (req, res) => {
-    counter = req.body.counter;
-    res.json({ message: "Hello world", counter: counter });
-    console.log(req.body);
+    if (req.body.counter >= 0) {
+        counter = req.body.counter;
+        console.log(req.body);
+        res.json({ message: "Hello world", counter: counter });
+    } else {
+        res.status(400).json({ message: "Errore" });
+    }
 
 });
 
