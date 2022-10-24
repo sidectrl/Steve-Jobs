@@ -17,7 +17,7 @@ app.put('/', (req, res) => {
         console.log(req.body);
         res.json({ message: "Hello world", counter: counter });
     } else {
-        res.status(400).json({ message: "Errore" });
+        res.status(400).json({ message: "The counters is negative!" });
     }
 
 });
