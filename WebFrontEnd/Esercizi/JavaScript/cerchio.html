@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+  <p>Java Exercises</p>
+  <form id="frm1" action="cerchio.html">
+    Valore del raggio: <input type="text" name="fname" id="raggioID" value="0"><br>
+    <input type="button" onclick="myFunction()" value="Submit"><br>
+    The area value is: <input type="number" id="area" value="0">
+    <br><select onchange="selectColor(this.value)" style="width: 280px; margin-top: 10px;" id="color">
+      <option selected="">Select the color</option>
+      <option value="red">Red</option>
+      <option value="blue">Blue</option>
+      <option value="green">Green</option>
+      <option value="yellow">Yellow</option>
+      <option value="black">Black</option>
+      <option value="brown">Brown</option>
+      <option value="grey">Grey</option>
+    </select>
+    <div style="width: 50px; height: 50px; background-color:blueviolet; margin-top: 10px;" id="square">
+    </div>
+  </form>
+
+  <script>
+    function myFunction() {
+      var raggio = document.getElementById("raggioID").value;
+      var area = 0;
+      if (raggio > 0 && !isNaN(raggio)) {
+        area = Math.pow(raggio, 2) * Math.PI;
+        document.getElementById("area").value = area;
+      }
+      else {
+        alert("Error, incorrect value");
+      }
+    }
+    function selectColor(color) {
+      document.getElementById("square").style.backgroundColor = color;
+    }
+  </script>
+
+</body>
+
+</html>

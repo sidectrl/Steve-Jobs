@@ -2,8 +2,6 @@ package Java;
 
 import java.util.Scanner;
 
-import EsParking.Car;
-
 public class mainProgram {
     public static void main(String[] args) {
 
