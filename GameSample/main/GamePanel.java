@@ -5,8 +5,7 @@ import java.awt.Graphics2D;
 import java.awt.Color;
 import java.awt.Dimension;
 import javax.swing.JPanel;
-
-import Entity.Player;
+import entity.Player;
 import tile.TileManager;
 
 public class GamePanel extends JPanel implements Runnable {
@@ -23,6 +22,12 @@ public class GamePanel extends JPanel implements Runnable {
     final int screenHeight = tileSize * maxScreenY;
     KeyHandler keyH = new KeyHandler();
     Thread gameThread;
+
+    // world map settings
+    private final int maxWorldCol = 50;
+    private final int maxWorldRow = 50;
+    private final int worldWidth = getTileSize() * maxWorldCol;
+    private final int worldHeight = getTileSize() * maxWorldRow;
 
     // FPS
     int FPS = 60;
@@ -49,6 +54,7 @@ public class GamePanel extends JPanel implements Runnable {
         player.update();
     }
 
+    @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
         Graphics2D g2 = (Graphics2D) g; // Graphics2D class extends the Graphics class to provide more sophisticated
@@ -95,7 +101,7 @@ public class GamePanel extends JPanel implements Runnable {
 
     @Override
     public void run() {
-        double drawInterval = 1000000000 / FPS;
+        double drawInterval = (double) 1000000000 / (double) FPS;
         double delta = 0; // current time + drawInterval
         long lastTime = System.nanoTime();
         long currentTime;
@@ -123,7 +129,55 @@ public class GamePanel extends JPanel implements Runnable {
         }
     }
 
+    public int getMaxScreenX() {
+        return maxScreenX;
+    }
+
+    public int getMaxScreenY() {
+        return maxScreenY;
+    }
+
     public int getTileSize() {
         return this.tileSize;
+    }
+
+    public int getScreenWidth() {
+        return this.screenWidth;
+    }
+
+    public int getScreenHeight() {
+        return this.screenWidth;
+    }
+
+    public int getWorldHeight() {
+        return worldHeight;
+    }
+
+    public int getWorldWidth() {
+        return worldWidth;
+    }
+
+    public int getMaxWorldCol() {
+        return this.maxWorldCol;
+    }
+
+    public int getMaxWorldRow() {
+        return this.maxWorldRow;
+    }
+
+    public int getPlayerWorldX() {
+        return this.player.getWorldX();
+    }
+
+    public int getPlayerWorldY() {
+        return this.player.getWorldY();
+    }
+
+    public int getPlayerScreenX() {
+        return this.player.getScreenX();
+    }
+
+    public int getPlayerScreenY() {
+        return this.player.getScreenY();
     }
 }

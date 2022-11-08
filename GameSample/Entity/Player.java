@@ -1,4 +1,5 @@
-package Entity;
+package entity;
+
 import java.awt.Graphics2D;
 import javax.imageio.ImageIO;
 import main.GamePanel;
@@ -9,10 +10,14 @@ import java.awt.image.BufferedImage;
 public class Player extends Entity {
     protected GamePanel gp;
     protected KeyHandler keyH;
+    protected final int screenX;
+    protected final int screenY;
 
     public Player(GamePanel gp, KeyHandler keyH) {
         this.gp = gp;
         this.keyH = keyH;
+        screenX = gp.getScreenWidth() / 2 - (gp.getTileSize() / 2);
+        screenY = gp.getScreenHeight() / 2 - gp.getTileSize() / 2;
         setDefaultValue();
         getPlayerImage();
     }
@@ -33,25 +38,25 @@ public class Player extends Entity {
     }
 
     public void setDefaultValue() {
-        x = 100;
-        y = 100;
+        worldX = gp.getTileSize() * 23;
+        worldY = gp.getTileSize() * 21;
         speed = 4;
         direction = "down";
     }
 
     public void update() {
         if (keyH.upPressed || keyH.downPressed || keyH.leftPressed || keyH.rightPressed) {
-            if (keyH.upPressed == true) {
-                y -= speed; // x values incarses to the right, y incarses as the go down
+            if (keyH.upPressed) {
+                worldY -= speed; // x values incarses to the right, y incarses as the go down
                 direction = "up";
-            } else if (keyH.downPressed == true) {
-                y += speed;
+            } else if (keyH.downPressed) {
+                worldY += speed;
                 direction = "down";
-            } else if (keyH.leftPressed == true) {
-                x -= speed;
+            } else if (keyH.leftPressed) {
+                worldX -= speed;
                 direction = "left";
-            } else if (keyH.rightPressed == true) {
-                x += speed;
+            } else if (keyH.rightPressed) {
+                worldX += speed;
                 direction = "right";
             }
 
@@ -107,7 +112,16 @@ public class Player extends Entity {
                     image = right2;
                 }
                 break;
+            default:
+                break;
         }
-        g2.drawImage(image, x, y, gp.getTileSize(), gp.getTileSize(), null);
+        g2.drawImage(image, this.screenX, this.screenY, gp.getTileSize(), gp.getTileSize(), null);
+    }
+
+    public int getScreenX(){
+        return this.screenX;
+    }
+    public int getScreenY(){
+        return this.screenY;
     }
 }
