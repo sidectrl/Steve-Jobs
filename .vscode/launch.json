@@ -13,6 +13,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch FirstGUI",
+            "request": "launch",
+            "mainClass": "FirstGUI.FirstGUI",
+            "projectName": "Steve-Jobs_91b24605"
+        },
+        {
+            "type": "java",
+            "name": "Launch FirstGUI",
+            "request": "launch",
+            "mainClass": "FirstGUI",
+            "projectName": "Steve-Jobs_91b24605"
+        },
+        {
+            "type": "java",
+            "name": "Launch main",
+            "request": "launch",
+            "mainClass": "main",
+            "projectName": "Steve-Jobs_91b24605"
+        },
+        {
+            "type": "java",
             "name": "Launch MainParking",
             "request": "launch",
             "mainClass": "MainParking",
