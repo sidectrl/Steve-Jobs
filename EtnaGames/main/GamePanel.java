@@ -1,6 +1,5 @@
 package main;
 
-
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Color;
@@ -8,6 +7,7 @@ import java.awt.Dimension;
 import javax.swing.JPanel;
 
 import Entity.Player;
+import tile.TileManager;
 
 public class GamePanel extends JPanel implements Runnable {
 
@@ -26,7 +26,7 @@ public class GamePanel extends JPanel implements Runnable {
 
     // FPS
     int FPS = 60;
-
+    TileManager tileM = new TileManager(this);
     Player player = new Player(this, keyH);
     // #region Player information
 
@@ -54,9 +54,11 @@ public class GamePanel extends JPanel implements Runnable {
         Graphics2D g2 = (Graphics2D) g; // Graphics2D class extends the Graphics class to provide more sophisticated
                                         // control over geometry, coordinate transformations, color management, and text
                                         // layout
+        tileM.draw(g2);
         player.draw(g2);
         g2.dispose(); // Dispose of this graphics context and release any system resources that it is
                       // using
+
     }
 
     /*
@@ -121,7 +123,7 @@ public class GamePanel extends JPanel implements Runnable {
         }
     }
 
-    public int getTileSize(){
+    public int getTileSize() {
         return this.tileSize;
     }
 }

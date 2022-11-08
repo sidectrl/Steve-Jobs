@@ -1,7 +1,6 @@
 package tile;
 import javax.imageio.ImageIO;
 import java.awt.Graphics2D;
-import javafx.scene.canvas.GraphicsContext;
 import main.GamePanel;
 
 public class TileManager {
@@ -29,5 +28,7 @@ public class TileManager {
     }
     public void draw(Graphics2D g2){
         g2.drawImage(tile[0].image, 0, 0, gp.getTileSize(), gp.getTileSize(), null);
+        g2.drawImage(tile[1].image, 1, 0, gp.getTileSize(), gp.getTileSize(), null);
+        g2.drawImage(tile[2].image, 1, 0, gp.getTileSize(), gp.getTileSize(), null);
     }
 }
