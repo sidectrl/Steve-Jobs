@@ -1,8 +1,9 @@
-package FirstGUI;
+package main;
+
 
 import javax.swing.JFrame;
 
-public class FirstGUI {
+public class Main {
     public static void main(String[] args) {
         // #region settingWindow
         JFrame window = new JFrame();

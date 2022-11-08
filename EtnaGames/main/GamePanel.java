@@ -1,4 +1,5 @@
-package FirstGUI;
+package main;
+
 
 import java.awt.Graphics;
 import java.awt.Graphics2D;
@@ -6,7 +7,7 @@ import java.awt.Color;
 import java.awt.Dimension;
 import javax.swing.JPanel;
 
-import entity.Player;
+import Entity.Player;
 
 public class GamePanel extends JPanel implements Runnable {
 
@@ -28,10 +29,6 @@ public class GamePanel extends JPanel implements Runnable {
 
     Player player = new Player(this, keyH);
     // #region Player information
-    // Set player's position
-    int playerX = 100;
-    int playerY = 100;
-    int playerSpeed = 4;
 
     // #endregion
 

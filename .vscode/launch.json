@@ -13,6 +13,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "main.Main",
+            "projectName": "Steve-Jobs_91b24605"
+        },
+        {
+            "type": "java",
             "name": "Launch FirstGUI",
             "request": "launch",
             "mainClass": "FirstGUI.FirstGUI",
