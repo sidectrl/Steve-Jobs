@@ -1,0 +1,15 @@
+C:\xampp\htdocs\Università\Steve-Jobs\Programmazione_2\EsempioHelloWorld\EsempioHelloWorld\bin\Debug\net6.0\EsempioHelloWorld.exe
+C:\xampp\htdocs\Università\Steve-Jobs\Programmazione_2\EsempioHelloWorld\EsempioHelloWorld\bin\Debug\net6.0\EsempioHelloWorld.deps.json
+C:\xampp\htdocs\Università\Steve-Jobs\Programmazione_2\EsempioHelloWorld\EsempioHelloWorld\bin\Debug\net6.0\EsempioHelloWorld.runtimeconfig.json
+C:\xampp\htdocs\Università\Steve-Jobs\Programmazione_2\EsempioHelloWorld\EsempioHelloWorld\bin\Debug\net6.0\EsempioHelloWorld.dll
+C:\xampp\htdocs\Università\Steve-Jobs\Programmazione_2\EsempioHelloWorld\EsempioHelloWorld\bin\Debug\net6.0\EsempioHelloWorld.pdb
+C:\xampp\htdocs\Università\Steve-Jobs\Programmazione_2\EsempioHelloWorld\EsempioHelloWorld\obj\Debug\net6.0\EsempioHelloWorld.csproj.AssemblyReference.cache
+C:\xampp\htdocs\Università\Steve-Jobs\Programmazione_2\EsempioHelloWorld\EsempioHelloWorld\obj\Debug\net6.0\EsempioHelloWorld.GeneratedMSBuildEditorConfig.editorconfig
+C:\xampp\htdocs\Università\Steve-Jobs\Programmazione_2\EsempioHelloWorld\EsempioHelloWorld\obj\Debug\net6.0\EsempioHelloWorld.AssemblyInfoInputs.cache
+C:\xampp\htdocs\Università\Steve-Jobs\Programmazione_2\EsempioHelloWorld\EsempioHelloWorld\obj\Debug\net6.0\EsempioHelloWorld.AssemblyInfo.cs
+C:\xampp\htdocs\Università\Steve-Jobs\Programmazione_2\EsempioHelloWorld\EsempioHelloWorld\obj\Debug\net6.0\EsempioHelloWorld.csproj.CoreCompileInputs.cache
+C:\xampp\htdocs\Università\Steve-Jobs\Programmazione_2\EsempioHelloWorld\EsempioHelloWorld\obj\Debug\net6.0\EsempioHelloWorld.dll
+C:\xampp\htdocs\Università\Steve-Jobs\Programmazione_2\EsempioHelloWorld\EsempioHelloWorld\obj\Debug\net6.0\refint\EsempioHelloWorld.dll
+C:\xampp\htdocs\Università\Steve-Jobs\Programmazione_2\EsempioHelloWorld\EsempioHelloWorld\obj\Debug\net6.0\EsempioHelloWorld.pdb
+C:\xampp\htdocs\Università\Steve-Jobs\Programmazione_2\EsempioHelloWorld\EsempioHelloWorld\obj\Debug\net6.0\EsempioHelloWorld.genruntimeconfig.cache
+C:\xampp\htdocs\Università\Steve-Jobs\Programmazione_2\EsempioHelloWorld\EsempioHelloWorld\obj\Debug\net6.0\ref\EsempioHelloWorld.dll

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>EsempioHelloWorld</id>
+    <version>1.0.0</version>
+    <authors>EsempioHelloWorld</authors>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework="net6.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\xampp\htdocs\Università\Steve-Jobs\Programmazione_2\EsempioHelloWorld\EsempioHelloWorld\bin\Debug\net6.0\EsempioHelloWorld.runtimeconfig.json" target="lib\net6.0\EsempioHelloWorld.runtimeconfig.json" />
+    <file src="C:\xampp\htdocs\Università\Steve-Jobs\Programmazione_2\EsempioHelloWorld\EsempioHelloWorld\bin\Debug\net6.0\EsempioHelloWorld.dll" target="lib\net6.0\EsempioHelloWorld.dll" />
+  </files>
+</package>
