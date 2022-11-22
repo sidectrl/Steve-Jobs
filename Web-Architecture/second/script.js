@@ -1,4 +1,4 @@
-var posts = [{
+let posts = [{
     post1: {
         name: "pippo",
         surname: "yamato",

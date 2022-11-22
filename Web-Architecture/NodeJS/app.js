@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-var counter = 0;
+let counter = 0;
 
 
 app.get('/', (req, res) => {
