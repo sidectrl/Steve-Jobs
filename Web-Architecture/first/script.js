@@ -1,6 +1,6 @@
-var x = 2;
-var y = 3;
-var z = sum(x, y)
+let x = 2;
+let y = 3;
+let z = sum(x, y)
 
 console.log(z);
 function sum(a, b) {
@@ -11,7 +11,7 @@ function sum(a, b) {
     console.log("dio cane");
 })()
 
-var user = {
+let user = {
     name: 'carlo',
     surname: 'esposito',
     address: {
