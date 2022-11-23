@@ -1,0 +1,14 @@
+{
+    "python.testing.pytestArgs": [
+        "Data_ANALisys"
+    ],
+    "python.testing.unittestEnabled": true,
+    "python.testing.pytestEnabled": false,
+    "python.testing.unittestArgs": [
+        "-v",
+        "-s",
+        "./Data_ANALisys",
+        "-p",
+        "test*.py"
+    ]
+}
