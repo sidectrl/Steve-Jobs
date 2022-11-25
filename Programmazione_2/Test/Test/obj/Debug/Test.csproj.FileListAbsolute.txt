@@ -1,0 +1,11 @@
+C:\xampp\htdocs\Università\Steve-Jobs\Programmazione_2\Test\Test\bin\Debug\Test.exe.config
+C:\xampp\htdocs\Università\Steve-Jobs\Programmazione_2\Test\Test\bin\Debug\Test.exe
+C:\xampp\htdocs\Università\Steve-Jobs\Programmazione_2\Test\Test\bin\Debug\Test.pdb
+C:\xampp\htdocs\Università\Steve-Jobs\Programmazione_2\Test\Test\obj\Debug\Test.csproj.AssemblyReference.cache
+C:\xampp\htdocs\Università\Steve-Jobs\Programmazione_2\Test\Test\obj\Debug\Test.csproj.SuggestedBindingRedirects.cache
+C:\xampp\htdocs\Università\Steve-Jobs\Programmazione_2\Test\Test\obj\Debug\Test.Form1.resources
+C:\xampp\htdocs\Università\Steve-Jobs\Programmazione_2\Test\Test\obj\Debug\Test.Properties.Resources.resources
+C:\xampp\htdocs\Università\Steve-Jobs\Programmazione_2\Test\Test\obj\Debug\Test.csproj.GenerateResource.cache
+C:\xampp\htdocs\Università\Steve-Jobs\Programmazione_2\Test\Test\obj\Debug\Test.csproj.CoreCompileInputs.cache
+C:\xampp\htdocs\Università\Steve-Jobs\Programmazione_2\Test\Test\obj\Debug\Test.exe
+C:\xampp\htdocs\Università\Steve-Jobs\Programmazione_2\Test\Test\obj\Debug\Test.pdb
