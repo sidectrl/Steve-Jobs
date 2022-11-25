@@ -1,5 +1,5 @@
 distretto,mese,giorno,ora,veicolo,genere,età,esito
-2,1,7,0,Autobus,M,42,Ferit lleu
+2,1,7,0,Autobus,,420,Ferit lleu
 5,1,11,0,Autobus,M,38,Ferit lleu
 8,9,27,0,Autobus,M,45,Ferit lleu
 4,12,24,0,Autobus,M,34,Ferit lleu
