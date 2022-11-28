@@ -1,0 +1,11 @@
+{
+  "name": "dice-francesco-limonelli",
+  "version": "1.0.1",
+  "description": "A sample dice lunch",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "limonellifrancesco@gmail.com",
+  "license": "MIT"
+}

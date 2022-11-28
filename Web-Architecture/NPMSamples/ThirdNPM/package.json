@@ -1,0 +1,19 @@
+{
+  "name": "dice-throw-risiko-limonelli-francesco",
+  "version": "1.0.0",
+  "description": "A sample risiko throw dice",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "dice",
+    "throw",
+    "risiko"
+  ],
+  "author": "limonellifrancesco@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "dice-francesco-limonelli": "^1.0.1"
+  }
+}
