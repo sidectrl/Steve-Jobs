@@ -1,0 +1,17 @@
+{
+  "name": "french-deck-limonelli-francesco",
+  "version": "1.0.0",
+  "description": "a sample of french deck",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "deck",
+    "french-deck",
+    "french",
+    "cards"
+  ],
+  "author": "limonellifrancesco@gmail.com",
+  "license": "MIT"
+}
