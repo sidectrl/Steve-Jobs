@@ -22,4 +22,3 @@ const play = (player1: PossibleChoices, player2 : PossibleChoices = computerChoi
         return "Game Over";
     }
 }
-console.log(play("paper"));

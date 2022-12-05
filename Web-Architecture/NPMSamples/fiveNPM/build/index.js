@@ -21,4 +21,3 @@ const play = (player1, player2 = computerChoices.sort(() => 0.5 - Math.random())
         return "Game Over";
     }
 };
-console.log(play("paper"));
