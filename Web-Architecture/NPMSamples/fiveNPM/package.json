@@ -1,0 +1,12 @@
+{
+  "name": "fivenpm",
+  "version": "1.0.0",
+  "description": "five sample npm",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsc && node ./build/index.js"
+  },
+  "author": "limonellifrancesco@gmail.com",
+  "license": "MIT"
+}
