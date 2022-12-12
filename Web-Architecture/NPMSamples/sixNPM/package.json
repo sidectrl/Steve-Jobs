@@ -1,0 +1,19 @@
+{
+  "name": "word-guesser-limonelli-francesco",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsc && node ./build/index.js"
+  },
+  "author": "limonellifrancesco@gmail.com",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^18.11.13"
+  },
+  "dependencies": {
+    "prompt-sync": "^4.2.0",
+    "random-italian-names": "^1.1.0"
+  }
+}
