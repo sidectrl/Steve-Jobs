@@ -23,10 +23,11 @@ cali sono “slittate” ciclicamente di k posti in avanti nell’elenco delle v
 
 I caratteri siano tutti minuscoli.
 """
-vocals = "aeiou"
+
 
 
 def cifraVocali(s, k):
+    vocals = "aeiou"
     new_string = ""
     for iesim in s:
         if (vocals.__contains__(iesim)):
