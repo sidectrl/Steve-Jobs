@@ -5,21 +5,27 @@ import uniqid from 'uniqid';
 const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+/*type Message = { author: string; text: string };
+type Chat = { name: string; id: string; messages: Message[] };
+
+const chats: Chat[] = [];*/
 const chats = [
     {
         id: '1',
         name: 'family del cuore',
-        texts: [{ author: "franco", text: "ciao, come stai?" }]
+        messages: [{ author: "franco", text: "ciao, come stai?" },
+        { author: "barbara", text: "io bene, tu?" },
+        { author: "alfredo", text: "wee ciaoo carusi" }]
     },
     {
         id: '2',
         name: 'calcetto',
-        texts: [{ author: "pippo", text: "ciao, calcettoo?" }]
+        messages: [{ author: "pippo", text: "ciao, calcettoo?" }]
     },
     {
         id: '3',
         name: 'jessico calcetto',
-        texts: [{ author: "alfredo", text: "uorzonataaa?!" }]
+        messages: [{ author: "alfredo", text: "uorzonataaa?!" }]
     }
 ].map((item) => ({ ...item, id: uniqid() }));
 
@@ -28,13 +34,32 @@ app.get('/', (req, res) => {
 });
 
 app.get('/chats', (req, res) => {
-    res.json(chats);
+    if (req.query.name) {
+        res.json(chats.filter(chat => chat.name.toLowerCase().includes(String(req.query.name).toLowerCase())));
+    }
+    else {
+        res.json(chats);
+    }
 });
 
 app.get('/chats/:id', (req, res) => {
-    const chat = res.json(chats.find(chat => chat.id == req.params.id));
+    const chat = chats.find(chat => chat.id == req.params.id);
     if (chat) {
-        res.json(chat);
+        res.json(chat)
+    }
+    else {
+        res.status(404).json({ text: "Chat not found" });
+    }
+});
+
+app.get('/chats/:id/messages', (req, res) => {
+    const chat = chats.find(chat => chat.id == req.params.id);
+    if (chat) {
+        if (req.query.text) {
+            res.json(chat.messages.filter(message => message.text.toLowerCase().includes(String(req.query.text).toLowerCase())));
+        } else {
+            res.json(chat.messages)
+        }
     }
     else {
         res.status(404).json({ text: "Chat not found" });
@@ -44,15 +69,15 @@ app.get('/chats/:id', (req, res) => {
 app.post('/chats', (req, res) => {
     chats.push(req.body)
     const { name } = req.body;
-    chats.push({ name, id: uniqid(), texts: [] });
+    chats.push({ name, id: uniqid(), messages: [] });
     res.json(chats);
-
 });
-app.post('/chats/:id/texts', (req, res) => {
+
+app.post('/chats/:id/messages', (req, res) => {
     const { author, text } = req.body;
     const chat = chats.find(chat => chat.id === req.params.id);
     if (chat) {
-        chat.texts.push({author, text});
+        chat.messages.push({ author, text });
     }
     else {
         res.status(404).json({ text: "Chat not found" });
