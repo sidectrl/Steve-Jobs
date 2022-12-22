@@ -1,0 +1,15 @@
+C:\xampp\htdocs\Università\Steve-Jobs\Programmazione_2\21-12-2022\21-12-2022\bin\Debug\net6.0\21-12-2022.exe
+C:\xampp\htdocs\Università\Steve-Jobs\Programmazione_2\21-12-2022\21-12-2022\bin\Debug\net6.0\21-12-2022.deps.json
+C:\xampp\htdocs\Università\Steve-Jobs\Programmazione_2\21-12-2022\21-12-2022\bin\Debug\net6.0\21-12-2022.runtimeconfig.json
+C:\xampp\htdocs\Università\Steve-Jobs\Programmazione_2\21-12-2022\21-12-2022\bin\Debug\net6.0\21-12-2022.dll
+C:\xampp\htdocs\Università\Steve-Jobs\Programmazione_2\21-12-2022\21-12-2022\bin\Debug\net6.0\21-12-2022.pdb
+C:\xampp\htdocs\Università\Steve-Jobs\Programmazione_2\21-12-2022\21-12-2022\obj\Debug\net6.0\21-12-2022.csproj.AssemblyReference.cache
+C:\xampp\htdocs\Università\Steve-Jobs\Programmazione_2\21-12-2022\21-12-2022\obj\Debug\net6.0\21-12-2022.GeneratedMSBuildEditorConfig.editorconfig
+C:\xampp\htdocs\Università\Steve-Jobs\Programmazione_2\21-12-2022\21-12-2022\obj\Debug\net6.0\21-12-2022.AssemblyInfoInputs.cache
+C:\xampp\htdocs\Università\Steve-Jobs\Programmazione_2\21-12-2022\21-12-2022\obj\Debug\net6.0\21-12-2022.AssemblyInfo.cs
+C:\xampp\htdocs\Università\Steve-Jobs\Programmazione_2\21-12-2022\21-12-2022\obj\Debug\net6.0\21-12-2022.csproj.CoreCompileInputs.cache
+C:\xampp\htdocs\Università\Steve-Jobs\Programmazione_2\21-12-2022\21-12-2022\obj\Debug\net6.0\21-12-2022.dll
+C:\xampp\htdocs\Università\Steve-Jobs\Programmazione_2\21-12-2022\21-12-2022\obj\Debug\net6.0\refint\21-12-2022.dll
+C:\xampp\htdocs\Università\Steve-Jobs\Programmazione_2\21-12-2022\21-12-2022\obj\Debug\net6.0\21-12-2022.pdb
+C:\xampp\htdocs\Università\Steve-Jobs\Programmazione_2\21-12-2022\21-12-2022\obj\Debug\net6.0\21-12-2022.genruntimeconfig.cache
+C:\xampp\htdocs\Università\Steve-Jobs\Programmazione_2\21-12-2022\21-12-2022\obj\Debug\net6.0\ref\21-12-2022.dll
