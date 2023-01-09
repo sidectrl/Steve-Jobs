@@ -4,7 +4,7 @@ export type Review = {
     author: string;
 }
 
-type Movie = {
+export type Movie = {
     id : string;
     name : string;
     duration : number;
