@@ -19,5 +19,9 @@
 };*/
 export const findOdd = (xs: number[]): number => {
   // happy coding!
+
+  
   return xs.reduce((a,b)=> a^b);
 };
+
+console.log(2^3)

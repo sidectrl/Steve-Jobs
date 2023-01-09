@@ -25,3 +25,4 @@ const findOdd = (xs) => {
     return xs.reduce((a, b) => a ^ b);
 };
 exports.findOdd = findOdd;
+console.log(2 ^ 3);
