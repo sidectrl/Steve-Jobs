@@ -2,17 +2,12 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.rgb = void 0;
 function rgb(r, g, b) {
-    return (r.toString(16).padStart(2, '0') + g.toString(16).padStart(2, '0') + b.toString(16).padStart(2, '0'));
-    /*if (hex.length == 6) {
-        return hex;
-    }
-    else {
-        for (let i = hex.length; i < 6; i++) {
-            hex += 0
-        }
-        return hex;
-    }*/
-    //let dummy = hex ? hex.length <6 : 0 for (let i=0; i<= 6 - hex.length; i++);
+    r = clamp(r, 0, 255);
+    g = clamp(g, 0, 255);
+    b = clamp(b, 0, 255);
+    return (r.toString(16).padStart(2, '0') + g.toString(16).padStart(2, '0') + b.toString(16).padStart(2, '0')).toUpperCase();
 }
 exports.rgb = rgb;
-console.log(rgb(0, 0, 0));
+function clamp(value, min, max) {
+    return Math.max(min, Math.min(value, max));
+}

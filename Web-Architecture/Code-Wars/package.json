@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "tsc && mocha ./build/tests/test1.js",
+    "test": "tsc && mocha ./build/tests/test4.js",
     "start": "tsc && node ./build/solution1.js"
   },
   "keywords": [],
