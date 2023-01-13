@@ -1,38 +1,38 @@
 import { Scooter } from "../models/Scooter";
-const shortid = require('shortid');
+import shortid from 'shortid';
 export const scooters: Scooter[] = [
     {
         id: shortid.generate(),
-        lat: 120,
-        long: 316,
+        lat: 12.312030,
+        long: 16.12309,
         busy: false,
         battery: 100,
     },
     {
         id: shortid.generate(),
-        lat: 50,
-        long: 27,
+        lat: 5.12309,
+        long: 27.12039,
         busy: false,
         battery: 69,
     },
     {
         id: shortid.generate(),
-        lat: 300,
-        long: 269,
+        lat: 30.103912,
+        long: 10.1023129,
         busy: false,
         battery: 90,
     },
     {
         id: shortid.generate(),
-        lat: 89,
-        long: 690,
+        lat: 8.91023,
+        long: 6.91293,
         busy: false,
         battery: 10,
     },
     {
         id: shortid.generate(),
-        lat: 118,
-        long: 911,
+        lat: 11.81239,
+        long: 9.11239,
         busy: false,
         battery: 2,
     },

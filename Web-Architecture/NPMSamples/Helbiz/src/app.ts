@@ -1,19 +1,17 @@
 import express from 'express';
 import { scooters } from './data/scooter';
-import { distance } from './utility/distance';
+import { Scooter } from './models/Scooter';
+import { books } from './data/books';
+import { router as scooterApi} from './routes/scooters';
+import bodyParser from 'body-parser';
 const app = express();
 app.get("/scooters", (req, res) => {
-    console.log(req.query);
-    const myLat = Number(req.query.myLat) as number;
-    const myLong = Number(req.query.myLong) as number;
-    const maxRange = Number(req.query.maxRang) as number;
-    if (myLat && myLong && maxRange) {
-        res.json(scooters.filter((scooter => distance(scooter.long, scooter.lat,myLong, myLat) <= maxRange)));
-    }
-    else {
-        res.json(scooters)
-    }
+
 });
+
+app.use("/scooters", scooterApi);
+
+app.use(bodyParser.json());
 
 app.listen(3000, () => {
     console.log("Server is running");

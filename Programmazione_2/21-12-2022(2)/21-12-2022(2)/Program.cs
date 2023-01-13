@@ -4,8 +4,6 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        var name = "";
-        DateTime age;
         /*
          * Esercizio
             implementare un programma che chiede all’utente il suo
@@ -15,21 +13,26 @@ internal class Program
             essere implementato in modo tale da funzionare correttamente in
             qualsiasi anno
          */
-        Console.WriteLine("Inserisci nome e data di nascita");
-        var input = Console.ReadLine().Split(' ');
-        age = DateTime.Parse(input[1]);
-        if (input.Length == 2)
+        // Chiedi all'utente il suo nome
+        Console.Write("Inserisci il tuo nome: ");
+        string nome = Console.ReadLine();
+
+        // Chiedi all'utente la sua data di nascita
+        Console.Write("Inserisci la tua data di nascita (gg/mm/aaaa): ");
+        DateTime dataNascita = DateTime.Parse(Console.ReadLine());
+
+        // Calcola l'età dell'utente
+        int eta = DateTime.Now.Year - dataNascita.Year;
+        if (DateTime.Now < dataNascita.AddYears(eta))
         {
-            Console.WriteLine($"Hi {input[0]}, your age is {getAge(age)}, your birthday is in {getDaysToBirth(age)} days");
+            eta--;
         }
-        Console.ReadKey();
-    }
-    public static int getAge(DateTime birthday)
-    {
-        return Convert.ToInt32(DateTime.Now.Year - birthday.Year);
-    }
-    public static int getDaysToBirth(DateTime birthday)
-    {
-        return 1;
+
+        // Calcola i giorni mancanti al prossimo compleanno
+        DateTime dataProssimoCompleanno = dataNascita.AddYears(eta + 1);
+        TimeSpan giorniMancanti = dataProssimoCompleanno - DateTime.Now;
+
+        // Saluta l'utente
+        Console.WriteLine($"Ciao, {nome}! Oggi hai {eta} anni e mancano {giorniMancanti.Days} giorni al tuo prossimo compleanno.");
     }
 }

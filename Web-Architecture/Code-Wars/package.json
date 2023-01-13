@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "tsc && test ./build/tests/test1.js"
+    "test": "tsc && mocha ./build/tests/test1.js",
+    "start": "tsc && node ./build/solution1.js"
   },
   "keywords": [],
   "author": "limonellifrancesco@gmail.com",
