@@ -1,8 +1,6 @@
 export type Scooter = {
-    id: string;
-    lat: number;
-    long: number;
-    busy: boolean;
-    battery: number;
-    bookId?: string;
-}
+  id: string;
+  lat: number;
+  long: number;
+  bookId?: string;
+};

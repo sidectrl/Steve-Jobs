@@ -1,6 +1,8 @@
 import { Router } from "express";
+import { books } from "../data/books";
+
 export const router = Router();
 
-router.get('/', (req, res) => {
-    
-})
+router.get("/", (_, res) => {
+  res.json(books);
+});
