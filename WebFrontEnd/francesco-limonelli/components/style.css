@@ -1,0 +1,77 @@
+@import url("./fonts/fonts.css");
+.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0; /* remove the gap so it doesn't close */
+}
+
+.carousel-indicators li {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+}
+
+@media (min-width: 320px) {
+  .navbar-brand img {
+    height: 2.25rem;
+  }
+  .container .carousel .carousel-item .carousel-caption h1 {
+    font-family: "Jost";
+    font-size: 2.875rem;
+  }
+  .container .carousel .carousel-item .carousel-caption p {
+    font-family: "Muli";
+    font-weight: bold;
+    font-size: 0.6875rem;
+  }
+  .container .carousel img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 32.8125rem;
+  }
+  .job {
+    margin: 78px 0 93px;
+  }
+  .job article {
+    width: 80%;
+  }
+  .job article h1 {
+    font-family: "Jost", sans-serif;
+    font-size: 1.5625rem;
+  }
+  .job article p {
+    font-family: "Muli", sans-serif;
+    font-size: 1rem;
+  }
+  .circle-container {
+    width: 20%;
+    height: 100%;
+    margin-right: 25px;
+  }
+  .circle {
+    font-size: 1.375rem;
+    background-color: #ffdd00;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+  }
+  .team-or-individuals {
+    width: 100%;
+  }
+  .team-or-individuals .shape {
+    background-color: #ffdd00;
+    width: calc(100% - 30px);
+    transition: all 1s;
+    padding: 0;
+  }
+  .team-or-individuals .shape img {
+    max-width: 100%;
+    transform: translate(20px, -20px);
+    transition: all 1s;
+  }
+  .team-or-individuals .shape:hover {
+    transform: translate(20px, -20px);
+  }
+  .team-or-individuals img:hover {
+    transform: translate(-20px, 20px);
+  }
+}/*# sourceMappingURL=style.css.map */
