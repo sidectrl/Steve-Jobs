@@ -1,46 +1,52 @@
 @import url("./fonts/fonts.css");
-.dropdown:hover .dropdown-menu {
-  display: block;
-  margin-top: 0; /* remove the gap so it doesn't close */
-}
-
-.carousel-indicators li {
-  width: 10px;
-  height: 10px;
-  border-radius: 100%;
+body {
+  max-width: 90%;
 }
 
 @media (min-width: 320px) {
+  .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; /* remove the gap so it doesn't close */
+  }
+  h1 {
+    font-family: "Jost", sans-serif;
+  }
+  p {
+    font-family: "Muli", sans-serif;
+    font-size: 1rem;
+    color: #777777;
+  }
+  .subtitle {
+    color: #ef4623;
+  }
   .navbar-brand img {
     height: 2.25rem;
   }
-  .container .carousel .carousel-item .carousel-caption h1 {
+  .carousel1-container .carousel-item .carousel-caption {
+    top: 10%;
+  }
+  .carousel1-container .carousel-item .carousel-caption h1 {
     font-family: "Jost";
     font-size: 2.875rem;
   }
-  .container .carousel .carousel-item .carousel-caption p {
+  .carousel1-container .carousel-item .carousel-caption p {
     font-family: "Muli";
     font-weight: bold;
     font-size: 0.6875rem;
   }
-  .container .carousel img {
+  .carousel1-container img {
     -o-object-fit: cover;
        object-fit: cover;
     height: 32.8125rem;
   }
-  .job {
+  .Find-Choose-Start {
     margin: 78px 0 93px;
   }
-  .job article {
+  .Find-Choose-Start article {
     width: 80%;
   }
-  .job article h1 {
-    font-family: "Jost", sans-serif;
+  .Find-Choose-Start article h1 {
     font-size: 1.5625rem;
-  }
-  .job article p {
-    font-family: "Muli", sans-serif;
-    font-size: 1rem;
   }
   .circle-container {
     width: 20%;
@@ -56,22 +62,81 @@
   }
   .team-or-individuals {
     width: 100%;
+    background-color: #e5e5e5;
   }
-  .team-or-individuals .shape {
+  .team-or-individuals .shape-container {
+    padding: 50px 20px 40px;
+  }
+  .team-or-individuals .shape-container .shape {
     background-color: #ffdd00;
     width: calc(100% - 30px);
     transition: all 1s;
-    padding: 0;
   }
-  .team-or-individuals .shape img {
+  .team-or-individuals .shape-container .shape img {
     max-width: 100%;
     transform: translate(20px, -20px);
     transition: all 1s;
   }
-  .team-or-individuals .shape:hover {
+  .team-or-individuals .shape-container .shape:hover {
     transform: translate(20px, -20px);
   }
-  .team-or-individuals img:hover {
+  .team-or-individuals .shape-container img:hover {
     transform: translate(-20px, 20px);
+  }
+  .team-or-individuals h1 {
+    font-size: 2.6875rem;
+  }
+  .team-or-individuals .button-container {
+    padding-top: 38px;
+    padding-bottom: 50px;
+  }
+  .team-or-individuals .button-container .btn {
+    height: 3.25rem;
+    width: 9.125rem;
+  }
+  .best-place {
+    padding-top: 95px;
+  }
+  .best-place .card__container1 .card__title h1 {
+    font-size: 2.125rem;
+  }
+  .best-place .card__container1 .card__paragraph p {
+    font-size: 1.1875rem;
+  }
+  .best-place .element__container .img__container {
+    width: 100%;
+  }
+  .best-place .element__container .card__container .card__title {
+    margin-top: 25px;
+  }
+  .best-place .element__container .card__container .card__title h1 {
+    font-size: 1.25rem;
+  }
+  .about-us {
+    padding: 92px 0 96px;
+  }
+  .about-us .carousel-inner {
+    padding: 99px 0 93px;
+    background-color: #2a3cb7;
+  }
+  .about-us .carousel-inner .carousel-item {
+    color: white;
+    padding: 0 48px 60px;
+  }
+  .about-us .carousel-inner .carousel-item h1 {
+    margin: 0 0 30px;
+    font-size: 2.125rem;
+  }
+  .about-us .carousel-inner .carousel-item .author-name {
+    font-size: 1.1875rem;
+    color: white;
+  }
+  .about-us .carousel-inner .carousel-item .author-job {
+    color: white;
+    font-size: 0.6875rem;
+  }
+  footer a {
+    color: #777777;
+    text-decoration: none;
   }
 }/*# sourceMappingURL=style.css.map */
