@@ -1,9 +1,22 @@
 @import url("./fonts/fonts.css");
-body {
-  max-width: 90%;
-}
-
 @media (min-width: 320px) {
+  .btn {
+    width: 150px;
+    height: 52px;
+  }
+  .carousel-indicators .active {
+    background-color: blue;
+  }
+  .btn:hover span {
+    transform: translate(20px, -20px);
+  }
+  span {
+    color: white;
+  }
+  body {
+    margin: 0 auto;
+    max-width: 90%;
+  }
   .dropdown:hover .dropdown-menu {
     display: block;
     margin-top: 0; /* remove the gap so it doesn't close */
@@ -19,11 +32,20 @@ body {
   .subtitle {
     color: #ef4623;
   }
-  .navbar-brand img {
+  .navbar {
+    height: 4.375rem;
+  }
+  .navbar .container-fluid {
+    padding: 0;
+  }
+  .navbar .navbar-brand img {
     height: 2.25rem;
   }
+  .navbar ul a {
+    color: black;
+  }
   .carousel1-container .carousel-item .carousel-caption {
-    top: 10%;
+    top: 15%;
   }
   .carousel1-container .carousel-item .carousel-caption h1 {
     font-family: "Jost";
@@ -33,6 +55,7 @@ body {
     font-family: "Muli";
     font-weight: bold;
     font-size: 0.6875rem;
+    color: white !important;
   }
   .carousel1-container img {
     -o-object-fit: cover;
@@ -61,7 +84,6 @@ body {
     height: 50px;
   }
   .team-or-individuals {
-    width: 100%;
     background-color: #e5e5e5;
   }
   .team-or-individuals .shape-container {
@@ -138,5 +160,39 @@ body {
   footer a {
     color: #777777;
     text-decoration: none;
+  }
+}
+@media (min-width: 768px) {
+  .team-or-individuals article {
+    padding: 0 0 0 45px;
+  }
+  .carousel1-container .carousel-item .carousel-caption h1 {
+    font-size: 5rem;
+  }
+}
+@media (min-width: 1440px) {
+  body {
+    max-width: 1100px !important;
+  }
+  body .container-fluid {
+    padding: 0 !important;
+  }
+  .navbar {
+    height: 6.25rem;
+  }
+  .navbar .container-fluid {
+    height: 100px;
+  }
+  .navbar .navbar-nav {
+    padding: 20px;
+  }
+  .navbar .navbar-nav li {
+    padding: 20px;
+  }
+  .carousel1-container img {
+    height: 34.375rem;
+  }
+  .team-or-individuals .shape-container .shape {
+    max-width: 410px;
   }
 }/*# sourceMappingURL=style.css.map */
