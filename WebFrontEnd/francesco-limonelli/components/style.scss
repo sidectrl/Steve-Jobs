@@ -25,9 +25,11 @@ body {
     .subtitle {
         color: #ef4623;
     }
-    .navbar-brand {
-        img {
-            @include toRem(height, 36);
+    .navbar {
+        .navbar-brand {
+            img {
+                @include toRem(height, 36);
+            }
         }
     }
     .carousel1-container {
@@ -43,8 +45,11 @@ body {
                     font-family: "Muli";
                     font-weight: bold;
                     @include toRem(font-size, 11);
+                    color: white !important;
                 }
+                
             }
+            
         }
         img {
             object-fit: cover;
@@ -160,7 +165,6 @@ body {
                 .author-job {
                     color: white;
                     @include toRem(font-size, 11);
-                    
                 }
             }
         }

@@ -12,26 +12,72 @@
 
 <body class="container">
   <header>
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar-collapse navbar navbar-expand-lg navbar-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#" id="brand"><img src="./img/logo-FINAL.png" alt="Logo"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand" href="#">
+          <img src="img/logo-FINAL.png" alt="" width="103">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Home
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Main Home </a></li>
+                <li><a class="dropdown-item" href="#">Left Menu Home</a></li>
+                <li><a class="dropdown-item" href="#">Coworking Home</a></li>
+                <li><a class="dropdown-item" href="#">Animated Slider</a></li>
+                <li><a class="dropdown-item" href="#">Coming Soon</a></li>
+                <li><a class="dropdown-item" href="#">Grid Home</a></li>
+                <li><a class="dropdown-item" href="#">Metro Showcase</a></li>
+                <li><a class="dropdown-item" href="#">Offices Home</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Pages
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">About Us</a></li>
+                <li><a class="dropdown-item" href="#">Our Team</a></li>
+                <li><a class="dropdown-item" href="#">Our Services</a></li>
+                <li><a class="dropdown-item" href="#">Pricing Plans</a></li>
+                <li><a class="dropdown-item" href="#">Book A Space</a></li>
+                <li><a class="dropdown-item" href="#">Contact Us</a></li>
+                <li><a class="dropdown-item" href="#">404 Error Page</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Events
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Event List</a></li>
+                <li><a class="dropdown-item" href="#">Event small</a></li>
+                <li><a class="dropdown-item" href="#">Event Compact</a></li>
+                <li><a class="dropdown-item" href="#">Event Single</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Blog
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Right Sidebar</a></li>
+                <li><a class="dropdown-item" href="#">Left Sidebar</a></li>
+                <li><a class="dropdown-item" href="#">Without Sidebar</a></li>
+                <li><a class="dropdown-item" href="#">Post Types</a></li>
+              </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Pages</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link">Events</a>
+              <a class="nav-link active" aria-current="page" href="#">Landing</a>
             </li>
           </ul>
-          <button class="btn btn-outline-success" type="submit">Sign Up</button>
+            <button class="btn btn-sign bg-primary" type="submit">Book office</button>
         </div>
       </div>
     </nav>
