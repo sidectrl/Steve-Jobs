@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "tsc && mocha ./build/tests/test4.js",
-    "start": "tsc && node ./build/solution1.js"
+    "start": "tsc && node ./build/compito.js"
   },
   "keywords": [],
   "author": "limonellifrancesco@gmail.com",
