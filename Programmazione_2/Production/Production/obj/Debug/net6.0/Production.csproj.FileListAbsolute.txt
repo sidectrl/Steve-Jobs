@@ -1,0 +1,15 @@
+C:\xampp\htdocs\Università\Steve-Jobs\Programmazione_2\Production\Production\bin\Debug\net6.0\Production.exe
+C:\xampp\htdocs\Università\Steve-Jobs\Programmazione_2\Production\Production\bin\Debug\net6.0\Production.deps.json
+C:\xampp\htdocs\Università\Steve-Jobs\Programmazione_2\Production\Production\bin\Debug\net6.0\Production.runtimeconfig.json
+C:\xampp\htdocs\Università\Steve-Jobs\Programmazione_2\Production\Production\bin\Debug\net6.0\Production.dll
+C:\xampp\htdocs\Università\Steve-Jobs\Programmazione_2\Production\Production\bin\Debug\net6.0\Production.pdb
+C:\xampp\htdocs\Università\Steve-Jobs\Programmazione_2\Production\Production\obj\Debug\net6.0\Production.csproj.AssemblyReference.cache
+C:\xampp\htdocs\Università\Steve-Jobs\Programmazione_2\Production\Production\obj\Debug\net6.0\Production.GeneratedMSBuildEditorConfig.editorconfig
+C:\xampp\htdocs\Università\Steve-Jobs\Programmazione_2\Production\Production\obj\Debug\net6.0\Production.AssemblyInfoInputs.cache
+C:\xampp\htdocs\Università\Steve-Jobs\Programmazione_2\Production\Production\obj\Debug\net6.0\Production.AssemblyInfo.cs
+C:\xampp\htdocs\Università\Steve-Jobs\Programmazione_2\Production\Production\obj\Debug\net6.0\Production.csproj.CoreCompileInputs.cache
+C:\xampp\htdocs\Università\Steve-Jobs\Programmazione_2\Production\Production\obj\Debug\net6.0\Production.dll
+C:\xampp\htdocs\Università\Steve-Jobs\Programmazione_2\Production\Production\obj\Debug\net6.0\refint\Production.dll
+C:\xampp\htdocs\Università\Steve-Jobs\Programmazione_2\Production\Production\obj\Debug\net6.0\Production.pdb
+C:\xampp\htdocs\Università\Steve-Jobs\Programmazione_2\Production\Production\obj\Debug\net6.0\Production.genruntimeconfig.cache
+C:\xampp\htdocs\Università\Steve-Jobs\Programmazione_2\Production\Production\obj\Debug\net6.0\ref\Production.dll
