@@ -1,0 +1,11 @@
+C:\xampp\htdocs\Università\Steve-Jobs\Programmazione_2\limonelli-francesco-rubrica\limonelli-francesco-rubrica\bin\Debug\limonelli-francesco-rubrica.exe.config
+C:\xampp\htdocs\Università\Steve-Jobs\Programmazione_2\limonelli-francesco-rubrica\limonelli-francesco-rubrica\bin\Debug\limonelli-francesco-rubrica.exe
+C:\xampp\htdocs\Università\Steve-Jobs\Programmazione_2\limonelli-francesco-rubrica\limonelli-francesco-rubrica\bin\Debug\limonelli-francesco-rubrica.pdb
+C:\xampp\htdocs\Università\Steve-Jobs\Programmazione_2\limonelli-francesco-rubrica\limonelli-francesco-rubrica\obj\Debug\limonelli-francesco-rubrica.csproj.AssemblyReference.cache
+C:\xampp\htdocs\Università\Steve-Jobs\Programmazione_2\limonelli-francesco-rubrica\limonelli-francesco-rubrica\obj\Debug\limonelli-francesco-rubrica.csproj.SuggestedBindingRedirects.cache
+C:\xampp\htdocs\Università\Steve-Jobs\Programmazione_2\limonelli-francesco-rubrica\limonelli-francesco-rubrica\obj\Debug\limonelli_francesco_rubrica.frmPhoneBook.resources
+C:\xampp\htdocs\Università\Steve-Jobs\Programmazione_2\limonelli-francesco-rubrica\limonelli-francesco-rubrica\obj\Debug\limonelli_francesco_rubrica.Properties.Resources.resources
+C:\xampp\htdocs\Università\Steve-Jobs\Programmazione_2\limonelli-francesco-rubrica\limonelli-francesco-rubrica\obj\Debug\limonelli-francesco-rubrica.csproj.GenerateResource.cache
+C:\xampp\htdocs\Università\Steve-Jobs\Programmazione_2\limonelli-francesco-rubrica\limonelli-francesco-rubrica\obj\Debug\limonelli-francesco-rubrica.csproj.CoreCompileInputs.cache
+C:\xampp\htdocs\Università\Steve-Jobs\Programmazione_2\limonelli-francesco-rubrica\limonelli-francesco-rubrica\obj\Debug\limonelli-francesco-rubrica.exe
+C:\xampp\htdocs\Università\Steve-Jobs\Programmazione_2\limonelli-francesco-rubrica\limonelli-francesco-rubrica\obj\Debug\limonelli-francesco-rubrica.pdb
