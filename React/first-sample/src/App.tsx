@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import { Card } from './components/Card/Card';
 import { Container } from './components/Container/Container';
@@ -14,14 +14,18 @@ const items = [{
   description: "Nuovo di gamma con 2px di fotocamera"
 }
 ]
+
 function App() {
+  const [x, setX] = useState(0);
   return (
     <div className='container d-flex'>
       {items.map(({product, price, description}) =>
         <Container>
           <Card product={product}
             price={price}
-            description={description} />
+            description={description}
+            quantity = {x}
+            setX = {setX} />
         </Container>
       )}
     </div>
