@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import { Card } from './components/Card/Card';
+import { Container } from './components/Container/Container';
 
 const items = [{
   product: 'Samsung Galaxy',
@@ -15,12 +16,14 @@ const items = [{
 ]
 function App() {
   return (
-    <div>
-    {items.map(item =>
-      <Card
-        product={item.product}
-        price={item.price}
-        description={item.description} />)}
+    <div className='container d-flex'>
+      {items.map(({product, price, description}) =>
+        <Container>
+          <Card product={product}
+            price={price}
+            description={description} />
+        </Container>
+      )}
     </div>
   )
 }
