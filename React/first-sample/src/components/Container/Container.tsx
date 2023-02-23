@@ -8,9 +8,7 @@ export const Container = (props : containerProps) => {
   return (
     <div className='card'>
         {props.children}
-        <img src={giga} alt="giga" />
-
-        
+        <img src={giga} alt="giga" />  
     </div>
 
   )
