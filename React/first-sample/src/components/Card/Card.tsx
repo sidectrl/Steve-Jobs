@@ -6,12 +6,12 @@ type CardProps = {
     description: string,
 }
 
-export const Card = (props: CardProps) => {
+export const Card = ({product, description, price}: CardProps) => {
     return (
         <div className="card-body">
-            <h5 className="card-title">{props.product}</h5>
-            <p className="card-text">{props.description}</p>
-            <a className="btn btn-primary">{props.price}€</a>
+            <h5 className="card-title">{product}</h5>
+            <p className="card-text">{description}</p>
+            <a className="btn btn-primary">{price}€</a>
         </div>
     )
 }
