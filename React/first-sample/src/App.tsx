@@ -4,12 +4,12 @@ import { Card } from './components/Card/Card';
 
 const items = [{
   product: 'Samsung Galaxy',
-  price: '3000€',
+  price: 3000,
   description: "Nuovo di gamma con 69px di fotocamera"
 },
 {
   product: 'iPhone SuperIperProMax PLUS',
-  price: '15700€',
+  price: 15700,
   description: "Nuovo di gamma con 2px di fotocamera"
 }
 ]
