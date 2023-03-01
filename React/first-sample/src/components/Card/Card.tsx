@@ -4,7 +4,7 @@ type CardProps = {
     product: string,
     price: number,
     description: string,
-    index: number
+    index?: number
 }
 
 export const Card = ({ product, description, price, index}: CardProps) => {

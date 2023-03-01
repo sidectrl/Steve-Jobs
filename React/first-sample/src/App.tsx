@@ -20,7 +20,7 @@ function App() {
   return (
     <div className='container d-flex'>
       {items.map(({ product, price, description }) =>
-        <Container key={index}>
+        <Container>
           <Card product={product}
             price={price}
             description={description}
