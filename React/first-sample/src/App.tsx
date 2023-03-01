@@ -16,16 +16,16 @@ const items = [{
 ]
 
 function App() {
-  const [x, setX] = useState(0);
+
   return (
     <div className='container d-flex'>
-      {items.map(({product, price, description}) =>
-        <Container>
+      {items.map(({ product, price, description }) =>
+        <Container key={index}>
           <Card product={product}
             price={price}
             description={description}
-            quantity = {x}
-            setX = {setX} />
+            
+          />
         </Container>
       )}
     </div>
