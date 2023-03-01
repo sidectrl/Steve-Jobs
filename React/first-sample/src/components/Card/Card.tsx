@@ -4,10 +4,9 @@ type CardProps = {
     product: string,
     price: number,
     description: string,
-    index?: number
 }
 
-export const Card = ({ product, description, price, index}: CardProps) => {
+export const Card = ({ product, description, price}: CardProps) => {
     const [x, setX] = useState(0);
     return (
         <div className="card-body">
