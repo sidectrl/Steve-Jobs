@@ -1,27 +1,9 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { Character } from "../types/Character";
 const url = "https://rickandmortyapi.com/api/character";
 
-type Character = {
-  id: number;
-  name: string;
-  status: "unknown" | "alive" | "dead";
-  species: string;
-  type: string;
-  gender: "unknown" | "female" | "male" | "genderless";
-  origin: {
-    name: string;
-    url: string;
-  };
-  location: {
-    name: string;
-    url: string;
-  };
-  image: string;
-  episode: string[];
-  url: string;
-  created: string;
-};
+
 
 export const useCharacters = (page = 1) => {
   const [characters, setCharacters] = useState<Character[]>([]);
