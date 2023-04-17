@@ -1,13 +1,37 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Character } from "../models/Character";
-
 const url = "https://www.dnd5eapi.co/api/classes";
+
+
+
+/*export const useCharacter = (index: string) => {
+  const [characters, setCharacter] = useState<Character>();
+  const [isLoading, setLoading] = useState<boolean>(false);
+  
+  useEffect(() => {
+    const load = async () => {
+      setLoading(true);
+      setTimeout(async () => {
+        const { data } = await axios.get(`${url}/${index}`);
+        setCharacter(data.results);
+        setLoading(false);
+      }, 2000);
+    };  
+    load();
+  }, [index]);
+  return [characters, setCharacter, isLoading] as [
+    Character,
+    Function,
+    boolean
+  ];
+};
+*/
 
 export const useCharacter = (index: string) => {
   const [character, setCharacter] = useState<Character>();
   const [isLoading, setLoading] = useState<boolean>(false);
-  
+
   useEffect(() => {
     const load = async () => {
       setLoading(true);
@@ -19,7 +43,7 @@ export const useCharacter = (index: string) => {
       } finally {
         setLoading(false);
       }
-    };  
+    };
     load();
   }, [index]);
 
@@ -29,4 +53,3 @@ export const useCharacter = (index: string) => {
     boolean
   ];
 };
-
