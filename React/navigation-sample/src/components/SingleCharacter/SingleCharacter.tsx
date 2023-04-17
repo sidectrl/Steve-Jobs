@@ -28,4 +28,4 @@ const SingleCharacter = () => {
 
 }
 
-export default SingleCharacter;;
+export default SingleCharacter;
