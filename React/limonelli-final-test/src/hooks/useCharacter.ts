@@ -5,7 +5,7 @@ const url = "https://www.dnd5eapi.co/api/classes";
 
 
 
-/*export const useCharacter = (index: string) => {
+export const useCharacter = (index: string) => {
   const [characters, setCharacter] = useState<Character>();
   const [isLoading, setLoading] = useState<boolean>(false);
   
@@ -14,9 +14,10 @@ const url = "https://www.dnd5eapi.co/api/classes";
       setLoading(true);
       setTimeout(async () => {
         const { data } = await axios.get(`${url}/${index}`);
-        setCharacter(data.results);
+        console.log(data);
+        setCharacter(data);
         setLoading(false);
-      }, 2000);
+      }, 100);
     };  
     load();
   }, [index]);
@@ -26,9 +27,9 @@ const url = "https://www.dnd5eapi.co/api/classes";
     boolean
   ];
 };
-*/
 
-export const useCharacter = (index: string) => {
+
+/*export const useCharacter = (index: string) => {
   const [character, setCharacter] = useState<Character>();
   const [isLoading, setLoading] = useState<boolean>(false);
 
@@ -53,3 +54,4 @@ export const useCharacter = (index: string) => {
     boolean
   ];
 };
+*/

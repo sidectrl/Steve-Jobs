@@ -104,6 +104,7 @@ export type Character = {
   
   export type MultiClassing = {
     prerequisites: Prerequisite[]
+    prerequisite_options?: PrerequisiteOptions
     proficiencies: Proficiency2[]
   }
   
@@ -128,5 +129,22 @@ export type Character = {
     index: string
     name: string
     url: string
+  }
+
+  export type PrerequisiteOptions = {
+    type: string
+    choose: number
+    from: From5
+  }
+
+  export type From5 = {
+    option_set_type: string
+    options: Option3[]
+  }
+
+  export interface Option3 {
+    option_type: string
+    ability_score: AbilityScore
+    minimum_score: number
   }
   
