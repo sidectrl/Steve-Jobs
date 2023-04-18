@@ -63,8 +63,9 @@ const CharacterCard = ({ character }: CardProps) => {
           <ul>
             <p>Chose two from:</p>
             <ul>
-              {character?.proficiency_choices.map((iesim) =>
-                iesim.from.options.map((iesimOption) => <li>{iesimOption.item.name}</li>))}
+              {/*character?.proficiency_choices.map((iesim) =>
+                iesim?.from.options.map((iesimOption) => <li>{iesimOption?.item.name}</li>))*/
+                character?.proficiency_choices.map((iesim) => iesim.from.options.map((iesimOption) => <li><p>{iesimOption.item?.name}</p></li>))}
             </ul>
           </ul>
         </div>

@@ -14,7 +14,6 @@ export const useCharacter = (index: string) => {
       setLoading(true);
       setTimeout(async () => {
         const { data } = await axios.get(`${url}/${index}`);
-        console.log(data);
         setCharacter(data);
         setLoading(false);
       }, 100);
