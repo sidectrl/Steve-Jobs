@@ -40,7 +40,7 @@ const CharacterCard = ({ character }: CardProps) => {
             <li><p>Proficiencies:</p>
               <ul>
                 <div>
-                  {character?.multi_classing.proficiencies.map(iesim => <li>{iesim.name}</li>)}
+                  {character?.multi_classing.proficiencies.map(iesim => <li><p>{iesim.name}</p></li>)}
                 </div>
               </ul>
             </li>
@@ -52,7 +52,7 @@ const CharacterCard = ({ character }: CardProps) => {
             Proficiencies:
           </h4>
           <ul>
-            {character?.proficiencies.map((iesim) => <li>{iesim.name}</li>)}
+            {character?.proficiencies.map((iesim) => <li><p>{iesim.name}</p></li>)}
           </ul>
         </div>
 
@@ -61,10 +61,37 @@ const CharacterCard = ({ character }: CardProps) => {
             Proficiency choices:
           </h4>
           <ul>
-            {character?.proficiencies.map((iesim) => <li>{iesim.name}</li>)}
+            <p>Chose two from:</p>
+            <ul>
+              {character?.proficiency_choices.map((iesim) =>
+                iesim.from.options.map((iesimOption) => <li>{iesimOption.item.name}</li>))}
+            </ul>
           </ul>
         </div>
 
+        <div id='starting_equipment'>
+          <h4>Starting equipment</h4>
+          <ul>
+            {character?.starting_equipment.map((iesim) => <li><p>Name: {iesim.equipment.name}<br></br> Quantity: {iesim.quantity}</p></li>)}
+          </ul>
+        </div>
+
+        <div id='starting_equipment_options'>
+          <h4>Starting equipment options</h4>
+          <ul>
+            <li>{character?.starting_equipment_options.map((iesimOption, index) =>
+              <p><b>Choose {index}:</b> <br />
+                {iesimOption.desc}
+              </p>
+            )}</li></ul>
+        </div>
+
+        <div id='subclasses'>
+          <h4>Sub-Classes</h4>
+          <ul>
+            {character?.subclasses.map((iesim) => <li>{iesim.name}</li>)}
+          </ul>
+        </div>
       </div>
     </>
   )
