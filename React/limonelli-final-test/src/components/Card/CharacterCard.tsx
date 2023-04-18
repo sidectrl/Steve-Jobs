@@ -47,10 +47,22 @@ const CharacterCard = ({ character }: CardProps) => {
           </ul>
         </div>
 
-        <div id='prerequisites'>
+        <div id='proficiencies'>
           <h4>
-            
+            Proficiencies:
           </h4>
+          <ul>
+            {character?.proficiencies.map((iesim) => <li>{iesim.name}</li>)}
+          </ul>
+        </div>
+
+        <div id='proficiency_choices'>
+          <h4>
+            Proficiency choices:
+          </h4>
+          <ul>
+            {character?.proficiencies.map((iesim) => <li>{iesim.name}</li>)}
+          </ul>
         </div>
 
       </div>
