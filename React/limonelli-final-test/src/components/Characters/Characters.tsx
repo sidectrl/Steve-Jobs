@@ -1,13 +1,15 @@
 import React from 'react'
 import { useClasses } from '../../hooks/useClasses';
 import { Link, useLocation} from 'react-router-dom';
+import './Character.css';
+
 export const Classes = () => {
   const [characters, , isLoading] = useClasses();
   const { pathname } = useLocation();
 
   return (
-    <div >
-      {pathname}
+    <div className='character--list'>
+      {/*pathname*/}
       {isLoading && <p>loading</p>}
       {!isLoading && (
         <ul>
