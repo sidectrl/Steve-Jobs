@@ -9,6 +9,7 @@ export const Classes = () => {
 
   return (
     <div className='character--list'>
+      <h2>Character List</h2>
       {/*pathname*/}
       {isLoading && <p>loading</p>}
       {!isLoading && (
