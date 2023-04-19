@@ -1,22 +1,27 @@
 import React from 'react'
-import { useClasses } from '../../hooks/useClasses';
 import { Link, useLocation} from 'react-router-dom';
-import './Character.css';
+import '../Styles/StyleInterface.css';
+import { Monster } from '../../models/Monster';
+import { Character } from '../../models/Character';
 
-export const Classes = () => {
-  const [characters, , isLoading] = useClasses();
+type ClassesProps = {
+  customHook: [Character[] | Monster[], Function, boolean]
+}
+
+export const Classes = ({customHook} :ClassesProps) => {
+  const [items, , isLoading] = customHook;
   const { pathname } = useLocation();
 
   return (
-    <div className='character--list'>
-      <h2>Character List</h2>
-      {/*pathname*/}
+    <div className='items--list'>
+      <p>{pathname}</p>
+      <h2>item List</h2>
       {isLoading && <p>loading</p>}
       {!isLoading && (
         <ul>
-          {characters.map((character) => (
-            <Link to={String(character.index)} key={character.index}>
-              <li>{character.name}</li>
+          {items.map((item) => (
+            <Link to={String(item.index)} key={item.index}>
+              <li>{item.name}</li>
             </Link>
           ))}
         </ul>
