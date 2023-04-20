@@ -12,7 +12,7 @@ const Monster = () => {
         <>
             <div className='container'>
                 <h2>Monster: {monster?.name}</h2>
-                {monster?.image ? <img src={`${url}${monster?.image}`} alt="Monster_img" /> : ''}
+                <img src={monster?.image ? `${url}${monster?.image}` : ''} alt="Monster_img" />
                 <p>Size: {monster?.size}</p>
                 <p>Type: {monster?.type}</p>
                 <p>Alignment: {monster?.alignment}</p>
@@ -63,7 +63,7 @@ const Monster = () => {
                 <div id='damage_resistances'>
                     <h4>Damage resistance:</h4>
                     <ul>
-                        {monster?.damage_resistances.map(iesim => <li>{iesim}</li>)}
+                        {monster?.damage_resistances?.map(iesim => <li>{iesim}</li>)}
                     </ul>
                 </div>
                 <div id='damage_immunities'>
@@ -97,10 +97,69 @@ const Monster = () => {
                                 <p>{iesim?.name} <br />
                                     Desc: {iesim?.desc}
                                 </p>
-                                {iesim.usage ? <p>usage: <br/><ul>type: {iesim?.usage.type} <br/> times: {iesim?.usage.times} <br/> rest types: {iesim?.usage.rest_types.map(iesim => iesim)}</ul></p> : ''}
+                                {iesim.usage ? <p>usage: <br /><ul>type: {iesim?.usage.type} <br /> times: {iesim?.usage.times} <br /> rest types: {iesim?.usage.rest_types.map(iesim => iesim)}</ul></p> : ''}
                             </li>)}
                     </ul>
+                </div>
+                <div id='actions'>
+                    <h4>Actions:</h4>
+                    <ul>
+                        {monster?.actions.map((action) =>
+                            <li>
+                                <p> Name: {action.name} <br />
+                                    Description: {action?.desc} <br />
+                                    Attack bonus: {action?.attack_bonus} <br />
+                                    Dc: <ul>
+                                        <li>dc type: {action?.dc?.dc_type.name}</li>
+                                        <li>dc value: {action?.dc?.dc_value}</li>
+                                        <li>duccess type: {action?.dc?.success_type}</li>
+                                    </ul> <br />
+                                    Damage: {action?.damage?.map((iesim) =>
+                                        <ul>
+                                            <li>Type: {iesim?.damage_type.name}.</li>
+                                            <li>Dice: {iesim?.damage_dice}.</li>
+                                        </ul>)} <br />
 
+
+                                    Actions: {action?.actions.map((action) =>
+                                        <ul>
+                                            <li>name: {action?.action_name}</li>
+                                            <li>count: {action?.count}</li>
+                                            <li>type: {action?.type}</li>
+                                        </ul>)} <br />
+                                    Multi attack type:{action?.multiattack_type} <br />
+                                    Usage: <ul>
+                                        <li>dice: {action?.usage?.dice}</li>
+                                        <li>min value: {action?.usage?.min_value}</li>
+                                        <li>type: {action?.usage?.type}</li>
+                                    </ul>
+                                </p> <br /> <hr />
+                            </li>
+                        )}
+                    </ul>
+
+                </div>
+                <div id='legendary_actions'>
+                    <h4>Legendary actions: </h4>
+                    <ul>
+                        {monster?.legendary_actions.map(legendary_action =>
+                            <li>
+                                <p>Name: {legendary_action.name} <br />
+                                    description: {legendary_action.desc} <br />
+                                    Dc: <ul>
+                                        <li>dc type: {legendary_action?.dc?.dc_type.name}</li>
+                                        <li>dc value: {legendary_action?.dc?.dc_value}</li>
+                                        <li>duccess type: {legendary_action?.dc?.success_type}</li>
+                                    </ul>
+                                    Damage: {legendary_action?.damage?.map((iesim) =>
+                                        <ul>
+                                            <li>Type: {iesim?.damage_type.name}.</li>
+                                            <li>Dice: {iesim?.damage_dice}.</li>
+                                        </ul>)} <br />
+
+                                </p> <hr />
+                            </li>)}
+                    </ul>
                 </div>
             </div>
         </>
