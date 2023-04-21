@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { BrowserRouter, Outlet, Route, Routes } from 'react-router-dom'
-import Classes from '../Characters/Characters'
+import Classes from '../ElementListCard/ElementListCard'
 import Character from '../Character/Character'
 import { ThemeContext } from '../../App'
 import { useClasses } from '../../hooks/useClasses'

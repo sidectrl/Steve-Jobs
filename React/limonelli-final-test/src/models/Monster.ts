@@ -16,10 +16,10 @@ export type Monster ={
     wisdom: number
     charisma: number
     proficiencies: Proficiency[]
-    damage_vulnerabilities: any[]
-    damage_resistances: any[]
+    damage_vulnerabilities: From[]
+    damage_resistances: From[]
     damage_immunities: string[]
-    condition_immunities: any[]
+    condition_immunities: From[]
     senses: Senses
     languages: string
     challenge_rating: number
@@ -31,6 +31,12 @@ export type Monster ={
     url: string
   }
   
+  export type From = {
+    index: string
+    name: string
+    url: string
+    }
+    
   export type ArmorClass ={
     type: string
     value: number

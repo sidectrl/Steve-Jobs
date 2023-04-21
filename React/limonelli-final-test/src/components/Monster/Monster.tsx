@@ -19,7 +19,7 @@ const Monster = () => {
                 <h4>Armor class:</h4>
                 <ul>
                     {monster?.armor_class.map((iesim) => (
-                        <React.Fragment key={iesim.type}>
+                        <React.Fragment >
                             <li>Type: {iesim.type}</li>
                             <li>Value: {iesim.value}</li>
                         </React.Fragment>
@@ -59,7 +59,7 @@ const Monster = () => {
                 <h4>Damage vulnerabilities:</h4>
                 <ul>
                     {monster?.damage_vulnerabilities.map((iesim) => (
-                        <li key={iesim}>{iesim}</li>
+                        <li key={iesim.index}>{iesim.name}</li>
                     ))}
                 </ul>
             </div>
@@ -67,7 +67,7 @@ const Monster = () => {
                 <h4>Damage resistance:</h4>
                 <ul>
                     {monster?.damage_resistances?.map((iesim) => (
-                        <li key={iesim}>{iesim}</li>
+                        <li key={iesim.index}>{iesim.name}</li>
                     ))}
                 </ul>
             </div>
@@ -82,9 +82,7 @@ const Monster = () => {
             <div id='condition_immunities'>
                 <h4>Condition immunities:</h4>
                 <ul>
-                    {monster?.condition_immunities.map((iesim) => (
-                        <li key={iesim}>{iesim}</li>
-                    ))}
+                    {monster?.condition_immunities.map((iesim) => (<li key={iesim.name}>{iesim.name}</li>))}
                 </ul>
             </div>
             <div id='senses'>

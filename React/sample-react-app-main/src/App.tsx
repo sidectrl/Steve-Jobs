@@ -58,8 +58,8 @@ const App = () => {
       <h1>{price}</h1>
       <div className='d-flex flex-wrap'>
         {items.map((item, index) =>
-          <Container key={index}>
-            <Card key={index} setItems={setItems} product={item} index={index}></Card>
+          <Container>
+            <Card setItems={setItems} product={item} index={index}></Card>
           </Container>
         )}
       </div>

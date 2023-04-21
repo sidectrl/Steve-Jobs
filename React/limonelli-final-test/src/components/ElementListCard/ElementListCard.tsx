@@ -11,7 +11,6 @@ type ClassesProps = {
 export const Classes = ({customHook} :ClassesProps) => {
   const [items, , isLoading] = customHook;
   const { pathname } = useLocation();
-
   return (
     <div className='items--list'>
       <p>{pathname}</p>

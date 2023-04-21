@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Monster } from "../models/Monster";
-const url = "https://www.dnd5eapi.co/api/";
+const url = "https://www.dnd5eapi.co/api";
 
 
 
@@ -13,7 +13,7 @@ export const useMonsters = () => {
     const load = async () => {
       setLoading(true);
       setTimeout(async () => {
-        const { data } = await axios.get(`${url}monsters`);
+        const { data } = await axios.get(`${url}/monsters`);
         setMonsters(data.results);
         setLoading(false);
       }, 100);

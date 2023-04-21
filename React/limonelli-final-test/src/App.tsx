@@ -7,7 +7,6 @@ function App() {
   const [theme, setTheme] = useState('light');
   return (
     <>
-
       <div>
         <ThemeContext.Provider value={theme}>
           <label>
@@ -21,7 +20,6 @@ function App() {
             Use dark mode
           </label>
           <Wrapper />
-
         </ThemeContext.Provider>
       </div>
     </>
