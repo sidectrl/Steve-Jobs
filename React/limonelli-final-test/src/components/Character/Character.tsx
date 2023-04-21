@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { useCharacter } from '../../hooks/useCharacter';
 import '../Styles/CardStyle.css';
 const Character = () => {
@@ -12,7 +12,7 @@ const Character = () => {
         <h2>Class: {character?.name}</h2>
         <p>Hit Die: {character?.hit_die}</p>
         <div id='multi_classing'>
-          <h4>Multi classing:</h4>
+          <h4><Link to={'multi-classing'}>Multi classing:</Link></h4>
           <ul>
             <li><p>Prerequisites:</p>
               <ul>

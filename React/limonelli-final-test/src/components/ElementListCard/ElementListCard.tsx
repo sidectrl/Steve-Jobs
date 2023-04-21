@@ -14,7 +14,7 @@ export const Classes = ({customHook} :ClassesProps) => {
   return (
     <div className='items--list'>
       <p>{pathname}</p>
-      <h2>item List</h2>
+      <h2>Item List</h2>
       {isLoading && <p>loading</p>}
       {!isLoading && (
         <ul>
