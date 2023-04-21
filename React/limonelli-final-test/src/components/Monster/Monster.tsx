@@ -109,9 +109,9 @@ const Monster = () => {
                                 <p>
                                     usage: <br />
                                     <ul>
-                                        <li>type: {ability.usage.type}</li>
-                                        <li>times: {ability.usage.times}</li>
-                                        <li>rest types: {ability.usage.rest_types?.join(', ')}</li>
+                                        <li key={ability.usage.type}>type: {ability.usage.type}</li>
+                                        <li key={ability.usage.times}>times: {ability.usage.times}</li>
+                                        <li key={'rest_types'}>rest types: {ability.usage.rest_types?.join(', ')}</li>
                                     </ul>
                                 </p>
                             )}
@@ -130,9 +130,9 @@ const Monster = () => {
                                 Attack bonus: {action?.attack_bonus} <br />
                                 Dc:
                                 <ul>
-                                    <li>dc type: {action?.dc?.dc_type?.name}</li>
-                                    <li>dc value: {action?.dc?.dc_value}</li>
-                                    <li>success type: {action?.dc?.success_type}</li>
+                                    <li key={action?.dc?.dc_type?.index}>dc type: {action?.dc?.dc_type?.name}</li>
+                                    <li key={action?.dc?.dc_value}>dc value: {action?.dc?.dc_value}</li>
+                                    <li key={action?.dc?.success_type}>success type: {action?.dc?.success_type}</li>
                                 </ul>
                                 Damage:
                                 <ul>
@@ -158,9 +158,9 @@ const Monster = () => {
                                 Multi attack type: {action?.multiattack_type} <br />
                                 Usage:
                                 <ul>
-                                    <li>dice: {action?.usage?.dice}</li>
-                                    <li>min value: {action?.usage?.min_value}</li>
-                                    <li>type: {action?.usage?.type}</li>
+                                    <li key={action?.usage?.dice}>dice: {action?.usage?.dice}</li>
+                                    <li key={action?.usage?.min_value}>min value: {action?.usage?.min_value}</li>
+                                    <li key={action?.usage?.type}>type: {action?.usage?.type}</li>
                                 </ul>
                             </p>
                             <br />
@@ -179,15 +179,15 @@ const Monster = () => {
                                 description: {legendary_action.desc} <br />
                                 Dc:
                                 <ul>
-                                    <li>dc type: {legendary_action?.dc?.dc_type?.name}</li>
-                                    <li>dc value: {legendary_action?.dc?.dc_value}</li>
-                                    <li>success type: {legendary_action?.dc?.success_type}</li>
+                                    <li key={legendary_action?.dc?.dc_type?.index}>dc type: {legendary_action?.dc?.dc_type?.name}</li>
+                                    <li key={legendary_action?.dc?.dc_value}>dc value: {legendary_action?.dc?.dc_value}</li>
+                                    <li key={legendary_action?.dc?.success_type}>success type: {legendary_action?.dc?.success_type}</li>
                                 </ul>
                                 Damage:
                                 {legendary_action?.damage?.map((item) => (
                                     <ul>
-                                        <li>Type: {item?.damage_type?.name}.</li>
-                                        <li>Dice: {item?.damage_dice}.</li>
+                                        <li key={item?.damage_type?.index}>Type: {item?.damage_type?.name}.</li>
+                                        <li key={item?.damage_dice}>Dice: {item?.damage_dice}.</li>
                                     </ul>
                                 ))}
                                 <br />
