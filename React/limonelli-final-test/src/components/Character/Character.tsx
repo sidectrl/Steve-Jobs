@@ -1,9 +1,11 @@
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { useCharacter } from '../../hooks/useCharacter';
 import '../Styles/CardStyle.css';
+import PopupButton from '../PopupButton/PopupButton';
 const Character = () => {
   const { index } = useParams() as { index: string };
   const [character] = useCharacter(index);
+
 
   console.log(character);
   return (
@@ -12,8 +14,11 @@ const Character = () => {
         <h2>Class: {character?.name}</h2>
         <p>Hit Die: {character?.hit_die}</p>
         <div id='multi_classing'>
-          <h4><Link to={'multi-classing'}>Multi classing:</Link></h4>
+          <PopupButton
+            name={'Multi Classing'}
+          />
           <ul>
+
             <li><p>Prerequisites:</p>
               <ul>
                 <div>
@@ -59,12 +64,13 @@ const Character = () => {
           <ul>
             <p>Chose two from:</p>
             <ul>
-              {/*character?.proficiency_choices.map((iesim) =>
-                iesim?.from.options.map((iesimOption) => <li>{iesimOption?.item.name}</li>))*/
-                character?.proficiency_choices.map((iesim) => iesim.from.options.map((iesimOption) => <li><p>{iesimOption.item?.name}</p></li>))}
+              {character?.proficiency_choices.map((iesim) => iesim.from.options.map((iesimOption) => <li><p>{iesimOption.item?.name}</p></li>))}
             </ul>
           </ul>
         </div>
+        {
+          character?.index !== 'barbarian' || 'fighter' || 'rogue' ? <PopupButton name='Spell Casting' /> : ''
+        }
 
         <div id='starting_equipment'>
           <h4>Starting equipment</h4>
@@ -82,7 +88,6 @@ const Character = () => {
               </p>
             )}</li></ul>
         </div>
-
         <div id='subclasses'>
           <h4>Sub-Classes</h4>
           <ul>
