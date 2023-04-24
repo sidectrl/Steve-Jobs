@@ -4,17 +4,18 @@ import '../../Styles/StyleInterface.css';
 import { Monster } from '../../../models/Monster';
 import { Character } from '../../../models/Character';
 import { Race } from '../../../models/Race';
+import { Trait } from '../../../models/Trait';
 
 type ClassesProps = {
-  customHook: [Character[] | Monster[]| Race[], Function, boolean]
+  customHook: [Character[] | Monster[]| Race[]| Trait[], Function, boolean]
 }
 
 export const ElementListCard = ({customHook} :ClassesProps) => {
   const [items, , isLoading] = customHook;
-  const { pathname } = useLocation();
+  //const { pathname } = useLocation();
   return (
     <div className='items--list'>
-      <p>{pathname}</p>
+      <p>{/*pathname*/}</p>
       <h2>Item List</h2>
       {isLoading && <p>loading</p>}
       {!isLoading && (

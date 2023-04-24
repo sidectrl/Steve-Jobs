@@ -1,12 +1,12 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Character } from "../models/Character";
-const url = "https://www.dnd5eapi.co/api/classes";
+import { Trait } from "../../models/Trait";
+const url = "https://www.dnd5eapi.co/api/traits";
 
 
 
-export const useCharacter = (index: string) => {
-  const [characters, setCharacter] = useState<Character>();
+export const useTrait = (index: string) => {
+  const [trait, setTrait] = useState<Trait>();
   const [isLoading, setLoading] = useState<boolean>(false);
   
   useEffect(() => {
@@ -14,14 +14,14 @@ export const useCharacter = (index: string) => {
       setLoading(true);
       setTimeout(async () => {
         const { data } = await axios.get(`${url}/${index}`);
-        setCharacter(data);
+        setTrait(data);
         setLoading(false);
       }, 100);
     };  
     load();
   }, [index]);
-  return [characters, setCharacter, isLoading] as [
-    Character,
+  return [trait, setTrait, isLoading] as [
+    Trait,
     Function,
     boolean
   ];

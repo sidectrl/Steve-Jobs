@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom';
-import { useCharacter } from '../../../hooks/useCharacter';
+import { useCharacter } from '../../../hooks/Character/useCharacter';
 import '../../Styles/CardStyle.css';
 import PopupButton from '../../PopupButton/PopupButton';
 const Character = () => {

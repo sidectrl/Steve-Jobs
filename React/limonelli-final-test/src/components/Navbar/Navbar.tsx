@@ -8,12 +8,13 @@ function CustomNavbar() {
     <>
       <Navbar bg="dark" variant="dark" fixed='top'>
         <TabContainer>
-          <Navbar.Brand href="/">Navbar</Navbar.Brand>
+          <Navbar.Brand href="../../../logo.svg">Navbar</Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="classes">Classes</Nav.Link>
-            <Nav.Link href="monsters">Monsters</Nav.Link>
-            <Nav.Link href="races">Races</Nav.Link>
+            <Nav.Link href="/classes">Classes</Nav.Link>
+            <Nav.Link href="/monsters">Monsters</Nav.Link>
+            <Nav.Link href="/races">Races</Nav.Link>
+            <Nav.Link href="/traits">Traits</Nav.Link>
           </Nav>
         </TabContainer>
       </Navbar>

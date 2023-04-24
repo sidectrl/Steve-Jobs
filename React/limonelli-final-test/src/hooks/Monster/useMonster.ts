@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Monster } from "../models/Monster";
+import { Monster } from "../../models/Monster";
 const url = "https://www.dnd5eapi.co/api/monsters";
 
 

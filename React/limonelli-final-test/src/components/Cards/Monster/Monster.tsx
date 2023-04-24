@@ -1,6 +1,6 @@
 import React from 'react'
 import { useParams } from 'react-router-dom';
-import { useMonster } from '../../../hooks/useMonster';
+import { useMonster } from '../../../hooks/Monster/useMonster';
 import '../../Styles/CardStyle.css';
 
 const url = 'https://www.dnd5eapi.co'

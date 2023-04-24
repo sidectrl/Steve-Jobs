@@ -1,12 +1,12 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Race } from "../models/Race";
-const url = "https://www.dnd5eapi.co/api/races";
+import { Character } from "../../models/Character";
+const url = "https://www.dnd5eapi.co/api/classes";
 
 
 
-export const useRace = (index: string) => {
-  const [races, setRaces] = useState<Race>();
+export const useCharacter = (index: string) => {
+  const [characters, setCharacter] = useState<Character>();
   const [isLoading, setLoading] = useState<boolean>(false);
   
   useEffect(() => {
@@ -14,14 +14,14 @@ export const useRace = (index: string) => {
       setLoading(true);
       setTimeout(async () => {
         const { data } = await axios.get(`${url}/${index}`);
-        setRaces(data);
+        setCharacter(data);
         setLoading(false);
       }, 100);
     };  
     load();
   }, [index]);
-  return [races, setRaces, isLoading] as [
-    Race,
+  return [characters, setCharacter, isLoading] as [
+    Character,
     Function,
     boolean
   ];

@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { useLocation } from 'react-router-dom';
-import { useMultiClassing } from '../../../hooks/useMultiClassing';
+import { useMultiClassing } from '../../../hooks/MultiClassing/useMultiClassing';
 const MultiClassingCard = () => {
   var { pathname } = useLocation();
   pathname += '/multi-classing'
@@ -36,7 +36,6 @@ const MultiClassingCard = () => {
           </li>
         ))}
       </ul>
-      <hr />
     </div>
   );
 }

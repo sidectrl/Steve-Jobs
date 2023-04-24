@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Race } from "../models/Race";
+import { Race } from "../../models/Race";
 const url = "https://www.dnd5eapi.co/api";
 
 

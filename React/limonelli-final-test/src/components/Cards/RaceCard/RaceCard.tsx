@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import { useRace } from '../../../hooks/useRace';
+import { useRace } from '../../../hooks/Race/useRace';
 
 export const RaceCard = () => {
     

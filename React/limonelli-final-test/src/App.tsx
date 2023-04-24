@@ -12,7 +12,8 @@ function App() {
       <div>
         <ThemeContext.Provider value={theme}>
           <Navbar />
-          <div className='col-12 d-flex justify-content-end' style={theme === 'dark' ? { backgroundColor: '#282A3A', color: 'white', marginTop: '56px' } : { backgroundColor: 'white', color: 'black', marginTop: '56px' }}>
+          <Wrapper />
+          <div className='col-12 d-flex justify-content-end' style={theme === 'dark' ? { backgroundColor: '#282A3A', color: 'white' } : { backgroundColor: 'white', color: 'black' }}>
             <label >
               <input
                 type="checkbox"
@@ -24,7 +25,6 @@ function App() {
               Use dark mode
             </label>
           </div>
-          <Wrapper />
         </ThemeContext.Provider>
 
       </div>

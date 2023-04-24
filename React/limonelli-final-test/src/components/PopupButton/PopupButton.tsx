@@ -1,29 +1,25 @@
-import React, { useState } from 'react'
+import React from 'react'
 import MultiClassingCard from '../Cards/MultiClassing/MultiClassingCard'
 import SpellCastingCard from '../Cards/SpellCastingCard/SpellCastingCard';
+import { Dropdown } from 'react-bootstrap';
 
 type PopupProps = {
     name: string
 }
 
 
-const PopupButton = ({name} : PopupProps) => {
-    const [isShown, setIsShown] = useState(false);
+const PopupButton = ({ name }: PopupProps) => {
     return (
-        <div>
-            <h4
-                onMouseEnter={() => setIsShown(true)}
-                onMouseLeave={() => setIsShown(false)}
-            >
-                <a style={{textDecoration:'none'}} href="">
-                    {name}:</a>
-            </h4>
-            {isShown && (
-                <ul>
-                    {name === 'Multi Classing' ? <MultiClassingCard /> : <SpellCastingCard />}
-                </ul>
-            )}
-        </div>
+
+        <Dropdown>
+            <Dropdown.Toggle variant="" id="dropdown-basic" size='lg' >
+                <h4>{name}</h4>
+            </Dropdown.Toggle>
+            <Dropdown.Menu>
+                {name === 'Multi Classing' ? <MultiClassingCard /> : <SpellCastingCard />}
+            </Dropdown.Menu>
+        </Dropdown>
+
     )
 }
 

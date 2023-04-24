@@ -1,13 +1,13 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { SpellCasting } from "../models/SpellCasting";
+import { MultiClassing } from "../../models/MultiClassing";
 
 const url = "https://www.dnd5eapi.co/api";
 
 
 
-export const useSpellCasting = (index: string) => {
-    const [spellCasting, setSpellCasting] = useState<SpellCasting>();
+export const useMultiClassing = (index: string) => {
+    const [multiClassing, setMultiClassing] = useState<MultiClassing>();
     const [isLoading, setLoading] = useState<boolean>(false);
 
     useEffect(() => {
@@ -15,15 +15,15 @@ export const useSpellCasting = (index: string) => {
             setLoading(true);
             setTimeout(async () => {
                 const { data } = await axios.get(`${url}${index}`);
-                console.log(data);
-                setSpellCasting(data);
+                //console.log(data);
+                setMultiClassing(data);
                 setLoading(false);
             }, 100);
         };
         load();
     }, [index]);
-    return [spellCasting, setSpellCasting, isLoading] as [
-        SpellCasting,
+    return [multiClassing, setMultiClassing, isLoading] as [
+        MultiClassing,
         Function,
         boolean
     ];
