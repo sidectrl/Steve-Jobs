@@ -1,13 +1,15 @@
 import React, { useContext } from 'react'
 import { BrowserRouter, Outlet, Route, Routes } from 'react-router-dom'
-import Classes from '../ElementListCard/ElementListCard'
-import Character from '../Character/Character'
+import Character from '../Cards/Character/Character'
 import { ThemeContext } from '../../App'
 import { useClasses } from '../../hooks/useClasses'
 import { useMonsters } from '../../hooks/useMonsters'
-import Monster from '../Monster/Monster'
-import MultiClassingCard from '../MultiClassing/MultiClassingCard'
-import SpellCastingCard from '../SpellCastingCard/SpellCastingCard'
+import Monster from '../Cards/Monster/Monster'
+import MultiClassingCard from '../Cards/MultiClassing/MultiClassingCard'
+import SpellCastingCard from '../Cards/SpellCastingCard/SpellCastingCard'
+import { useRaces } from '../../hooks/useRaces'
+import { ElementListCard } from '../Cards/ElementListCard/ElementListCard'
+import { RaceCard } from '../Cards/RaceCard/RaceCard'
 
 
 const Wrapper = () => {
@@ -17,17 +19,22 @@ const Wrapper = () => {
         <div style={customStyle}>
             <BrowserRouter>
                 <Routes>
-                    <Route path="classes" element={<><div style={{ display: 'flex' }}><p><Classes customHook={useClasses()} /></p><Outlet /></div></>}>
-                        <Route index />
-                        <Route path=":index" element={<div style={{ paddingLeft: '10%' }}><Character /><Outlet/></div>}>
-                            <Route path="multi-classing" element={<div ><MultiClassingCard /></div>} />
-                            <Route path="spell-casting" element={<div><SpellCastingCard /></div>} />
+                    <Route path='/'>
+                        <Route path="classes" element={<><div style={{ display: 'flex' }}><p><ElementListCard customHook={useClasses()} /></p><Outlet /></div></>}>
+                            <Route index />
+                            <Route path=":index" element={<div style={{ paddingLeft: '10%' }}><Character /><Outlet /></div>}>
+                                <Route path="multi-classing" element={<div ><MultiClassingCard /></div>} />
+                                <Route path="spellcasting" element={<div><SpellCastingCard /></div>} />
+                            </Route>
                         </Route>
-                    </Route>
-
-                    <Route path="monsters" element={<><div style={{ display: 'flex' }}><p><Classes customHook={useMonsters()} /></p><Outlet /></div></>}>
-                        <Route index />
-                        <Route path=":index" element={<div style={{ paddingLeft: '10%' }}><Monster /></div>} />
+                        <Route path="monsters" element={<><div style={{ display: 'flex' }}><p><ElementListCard customHook={useMonsters()} /></p><Outlet /></div></>}>
+                            <Route index />
+                            <Route path=":index" element={<div style={{ paddingLeft: '10%' }}><Monster /></div>} />
+                        </Route>
+                        <Route path="races" element={<><div style={{ display: 'flex' }}><p><ElementListCard customHook={useRaces()} /></p><Outlet /></div></>}>
+                            <Route index />
+                            <Route path=":index" element={<div style={{ paddingLeft: '10%' }}><RaceCard /></div>} />
+                        </Route>
                     </Route>
                 </Routes>
             </BrowserRouter>

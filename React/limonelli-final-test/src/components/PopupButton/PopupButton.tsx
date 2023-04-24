@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import MultiClassingCard from '../MultiClassing/MultiClassingCard'
-import SpellCastingCard from '../SpellCastingCard/SpellCastingCard';
+import MultiClassingCard from '../Cards/MultiClassing/MultiClassingCard'
+import SpellCastingCard from '../Cards/SpellCastingCard/SpellCastingCard';
 
 type PopupProps = {
     name: string

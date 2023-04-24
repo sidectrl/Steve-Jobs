@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom';
-import { useCharacter } from '../../hooks/useCharacter';
-import '../Styles/CardStyle.css';
-import PopupButton from '../PopupButton/PopupButton';
+import { useCharacter } from '../../../hooks/useCharacter';
+import '../../Styles/CardStyle.css';
+import PopupButton from '../../PopupButton/PopupButton';
 const Character = () => {
   const { index } = useParams() as { index: string };
   const [character] = useCharacter(index);

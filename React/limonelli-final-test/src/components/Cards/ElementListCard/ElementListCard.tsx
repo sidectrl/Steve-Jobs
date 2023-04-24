@@ -1,14 +1,15 @@
 import React from 'react'
 import { Link, useLocation} from 'react-router-dom';
-import '../Styles/StyleInterface.css';
-import { Monster } from '../../models/Monster';
-import { Character } from '../../models/Character';
+import '../../Styles/StyleInterface.css';
+import { Monster } from '../../../models/Monster';
+import { Character } from '../../../models/Character';
+import { Race } from '../../../models/Race';
 
 type ClassesProps = {
-  customHook: [Character[] | Monster[], Function, boolean]
+  customHook: [Character[] | Monster[]| Race[], Function, boolean]
 }
 
-export const Classes = ({customHook} :ClassesProps) => {
+export const ElementListCard = ({customHook} :ClassesProps) => {
   const [items, , isLoading] = customHook;
   const { pathname } = useLocation();
   return (
@@ -29,4 +30,3 @@ export const Classes = ({customHook} :ClassesProps) => {
   );
 };
 
-export default Classes;

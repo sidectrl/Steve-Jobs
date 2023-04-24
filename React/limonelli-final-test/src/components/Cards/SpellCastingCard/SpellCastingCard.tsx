@@ -1,6 +1,6 @@
 import React from 'react'
 import { useLocation } from 'react-router-dom';
-import { useSpellCasting } from '../../hooks/useSpellCasting';
+import { useSpellCasting } from '../../../hooks/useSpellCasting';
 const SpellCastingCard = () => {
     var { pathname } = useLocation();
   pathname += '/spellcasting'
