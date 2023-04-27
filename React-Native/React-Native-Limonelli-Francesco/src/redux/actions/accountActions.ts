@@ -1,6 +1,7 @@
 import { Data } from "../../models/Data";
 
 export type Account = Record<"email" | "password", string> &
+Record<"date", Date> &
   Record<"isLogged", boolean>;
 
 export interface AccountProps {
