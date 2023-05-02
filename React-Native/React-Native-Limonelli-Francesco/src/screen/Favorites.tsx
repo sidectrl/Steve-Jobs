@@ -2,7 +2,7 @@ import React from "react";
 import { View, Text, ScrollView } from "react-native";
 import { CustomScreenFC } from "../models/ScreenFC";
 import { useSelector } from "react-redux";
-import { Data } from "../models/Data";
+import { Data, Result } from "../models/Data";
 import Card from "../components/Card/Card";
 import {
   BookmarkProps,
@@ -51,14 +51,14 @@ const Favorites: CustomScreenFC<"Favorite"> = () => {
               marginTop: -20,
             }}
           >
-            {bookmarks?.map((item: Data, index: number) => {
+            {bookmarks?.map((item: Result, index: number) => {
               return (
                 <Card
                   item={item}
                   index={index}
                   key={index}
                   disabled
-                  onPress={() => dispatch(removeBookmark(item.id))}
+                  onPress={() => dispatch(removeBookmark(item.id.value))}
                 />
               );
             })}
