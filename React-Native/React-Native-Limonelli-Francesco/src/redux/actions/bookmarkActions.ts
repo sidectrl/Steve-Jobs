@@ -22,7 +22,7 @@ export const addBookmark = (bookmark: Result) => {
   };
 };
 
-export const removeBookmark = (id: number) => {
+export const removeBookmark = (id: string) => {
   return {
     type: BOOKMARK_ACTIONS.REMOVE_BOOKMARK,
     payload: id,

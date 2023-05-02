@@ -1,6 +1,7 @@
 import React from "react";
 import { TouchableOpacity, View, Image, StyleSheet } from "react-native";
-import { Data, Result } from "../../models/Data";
+import { Result } from "../../models/Data";
+import { HeartButton } from "../HeartButton/HeartButton";
 
 interface Props {
   item: Result;
@@ -22,6 +23,9 @@ const Card = ({ item, index, disabled, onPress }: Props) => {
             uri: item?.picture?.large,
           }}
           style={styles.image}
+        />
+        <HeartButton 
+        item={item}
         />
         <View style={styles.card}>
           
