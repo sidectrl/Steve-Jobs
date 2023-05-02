@@ -16,7 +16,7 @@ import axios from "axios";
 
 const HomeScreen: ScreenFC<"Home"> = ({ navigation, route }) => {
   const [state, setState] = useState<Data>();
-  const dispatch = useDispatch();
+  
 
   useEffect(() => {
     getData();
@@ -40,17 +40,21 @@ const HomeScreen: ScreenFC<"Home"> = ({ navigation, route }) => {
       </View>
       <View style={styles.shadow}>
         {state ? (
-          state?.results.map((item, index) => 
-              <Card
-                item={item}
-                index={index}
-                onPress={
-                  () => {
-                    navigation.navigate("Detail", { id: item.id.name});
-                  }
-                }
-              />)
-            )
+         <FlatList
+         data={state.results}
+         showsVerticalScrollIndicator={false}
+         renderItem={({ item, index }) => (
+           <Card
+             item={item}
+             index={index}
+             onPress={
+               () => {
+                 navigation.navigate("Detail", { id: item.id.toString() });
+               }
+             }
+           />
+         )}
+       />)
          : (
           <View style={styles.cardContainer}>
             <Text>No result</Text>
