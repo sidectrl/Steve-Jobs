@@ -1,9 +1,9 @@
 import React from "react";
-import { TouchableOpacity, View, Image, Text, StyleSheet } from "react-native";
-import { Data } from "../../models/Data";
+import { TouchableOpacity, View, Image, StyleSheet } from "react-native";
+import { Data, Result } from "../../models/Data";
 
 interface Props {
-  item: Data;
+  item: Result;
   index: number;
   disabled?: boolean;
   onPress?: () => void;
@@ -19,27 +19,12 @@ const Card = ({ item, index, disabled, onPress }: Props) => {
       <View style={styles.cardContainer}>
         <Image
           source={{
-            uri: item.image,
+            uri: item?.picture?.large,
           }}
           style={styles.image}
         />
         <View style={styles.card}>
-          <View>
-            <Text style={styles.description}>Nome:</Text>
-            <Text style={styles.description}>Specie:</Text>
-            <Text style={styles.description}>Location:</Text>
-          </View>
-          <View>
-            <Text ellipsizeMode="tail" numberOfLines={1} style={styles.tail}>
-              {item.name}
-            </Text>
-            <Text style={styles.tail} ellipsizeMode="tail" numberOfLines={1}>
-              {item.species}
-            </Text>
-            <Text ellipsizeMode="tail" numberOfLines={1} style={styles.tail}>
-              {item.location.name}
-            </Text>
-          </View>
+          
         </View>
       </View>
     </TouchableOpacity>

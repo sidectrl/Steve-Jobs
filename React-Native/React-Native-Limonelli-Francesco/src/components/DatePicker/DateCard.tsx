@@ -1,6 +1,6 @@
 import { DateTimePickerAndroid } from '@react-native-community/datetimepicker';
-import { useState } from 'react';
-import { Button, View , Text} from 'react-native';
+import { View , Text, TouchableOpacity} from 'react-native';
+import { styles } from '../../screen/SignUp';
 type DateProps= {
 date : Date;
 setDate : React.Dispatch<React.SetStateAction<Date>>
@@ -27,8 +27,8 @@ export const DateCard = ({date, setDate}: DateProps) => {
   };
 
   return (
-    <View>
-      <Button onPress={showDatepicker} title="Enter the date" />
+    <View style={{alignItems:'center'}}>
+      <TouchableOpacity onPress={showDatepicker}><Text style={styles.title}>Enter the date</Text></TouchableOpacity>
       <Text>selected: {date.toLocaleString()}</Text>
     </View>
   );

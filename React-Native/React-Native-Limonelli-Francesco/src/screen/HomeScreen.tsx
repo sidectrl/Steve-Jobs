@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import {
   View,
   SafeAreaView,
-  Button,
   FlatList,
   Text,
   StyleSheet,
@@ -13,29 +12,21 @@ import { Data } from "../models/Data";
 import { ScreenFC } from "../models/ScreenFC";
 import { useDispatch } from "react-redux";
 import { addBookmark } from "../redux/actions/bookmarkActions";
+import axios from "axios";
 
 const HomeScreen: ScreenFC<"Home"> = ({ navigation, route }) => {
-  const [state, setState] = useState<Array<Data>>([]);
-  const [page, setPage] = useState<number>(1);
-
+  const [state, setState] = useState<Data>();
   const dispatch = useDispatch();
 
   useEffect(() => {
     getData();
   }, []);
 
-  const getData = async (page: number = 1) => {
+  const getData = async () => {
     try {
-      const data = await fetch(
-        `https://rickandmortyapi.com/api/character?page=${page}`
-      );
-      const res = await data.json();
-      if (data.status === 200) {
-        setState(
-          res.results.length > 5 ? res.results.slice(0, 5) : res.results
-        ),
-          setPage(page);
-      }
+      const { data } = await axios.get(`https://randomuser.me/api/?results=24&seed=contactgram&nat=us,fr,gb&exc=login,registered&noinfo`)
+      console.log(data)
+      setState(data)
     } catch (err) {
       console.log("ERROR", err);
     }
@@ -46,39 +37,21 @@ const HomeScreen: ScreenFC<"Home"> = ({ navigation, route }) => {
       <SafeAreaView />
       <StatusBar style="auto" />
       <View style={styles.buttonContainer}>
-        <Button
-          title="Indietro"
-          color="red"
-          disabled={page === 1 && true}
-          onPress={() => getData(page - 1)}
-        />
-        <Button
-          title="Avanti"
-          color="blue"
-          disabled={state.length < 1}
-          onPress={() => getData(page + 1)}
-        />
       </View>
       <View style={styles.shadow}>
-        {state.length > 1 ? (
-          <FlatList
-            style={{ marginBottom: 120 }}
-            data={state}
-            showsVerticalScrollIndicator={false}
-            renderItem={({ item, index }) => (
+        {state ? (
+          state?.results.map((item, index) => 
               <Card
                 item={item}
                 index={index}
                 onPress={
                   () => {
-                    navigation.navigate("Detail", { id: item.id.toString() });
-                    dispatch(addBookmark(item));
+                    navigation.navigate("Detail", { id: item.id.name});
                   }
                 }
-              />
-            )}
-          />
-        ) : (
+              />)
+            )
+         : (
           <View style={styles.cardContainer}>
             <Text>No result</Text>
           </View>

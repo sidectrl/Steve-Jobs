@@ -29,7 +29,7 @@ const bookmarkReducer = (state = initialState, action: BookmarkAction) => {
         ...state,
         bookmarks: [
           ...state.bookmarks.filter(
-            (item) => item.id !== (action.payload as number)
+            (item) => item.id.name !== (action.payload as string)
           ),
         ],
       };
