@@ -1,7 +1,7 @@
 import { Data, Result } from '../../models/Data';
 
 export interface BookmarkProps {
-  bookmarks: Data[];
+  bookmarks: Result[];
 }
 
 export interface BookmarkAction {
