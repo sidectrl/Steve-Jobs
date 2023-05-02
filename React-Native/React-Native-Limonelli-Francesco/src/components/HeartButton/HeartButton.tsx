@@ -6,11 +6,11 @@ import { addBookmark, removeBookmark } from '../../redux/actions/bookmarkActions
 import { Result } from '../../models/Data';
 
 
-type Pisello = {
+type HeartButtonProps = {
   item: Result
 }
 
-export const HeartButton = ({ item }: Pisello) => {
+export const HeartButton = ({ item }: HeartButtonProps) => {
   const [isFavorite, setIsFavorite] = useState(false);
   const dispatch = useDispatch();
   const handlePress = () => {
