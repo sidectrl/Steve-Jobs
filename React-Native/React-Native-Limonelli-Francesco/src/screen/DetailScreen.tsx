@@ -3,6 +3,7 @@ import { ScreenFC } from "../models/ScreenFC";
 
 import { HeartButton } from "../components/HeartButton/HeartButton";
 import { styles } from "./SignUp";
+import Icon from "react-native-vector-icons/FontAwesome";
 
 const DetailScreen: ScreenFC<"Detail"> = ({ route, navigation }) => {
   const { data } = route.params;
@@ -25,11 +26,11 @@ const DetailScreen: ScreenFC<"Detail"> = ({ route, navigation }) => {
   return (
     <View style={styles2.container}>
       <Image source={{ uri: data?.picture.large }} style={styles2.image} />
-      <Text>{data?.name.first} {data?.name.last}</Text>
-      <Text>{data?.dob.date}</Text>
-      <Text>{data?.location.country}, {data?.location.city}</Text>
-      <Text style={styles.datePickerStyle} onPress={sendMail}>{data?.email}</Text>
-      <Text style={styles.datePickerStyle} onPress={callNumber}>{data?.cell}</Text>
+      <Text style={styles2.fontInfo}><Icon name='user' size={25} /> {data?.name.first} {data?.name.last}</Text>
+      <Text style={styles2.fontInfo}><Icon name='calendar' size={25} /> {data?.dob.date}</Text>
+      <Text style={styles2.fontInfo}><Icon name='map-marker' size={25} /> {data?.location.country}, {data?.location.city}</Text>
+      <Text style={[styles.datePickerStyle, styles2.fontInfo]} onPress={sendMail}><Icon name='envelope-o' size={25} /> {data?.email}</Text>
+      <Text style={[styles.datePickerStyle, styles2.fontInfo]} onPress={callNumber}><Icon name='phone' size={25} /> {data?.cell}</Text>
       <HeartButton
         item={data}
       />
@@ -45,10 +46,14 @@ const styles2 = StyleSheet.create({
     marginTop: 20,
   },
   image: {
-    height: 100,
-    width: 100,
+    height: 150,
+    width: 150,
     borderRadius: 80,
   },
+  fontInfo:{
+    fontSize: 20,
+    paddingVertical: 10
+  }
 });
 
 export default DetailScreen;
