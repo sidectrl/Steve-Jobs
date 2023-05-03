@@ -19,6 +19,7 @@ import { BookmarkProps } from "../redux/actions/bookmarkActions";
 import Login from "../screen/Login";
 import SignUp from "../screen/SignUp";
 import { AccountProps } from "../redux/actions/accountActions";
+import Icon from "react-native-vector-icons/FontAwesome";
 
 const RootStack = createStackNavigator<RootStackParams>();
 const Drawer = createDrawerNavigator();
@@ -97,14 +98,14 @@ const TabNavigation: React.FC = () => {
         }}
       />
       <Tab.Screen
-        name={ROUTES.Favorite}
-        component={Favorites}
+        name={ROUTES.Profile}
+        component={ProfileScreen}
         options={{
           headerTintColor: "red",
           headerStyle: { backgroundColor: "#fc8386" },
-          tabBarLabel: "Favorites",
+          tabBarLabel: "Profile",
           tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons name="bookmark" color={color} size={size} />
+            <Icon name='user' size={size} color={color} /> 
           ),
           tabBarBadge: bookmarks.length > 0 ? bookmarks.length : undefined,
         }}
@@ -121,14 +122,15 @@ const DrawerMenu: React.FC = () => {
   return (
     <NavigationContainer>
       {account && account.isLogged ? (
-        <Drawer.Navigator initialRouteName="Homepage">
+        <Drawer.Navigator initialRouteName="HomePage">
           <Drawer.Screen
             name={ROUTES.Homepage}
             component={TabNavigation}
             options={{ headerShown: true }}
           />
+          <Drawer.Screen name={ROUTES.Favorite} component={Favorites} />
+          <Drawer.Screen name={ROUTES.Profile} component={ProfileScreen}/>
           <Drawer.Screen name={ROUTES.Setting} component={SettingScreen} />
-          <Drawer.Screen name={ROUTES.Profile} component={ProfileScreen} />
         </Drawer.Navigator>
       ) : (
         <MainStack />
