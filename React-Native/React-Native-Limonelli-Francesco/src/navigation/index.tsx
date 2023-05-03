@@ -125,7 +125,7 @@ const DrawerMenu: React.FC = () => {
           <Drawer.Screen
             name={ROUTES.Homepage}
             component={TabNavigation}
-            options={{ headerShown: false }}
+            options={{ headerShown: true }}
           />
           <Drawer.Screen name={ROUTES.Setting} component={SettingScreen} />
           <Drawer.Screen name={ROUTES.Profile} component={ProfileScreen} />
