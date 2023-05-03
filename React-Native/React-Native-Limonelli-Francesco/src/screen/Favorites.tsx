@@ -58,7 +58,7 @@ const Favorites: CustomScreenFC<"Favorite"> = () => {
                   index={index}
                   key={index}
                   disabled
-                  onPress={() => dispatch(removeBookmark(item.id.value))}
+                  onPress={() => dispatch(removeBookmark(item.id.name))}
                 />
               );
             })}
