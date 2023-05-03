@@ -56,8 +56,8 @@ const ProfileScreen: CustomScreenFC<"Profile"> = ({ navigation }) => {
       {image && (
         <Image source={{ uri: image }} style={{ width: 200, height: 200 }} />
       )}
-      <Text>Email: {account.email}</Text>
-      <Text>Born: {account.date.getDay()+ '/' + account.date.getMonth() + '/' + account.date.getFullYear()}</Text>
+      <Text>Email: {account?.email}</Text>
+      <Text>Born: {account.date?.valueOf()}</Text>
       <Text>Logged: {String(account?.isLogged)} ?</Text>
       <Button title="Choice photo" color="blue" onPress={pickImage} />
       <Button title="Open Link" color="blue" onPress={handlePress} />

@@ -7,7 +7,7 @@ import { Result } from '../../models/Data';
 
 
 type HeartButtonProps = {
-  item: Result
+  item: Result | undefined
 }
 
 export const HeartButton = ({ item }: HeartButtonProps) => {
@@ -15,7 +15,8 @@ export const HeartButton = ({ item }: HeartButtonProps) => {
   const dispatch = useDispatch();
   const handlePress = () => {
     setIsFavorite(!isFavorite);
-    !isFavorite ? dispatch(addBookmark(item)) : dispatch(removeBookmark(item.id.name));
+    if (item)
+      !isFavorite ? dispatch(addBookmark(item)) : dispatch(removeBookmark(item.id.name))
   };
 
   return (

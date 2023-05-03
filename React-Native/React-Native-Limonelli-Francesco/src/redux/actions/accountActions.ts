@@ -1,8 +1,11 @@
+import { Country } from "react-native-country-picker-modal"
 
 export type Account = {
-  email:string
+  email: string
   password: string
   date?: Date
+  phoneNumber: string
+  country?: Country
   isLogged: boolean
 }
 

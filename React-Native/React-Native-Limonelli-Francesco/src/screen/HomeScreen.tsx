@@ -10,8 +10,6 @@ import {
 import Card from "../components/Card/Card";
 import { Data } from "../models/Data";
 import { ScreenFC } from "../models/ScreenFC";
-import { useDispatch } from "react-redux";
-import { addBookmark } from "../redux/actions/bookmarkActions";
 import axios from "axios";
 
 const HomeScreen: ScreenFC<"Home"> = ({ navigation, route }) => {
@@ -49,7 +47,7 @@ const HomeScreen: ScreenFC<"Home"> = ({ navigation, route }) => {
              index={index}
              onPress={
                () => {
-                 navigation.navigate("Detail", { id: item.id.toString() });
+                 navigation.navigate("Detail", { id: item.id.value,  });
                }
              }
            />
