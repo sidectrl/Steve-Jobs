@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import { View, Text, StyleSheet, Button, Image, Linking } from "react-native";
+import { View, Text, StyleSheet, Button, Image, Linking, TouchableOpacity } from "react-native";
 import { CustomScreenFC } from "../models/ScreenFC";
 import * as ImagePicker from "expo-image-picker";
 import { Camera, CameraType } from "expo-camera";
 import { useDispatch, useSelector } from "react-redux";
 import { AccountProps, logout } from "../redux/actions/accountActions";
+import { styles } from "./SignUp";
 
 const ProfileScreen: CustomScreenFC<"Profile"> = ({ navigation }) => {
   const [image, setImage] = useState<string>();
@@ -33,26 +34,9 @@ const ProfileScreen: CustomScreenFC<"Profile"> = ({ navigation }) => {
 
   // ImagePicker.requestMediaLibraryPermissionsAsync()
 
-  const supportedURL = "https://google.com";
-
-  const handlePress = async () => {
-    const supported = await Linking.canOpenURL(supportedURL);
-    if (supported) {
-      // await Linking.openURL(supportedURL);
-      // await Linking.openSettings();
-      // await Linking.openURL("mailto:lenda.ortiz@example.com");
-      await Linking.openURL("tel:(257)832-5149");
-    }
-  };
-
   return (
-    <View style={styles.container}>
-      <Text>ProfileScreen</Text>
-      <Button
-        title="Go to Setting"
-        color="red"
-        onPress={() => navigation?.navigate("Setting", { setting: "Default" })}
-      />
+    <View style={styles2.container}>
+      <Text style={styles.title}>ProfileScreen</Text>
       {image && (
         <Image source={{ uri: image }} style={{ width: 200, height: 200 }} />
       )}
@@ -60,13 +44,13 @@ const ProfileScreen: CustomScreenFC<"Profile"> = ({ navigation }) => {
       <Text>Born: {account.date?.valueOf()}</Text>
       <Text>Logged: {String(account?.isLogged)} ?</Text>
       <Button title="Choice photo" color="blue" onPress={pickImage} />
-      <Button title="Open Link" color="blue" onPress={handlePress} />
+      <TouchableOpacity><Text style={styles.datePickerStyle}>{account?.phoneNumber}</Text></TouchableOpacity>
       <Button title="Logout" color="blue" onPress={() => dispatch(logout())} />
     </View>
   );
 };
 
-const styles = StyleSheet.create({
+const styles2 = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",
