@@ -1,9 +1,8 @@
 import React from "react";
-import { View, Text, ScrollView } from "react-native";
+import { View, Text, ScrollView, TouchableHighlight } from "react-native";
 import { CustomScreenFC } from "../models/ScreenFC";
-import { useSelector } from "react-redux";
-import { Data, Result } from "../models/Data";
-import Card from "../components/Card/Card";
+import { useDispatch, useSelector } from "react-redux";
+import { Result } from "../models/Data";
 import {
   BookmarkProps,
   removeAllBookmark,
@@ -11,15 +10,15 @@ import {
 } from "../redux/actions/bookmarkActions";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
-import { useDispatch } from "react-redux";
+import FavoriteCard from "../components/Card/FavoriteCard";
 
-const Favorites: CustomScreenFC<"Favorite"> = () => {
+
+const Favorites: CustomScreenFC<"Favorite"> = ({ navigation }) => {
   const { bookmarks } = useSelector(
     (state: { bookmarkReducer: BookmarkProps }) => state.bookmarkReducer
   );
 
   const dispatch = useDispatch();
-
   return (
     <View
       style={{
@@ -53,12 +52,12 @@ const Favorites: CustomScreenFC<"Favorite"> = () => {
           >
             {bookmarks?.map((item: Result, index: number) => {
               return (
-                <Card
+                <FavoriteCard
                   item={item}
                   index={index}
-                  key={index}
+                  key={`key-${index}`}
                   disabled
-                  onPress={() => dispatch(removeBookmark(item.id.name))}
+                  onPress={() => navigation.navigate("Detail", { id: item.id.name, data: item })}
                 />
               );
             })}
