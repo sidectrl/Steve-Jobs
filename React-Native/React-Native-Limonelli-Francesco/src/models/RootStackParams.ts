@@ -1,8 +1,11 @@
+import { Result } from "./Data";
+
 type RootStackParams = {
   Home: { typology: string };
   Detail: {
     id?: string | undefined;
     name?: string | undefined;
+    data?: Result
   };
   HomeStack: undefined;
   Profile: undefined;

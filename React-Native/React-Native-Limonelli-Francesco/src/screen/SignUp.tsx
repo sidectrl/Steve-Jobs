@@ -1,15 +1,19 @@
 import React, { useState } from "react";
-import { Button, Text, TextInput, View ,StyleSheet} from "react-native";
+import { Button, Text, TextInput, View, StyleSheet } from "react-native";
 import { ScreenFC } from "../models/ScreenFC";
 import { useDispatch } from "react-redux";
 import { signUp } from "../redux/actions/accountActions";
 import { DateCard } from "../components/DatePicker/DateCard";
+import { Country } from "react-native-country-picker-modal";
+import CountryPick from "../components/CountryPicker/CountryPicker";
 
 
 const SignUp: ScreenFC<"SignUp"> = ({ navigation }) => {
   const [email, setEmail] = useState<string>();
   const [password, setPassword] = useState<string>();
-  const [date, setDate] = useState(new Date(1598051730000));
+  const [date, setDate] = useState(new Date());
+  const [phoneNumber, setPhoneNumber] = useState<string>();
+  const [country, setCountry] = useState<Country>()
   const dispatch = useDispatch();
 
   return (
@@ -23,7 +27,15 @@ const SignUp: ScreenFC<"SignUp"> = ({ navigation }) => {
         placeholder="password"
         onChangeText={(value) => setPassword(value)}
       />
-      <DateCard  date={date} setDate={setDate}/>
+      <DateCard date={date} setDate={setDate} />
+      <TextInput
+        placeholder="phone number"
+        onChangeText={(value) => setPhoneNumber(value)} />
+      <CountryPick
+      country={country}
+      setCountry={setCountry}
+      />
+
       <Button
         title="Registrati"
         color="red"
@@ -31,7 +43,9 @@ const SignUp: ScreenFC<"SignUp"> = ({ navigation }) => {
           email &&
             password &&
             date &&
-            dispatch(signUp({ email, password, date , isLogged: true }));
+            phoneNumber &&
+            country &&
+            dispatch(signUp({ email, password, date, phoneNumber,country, isLogged: true }));
         }}
       />
       <View style={{ flexDirection: "row", alignItems: "center" }}>
@@ -54,11 +68,11 @@ export const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   datePickerStyle: {
-    width: 230,
+    color: 'blue'
   },
   text: {
     width: 230,
     fontSize: 16,
-    color : "#000"
+    color: "#000"
   }
 });

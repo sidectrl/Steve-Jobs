@@ -47,7 +47,7 @@ const HomeScreen: ScreenFC<"Home"> = ({ navigation, route }) => {
              index={index}
              onPress={
                () => {
-                 navigation.navigate("Detail", { id: item.id.value,  });
+                 navigation.navigate("Detail", { id: item.id.name, data: item });
                }
              }
            />

@@ -1,4 +1,4 @@
-import { Data } from "../../models/Data";
+import { Data, Result } from "../../models/Data";
 import {
   BOOKMARK_ACTIONS,
   BookmarkAction,
@@ -19,7 +19,7 @@ const bookmarkReducer = (state = initialState, action: BookmarkAction) => {
         ...state,
         bookmarks: [
           ...state.bookmarks.filter(
-            (item) => item.id !== (action.payload as Data).id
+            (item) => item.id !== (action.payload as Result).id
           ),
           action.payload,
         ],

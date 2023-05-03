@@ -6,7 +6,7 @@ export interface BookmarkProps {
 
 export interface BookmarkAction {
   type: BOOKMARK_ACTIONS;
-  payload: Data | string;
+  payload: Result | string;
 }
 
 export enum BOOKMARK_ACTIONS {
