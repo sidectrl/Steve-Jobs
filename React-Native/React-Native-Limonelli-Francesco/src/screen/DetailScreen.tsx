@@ -1,18 +1,35 @@
-import { View, Text, StyleSheet, Image } from "react-native";
+import { View, Text, StyleSheet, Image, Linking } from "react-native";
 import { ScreenFC } from "../models/ScreenFC";
 
 import { HeartButton } from "../components/HeartButton/HeartButton";
+import { styles } from "./SignUp";
 
 const DetailScreen: ScreenFC<"Detail"> = ({ route, navigation }) => {
   const { data } = route.params;
+  const supportedURL = "https://google.com";
+
+  const callNumber = async () => {
+    const supported = await Linking.canOpenURL(supportedURL);
+    if (supported) {
+      // await Linking.openURL(supportedURL);
+      // await Linking.openSettings();
+      await Linking.openURL(`tel:${data?.cell}`);
+    }
+  };
+  const sendMail = async () => {
+    const supported = await Linking.canOpenURL(supportedURL);
+    if (supported) {
+      await Linking.openURL(`mailto:${data?.email}`);
+    }
+  };
   return (
-    <View style={styles.container}>
-      <Image source={{ uri: data?.picture.large }} style={styles.image} />
+    <View style={styles2.container}>
+      <Image source={{ uri: data?.picture.large }} style={styles2.image} />
       <Text>{data?.name.first} {data?.name.last}</Text>
       <Text>{data?.dob.date}</Text>
       <Text>{data?.location.country}, {data?.location.city}</Text>
-      <Text>{data?.email}</Text>
-      <Text>{data?.cell}</Text>
+      <Text style={styles.datePickerStyle} onPress={sendMail}>{data?.email}</Text>
+      <Text style={styles.datePickerStyle} onPress={callNumber}>{data?.cell}</Text>
       <HeartButton
         item={data}
       />
@@ -20,7 +37,7 @@ const DetailScreen: ScreenFC<"Detail"> = ({ route, navigation }) => {
   );
 };
 
-const styles = StyleSheet.create({
+const styles2 = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",
