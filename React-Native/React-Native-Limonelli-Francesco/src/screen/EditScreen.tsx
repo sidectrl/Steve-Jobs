@@ -40,6 +40,7 @@ export const EditScreen: CustomScreenFC<"EditProfile"> = () => {
         setPhoneNumber(account.phoneNumber);
         setCountry(account.country);
         setCity(account.city);
+        account.date ? setDate(new Date(account?.date)) : null
     }, []);
 
     const pickImage = async () => {
@@ -64,7 +65,7 @@ export const EditScreen: CustomScreenFC<"EditProfile"> = () => {
         <View style={styles.container}>
             <Text style={styles.title}>Edit account</Text>
 
-            <TouchableOpacity onPress={pickImage}>{image ? <Image alt="image" source={{ uri: image }} style={{ width: 200, height: 200 }} /> : <Text style={styles.subTitle}>Click to select image</Text>}</TouchableOpacity>
+            <TouchableOpacity onPress={pickImage}>{image ? <Image alt="image" source={{ uri: image }} style={{ width: 150, height: 150, borderRadius:80 }} /> : <Text style={styles.subTitle}>Click to select image</Text>}</TouchableOpacity>
             <Text>Name:</Text>
             <TextInput
                 placeholder={account?.name}
@@ -82,11 +83,10 @@ export const EditScreen: CustomScreenFC<"EditProfile"> = () => {
             />
             <Text>Password:</Text>
             <TextInput
-
                 placeholder={account?.password}
                 onChangeText={(value) => setPassword(value)}
             />
-            <Text>Telepho:</Text>
+            <Text>Telephone:</Text>
             <TextInput
                 placeholder={account?.phoneNumber}
                 onChangeText={(value) => setPhoneNumber(value)} />
@@ -94,8 +94,9 @@ export const EditScreen: CustomScreenFC<"EditProfile"> = () => {
                 country={account?.country}
                 setCountry={setCountry}
             />
+            <DateCard date={date} setDate={setDate} />
             <TextInput
-                placeholder="city"
+                placeholder={account?.city}
                 onChangeText={(value) => setCity(value)}
             />
             <Button
