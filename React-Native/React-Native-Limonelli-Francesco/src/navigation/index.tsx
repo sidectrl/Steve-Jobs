@@ -22,6 +22,7 @@ import { Button, Modal, View, StyleSheet, Text } from "react-native";
 import EditScreen from "../screen/EditScreen";
 import HomeScreen from "../screen/HomePage";
 import HomePage from "../screen/HomePage";
+import Favorites from "../screen/Favorites";
 
 const RootStack = createStackNavigator<RootStackParams>();
 const Drawer = createDrawerNavigator();
@@ -76,7 +77,7 @@ const TabNavigation: React.FC = () => {
           headerShown: false,
           tabBarLabel: "Home",
           tabBarIcon: ({ color, size }) => (
-            <Icon name="home"color={color} size={size} />
+            <Icon name="home" color={color} size={size} />
           ),
         }}
       />
@@ -155,6 +156,10 @@ const DrawerMenu: React.FC = () => {
             name={ROUTES.Profile}
             component={ProfileScreen}
             options={{ headerShown: true }}
+          />
+          <Drawer.Screen
+            name={ROUTES.Favorite}
+            component={Favorites}
           />
           <Drawer.Screen name={ROUTES.EditProfile} component={EditScreen} />
           <Drawer.Screen name={ROUTES.Info} component={InfoScreen} />

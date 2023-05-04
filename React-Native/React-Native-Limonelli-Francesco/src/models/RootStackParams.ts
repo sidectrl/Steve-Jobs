@@ -3,8 +3,8 @@ import { Result } from "./Data";
 type RootStackParams = {
   Home: { typology: string };
   Detail: {
-    id?: string | undefined;
-    name?: string | undefined;
+    id?: string;
+    name?: string;
     data?: Result
   };
   HomeStack: undefined;
