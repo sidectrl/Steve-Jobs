@@ -22,6 +22,7 @@ import { Button, Modal, View, StyleSheet, Text } from "react-native";
 import EditScreen from "../screen/EditScreen";
 import SettingScreen from "../screen/SettingScreen";
 import HomePage from "../screen/HomePage";
+import HomeScreen from "../screen/HomePage";
 
 const RootStack = createStackNavigator<RootStackParams>();
 const Drawer = createDrawerNavigator();
@@ -72,7 +73,7 @@ const TabNavigation: React.FC = () => {
     >
       <Tab.Screen
         name={ROUTES.Homepage}
-        component={HomeStack}
+        component={HomeScreen}
         options={{
           headerShown: false,
           tabBarLabel: "Home",
