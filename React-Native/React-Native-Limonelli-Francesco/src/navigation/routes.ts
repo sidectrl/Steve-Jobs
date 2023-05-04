@@ -3,7 +3,7 @@ enum ROUTES {
   Detail = "Detail",
   HomeStack = "HomeStack",
   Favorite = "Favorite",
-  Homepage = "Homepage",
+  HomePage = "HomePage",
   Setting = "Setting",
   Profile = "Profile",
   Login = "Login",

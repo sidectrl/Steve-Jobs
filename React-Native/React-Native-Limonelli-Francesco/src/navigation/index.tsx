@@ -20,14 +20,12 @@ import { AccountProps, deleteAccount, logout } from "../redux/actions/accountAct
 import Icon from "react-native-vector-icons/FontAwesome";
 import { Button, Modal, View, StyleSheet, Text } from "react-native";
 import EditScreen from "../screen/EditScreen";
-import SettingScreen from "../screen/SettingScreen";
-import HomePage from "../screen/HomePage";
 import HomeScreen from "../screen/HomePage";
+import HomePage from "../screen/HomePage";
 
 const RootStack = createStackNavigator<RootStackParams>();
 const Drawer = createDrawerNavigator();
 const Tab = createBottomTabNavigator();
-
 
 
 const MainStack: React.FC = () => {
@@ -72,8 +70,8 @@ const TabNavigation: React.FC = () => {
       }}
     >
       <Tab.Screen
-        name={ROUTES.Homepage}
-        component={HomeScreen}
+        name={ROUTES.HomePage}
+        component={HomePage}
         options={{
           headerShown: false,
           tabBarLabel: "Home",

@@ -14,7 +14,7 @@ type RootStackParams = {
     bookmark: number
   };
   Setting: {setting: string};
-  Homepage: undefined;
+  HomePage: undefined;
   SignUp: undefined;
   Login: undefined;
   Info: undefined;

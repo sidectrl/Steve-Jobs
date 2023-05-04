@@ -9,12 +9,11 @@ import {
 } from "react-native";
 import Card from "../components/Card/Card";
 import { Data } from "../models/Data";
-import { ScreenFC } from "../models/ScreenFC";
+import { CustomScreenFC, ScreenFC } from "../models/ScreenFC";
 import axios from "axios";
 
-const HomeScreen: ScreenFC<"Home"> = ({ navigation, route }) => {
+const HomePage:  CustomScreenFC<"Home"> = ({ navigation }) => {
   const [state, setState] = useState<Data>();
-  
 
   useEffect(() => {
     getData();
@@ -38,26 +37,26 @@ const HomeScreen: ScreenFC<"Home"> = ({ navigation, route }) => {
       </View>
       <View style={styles.shadow}>
         {state ? (
-         <FlatList
-         data={state.results}
-         showsVerticalScrollIndicator={false}
-         renderItem={({ item, index }) => (
-           <Card
-             item={item}
-             index={index}
-             onPress={
-               () => {
-                 navigation.navigate("Detail", { id: item.id.name, data: item });
-               }
-             }
-           />
-         )}
-       />)
-         : (
-          <View style={styles.cardContainer}>
-            <Text>No result</Text>
-          </View>
-        )}
+          <FlatList
+            data={state.results}
+            showsVerticalScrollIndicator={false}
+            renderItem={({ item, index }) => (
+              <Card
+                item={item}
+                index={index}
+                onPress={
+                  () => {
+                    navigation.navigate("Detail", { id: item.id.name, data: item });
+                  }
+                }
+              />
+            )}
+          />)
+          : (
+            <View style={styles.cardContainer}>
+              <Text>No result</Text>
+            </View>
+          )}
       </View>
     </View>
   );
@@ -94,4 +93,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default HomeScreen;
+export default HomePage;
