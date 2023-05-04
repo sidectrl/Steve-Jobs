@@ -106,6 +106,7 @@ const DrawerMenu: React.FC = () => {
   const dispatch = useDispatch();
   const confirmDelete = () => {
     dispatch(deleteAccount(account));
+    dispatch(logout());
     setModalVisible(false);
   };
   const CustomDrawerContent = (props: any) => {
