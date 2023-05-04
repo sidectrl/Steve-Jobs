@@ -18,6 +18,7 @@ type RootStackParams = {
   SignUp: undefined;
   Login: undefined;
   Info: undefined;
+  EditProfile: undefined;
 };
 
 export default RootStackParams;

@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import { Button, Text, TextInput, View, StyleSheet } from "react-native";
+import { Button, Text, TextInput, View, StyleSheet, TouchableOpacity, Image } from "react-native";
 import { ScreenFC } from "../models/ScreenFC";
 import { useDispatch } from "react-redux";
 import { signUp } from "../redux/actions/accountActions";
 import { DateCard } from "../components/DatePicker/DateCard";
 import { Country } from "react-native-country-picker-modal";
 import CountryPick from "../components/CountryPicker/CountryPicker";
+import * as ImagePicker from "expo-image-picker";
 
 
 const SignUp: ScreenFC<"SignUp"> = ({ navigation }) => {
@@ -16,11 +17,27 @@ const SignUp: ScreenFC<"SignUp"> = ({ navigation }) => {
   const [date, setDate] = useState(new Date());
   const [phoneNumber, setPhoneNumber] = useState<string>();
   const [country, setCountry] = useState<Country>()
+  const [image, setImage] = useState<string>();
   const dispatch = useDispatch();
 
+  const pickImage = async () => {
+    ImagePicker.requestMediaLibraryPermissionsAsync()
+    const result = await ImagePicker.launchImageLibraryAsync({
+      mediaTypes: ImagePicker.MediaTypeOptions.All,
+      allowsEditing: true,
+      aspect: [4, 3],
+      quality: 1,
+    });
+
+    if (result.assets) {
+      setImage(result.assets[0].uri);
+      console.log(result.assets[0].uri);
+    }
+  };
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Registrati</Text>
+      <TouchableOpacity onPress={pickImage}>{image ? <Image alt="image" source={{ uri: image }} style={{ width: 200, height: 200 }}/> : <Text style={styles.subTitle}>Click to select image</Text>}</TouchableOpacity>
       <TextInput
         placeholder="name"
         onChangeText={(value) => setName(value)}
@@ -57,7 +74,8 @@ const SignUp: ScreenFC<"SignUp"> = ({ navigation }) => {
             date &&
             phoneNumber &&
             country &&
-            dispatch(signUp({name, lastName, email, password, date, phoneNumber,country, isLogged: true }));
+            image&&
+            dispatch(signUp({name, lastName, email, password, date, phoneNumber,country,image, isLogged: true }));
         }}
       />
       <View style={{ flexDirection: "row", alignItems: "center" }}>
@@ -75,8 +93,12 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  title: {
+  subTitle:{
     fontSize: 20,
+    fontWeight: 'bold',
+  },
+  title: {
+    fontSize: 30,
     fontWeight: 'bold',
   },
   datePickerStyle: {

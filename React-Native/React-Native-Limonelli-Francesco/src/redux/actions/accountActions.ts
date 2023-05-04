@@ -8,6 +8,7 @@ export type Account = {
   date?: Date
   phoneNumber: string
   country?: Country
+  image?: string
   isLogged: boolean
 }
 

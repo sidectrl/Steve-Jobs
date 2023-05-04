@@ -10,7 +10,7 @@ const RootStack = createStackNavigator<RootStackParams>();
 
 const NavigationProvider: React.FC = () => {
   return (
-    <NavigationContainer>
+
       <RootStack.Navigator>
         <RootStack.Screen
           name="Home"
@@ -23,7 +23,7 @@ const NavigationProvider: React.FC = () => {
         <RootStack.Screen name="Detail" component={DetailScreen} />
         <RootStack.Screen name="Setting" component={SettingScreen} />
       </RootStack.Navigator>
-    </NavigationContainer>
+
   );
 };
 export default NavigationProvider;

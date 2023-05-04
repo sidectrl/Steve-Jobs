@@ -18,7 +18,7 @@ const ProfileScreen: CustomScreenFC<"Profile"> = ({ navigation }) => {
     (state: { accountReducer: AccountProps }) => state.accountReducer
   );
   const pickImage = async () => {
-    ImagePicker.requestMediaLibraryPermissionsAsync
+    ImagePicker.requestMediaLibraryPermissionsAsync()
     const result = await ImagePicker.launchImageLibraryAsync({
       mediaTypes: ImagePicker.MediaTypeOptions.All,
       allowsEditing: true,
@@ -28,6 +28,7 @@ const ProfileScreen: CustomScreenFC<"Profile"> = ({ navigation }) => {
 
     if (result.assets) {
       setImage(result.assets[0].uri);
+      console.log(result.assets[0].uri);
     }
   };
 
@@ -36,10 +37,8 @@ const ProfileScreen: CustomScreenFC<"Profile"> = ({ navigation }) => {
   return (
     <View style={styles2.container}>
       <Text style={styles.title}>ProfileScreen</Text>
-      {image && (
-        <Image source={{ uri: image }} style={{ width: 200, height: 200 }} />
-      )}
-      <Text style={styles2.fontInfo}><Icon name='user' size={25} /> {account?.email}</Text>
+      <Image alt='image' source={{ uri: image }} style={{ width: 150, height: 150, borderRadius: 80 }} />
+      <Text style={styles2.fontInfo}><Icon name='user' size={25} /> {account?.name} {account?.lastName}</Text>
       <Text style={styles2.fontInfo}><Icon name='calendar' size={25} /> {account.date?.valueOf()}</Text>
       <Text style={styles2.fontInfo}><Icon name='envelope-o' size={25} /> {account?.email}</Text>
       <Text style={[styles2.fontInfo]}><Icon name='phone' size={25} /> {account?.phoneNumber}</Text>

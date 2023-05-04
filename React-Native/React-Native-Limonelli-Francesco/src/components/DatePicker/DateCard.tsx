@@ -28,7 +28,7 @@ export const DateCard = ({date, setDate}: DateProps) => {
 
   return (
     <View style={{alignItems:'center'}}>
-      <Text style={styles.title}>Enter the date</Text>
+      <Text style={styles.subTitle}>Enter the date</Text>
       <TouchableOpacity onPress={showDatepicker}><Text style={styles.datePickerStyle}>selected: {date.toLocaleString()}</Text></TouchableOpacity>
     </View>
   );
