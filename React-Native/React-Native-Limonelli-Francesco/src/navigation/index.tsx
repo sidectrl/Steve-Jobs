@@ -6,6 +6,7 @@ import {
 import React from "react";
 import RootStackParams from "../models/RootStackParams";
 import DetailScreen from "../screen/DetailScreen";
+import InfoScreen from "../screen/InfoScreen";
 import HomeScreen from "../screen/HomeScreen";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import ProfileScreen from "../screen/ProfileScreen";
@@ -130,6 +131,7 @@ const DrawerMenu: React.FC = () => {
           />
           <Drawer.Screen name={ROUTES.Favorite} component={Favorites} />
           <Drawer.Screen name={ROUTES.Profile} component={ProfileScreen}/>
+          <Drawer.Screen name={ROUTES.Info} component={InfoScreen}/>
           <Drawer.Screen name={ROUTES.Setting} component={SettingScreen} />
         </Drawer.Navigator>
       ) : (
