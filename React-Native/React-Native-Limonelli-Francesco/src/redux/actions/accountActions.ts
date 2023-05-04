@@ -4,7 +4,7 @@ export type Account = {
   name?: string
   lastName?: string
   email?: string
-  password: string
+  password?: string
   date?: Date
   phoneNumber?: string
   country?: Country

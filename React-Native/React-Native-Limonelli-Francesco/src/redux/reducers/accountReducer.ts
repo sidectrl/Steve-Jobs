@@ -39,7 +39,15 @@ const accountReducer = (state = initialState, action: AccountAction) => {
       case ACCOUNT_ACTIONS.DELETE_ACCOUNT:
       return {
         ...state,
-        account: state,
+        ...action.payload
+      };
+      case ACCOUNT_ACTIONS.EDIT_ACCOUNT:
+      if (action.payload.password === ""){
+        action.payload.password = state.account.password;
+      }
+      return {
+        ...state,
+        account: action.payload,
       };
     default:
       return state;
