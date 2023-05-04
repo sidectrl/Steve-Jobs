@@ -38,7 +38,7 @@ const DetailScreen: ScreenFC<"Detail"> = ({ route, navigation }) => {
   );
 };
 
-const styles2 = StyleSheet.create({
+export const styles2 = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",

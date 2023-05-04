@@ -6,6 +6,8 @@ import { Camera, CameraType } from "expo-camera";
 import { useDispatch, useSelector } from "react-redux";
 import { AccountProps, logout } from "../redux/actions/accountActions";
 import { styles } from "./SignUp";
+import { styles2 } from "./DetailScreen";
+import Icon from "react-native-vector-icons/FontAwesome";
 
 const ProfileScreen: CustomScreenFC<"Profile"> = ({ navigation }) => {
   const [image, setImage] = useState<string>();
@@ -40,22 +42,13 @@ const ProfileScreen: CustomScreenFC<"Profile"> = ({ navigation }) => {
       {image && (
         <Image source={{ uri: image }} style={{ width: 200, height: 200 }} />
       )}
-      <Text>Email: {account?.email}</Text>
-      <Text>Born: {account.date?.valueOf()}</Text>
-      <Text>Logged: {String(account?.isLogged)} ?</Text>
-      <Button title="Choice photo" color="blue" onPress={pickImage} />
-      <TouchableOpacity><Text style={styles.datePickerStyle}>{account?.phoneNumber}</Text></TouchableOpacity>
+      <Text style={styles2.fontInfo}><Icon name='user' size={25} /> {account?.email}</Text>
+      <Text style={styles2.fontInfo}><Icon name='calendar' size={25} /> {account.date?.valueOf()}</Text>
+      <Text style={styles2.fontInfo}><Icon name='envelope-o' size={25} /> {account?.email}</Text>
+      <Text style={[styles2.fontInfo]}><Icon name='phone' size={25} /> {account?.phoneNumber}</Text>
       <Button title="Logout" color="blue" onPress={() => dispatch(logout())} />
     </View>
   );
 };
-
-const styles2 = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
 
 export default ProfileScreen;
