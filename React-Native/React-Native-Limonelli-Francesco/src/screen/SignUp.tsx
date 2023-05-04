@@ -18,6 +18,7 @@ const SignUp: ScreenFC<"SignUp"> = ({ navigation }) => {
   const [phoneNumber, setPhoneNumber] = useState<string>();
   const [country, setCountry] = useState<Country>()
   const [image, setImage] = useState<string>();
+  const [city, setCity] = useState<string>();
   const dispatch = useDispatch();
 
   const pickImage = async () => {
@@ -61,7 +62,10 @@ const SignUp: ScreenFC<"SignUp"> = ({ navigation }) => {
       country={country}
       setCountry={setCountry}
       />
-
+      <TextInput
+        placeholder="city"
+        onChangeText={(value) => setCity(value)}
+      />
       <Button
         title="Registrati"
         color="red"
@@ -73,8 +77,9 @@ const SignUp: ScreenFC<"SignUp"> = ({ navigation }) => {
             date &&
             phoneNumber &&
             country &&
+            city &&
             image &&
-            dispatch(signUp({name, lastName, email, password, date, phoneNumber,country,image, isLogged: true }));
+            dispatch(signUp({name, lastName, email, password, date, phoneNumber,country, city,image, isLogged: true }));
         }}
       />
       <View style={{ flexDirection: "row", alignItems: "center" }}>
