@@ -1,6 +1,8 @@
 import { Country } from "react-native-country-picker-modal"
 
 export type Account = {
+  name: string
+  lastName: string
   email: string
   password: string
   date?: Date
@@ -22,6 +24,8 @@ export enum ACCOUNT_ACTIONS {
   ADD_ACCOUNT = "ADD_ACCOUNT",
   LOGIN_ACCOUNT = "LOGIN_ACCOUNT",
   LOGOUT_ACCOUNT = "LOGOUT_ACCOUNT",
+  EDIT_ACCOUNT = "EDIT_ACCOUNT",
+  DELETE_ACCOUNT = "DELETE_ACCOUNT",
 }
 
 export const signUp = (account: Account) => {
@@ -30,14 +34,24 @@ export const signUp = (account: Account) => {
     payload: account,
   };
 };
-
+export const editAccount = (account: Account) => {
+  return {
+    type: ACCOUNT_ACTIONS.EDIT_ACCOUNT,
+    payload: account,
+  };
+};
 export const login = (account: Account) => {
   return {
     type: ACCOUNT_ACTIONS.LOGIN_ACCOUNT,
     payload: account,
   };
 };
-
+export const deleteAccount = (account: Account) => {
+  return {
+    type: ACCOUNT_ACTIONS.DELETE_ACCOUNT,
+    payload: account,
+  };
+};
 export const logout = () => {
   return {
     type: ACCOUNT_ACTIONS.LOGOUT_ACCOUNT,

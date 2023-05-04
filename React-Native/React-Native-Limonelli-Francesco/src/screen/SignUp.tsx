@@ -9,6 +9,8 @@ import CountryPick from "../components/CountryPicker/CountryPicker";
 
 
 const SignUp: ScreenFC<"SignUp"> = ({ navigation }) => {
+  const [name, setName] = useState<string>();
+  const [lastName, setLastName] = useState<string>();
   const [email, setEmail] = useState<string>();
   const [password, setPassword] = useState<string>();
   const [date, setDate] = useState(new Date());
@@ -19,6 +21,14 @@ const SignUp: ScreenFC<"SignUp"> = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Registrati</Text>
+      <TextInput
+        placeholder="name"
+        onChangeText={(value) => setName(value)}
+      />
+      <TextInput
+        placeholder="last name"
+        onChangeText={(value) => setLastName(value)}
+      />
       <TextInput
         placeholder="email"
         onChangeText={(value) => setEmail(value)}
@@ -40,12 +50,14 @@ const SignUp: ScreenFC<"SignUp"> = ({ navigation }) => {
         title="Registrati"
         color="red"
         onPress={() => {
+          name &&
+          lastName &&
           email &&
             password &&
             date &&
             phoneNumber &&
             country &&
-            dispatch(signUp({ email, password, date, phoneNumber,country, isLogged: true }));
+            dispatch(signUp({name, lastName, email, password, date, phoneNumber,country, isLogged: true }));
         }}
       />
       <View style={{ flexDirection: "row", alignItems: "center" }}>
