@@ -175,9 +175,13 @@ const DrawerMenu: React.FC = () => {
 };
 
 const HomeStack: React.FC = () => {
+  const { account } = useSelector(
+    (state: { accountReducer: AccountProps }) => state.accountReducer
+  );
   return (
     <NavigationContainer>
-      <RootStack.Navigator>
+      {account && account.isLogged ? (
+        <RootStack.Navigator>
         <RootStack.Screen
           name={ROUTES.Home}
           component={TabNavigation}
@@ -188,6 +192,11 @@ const HomeStack: React.FC = () => {
         />
         <RootStack.Screen name={ROUTES.Detail} component={DetailScreen} />
       </RootStack.Navigator>
+		
+        ) : (
+          <MainStack />
+        )}
+      
     </NavigationContainer>
   );
 };
