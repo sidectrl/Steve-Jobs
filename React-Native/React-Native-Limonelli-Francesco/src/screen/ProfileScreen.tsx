@@ -23,6 +23,8 @@ const ProfileScreen: CustomScreenFC<"Profile"> = ({ navigation }) => {
       <Text style={styles2.fontInfo}><Icon name='calendar' size={25} /> {account.date?.valueOf()}</Text>
       <Text style={styles2.fontInfo}><Icon name='envelope-o' size={25} /> {account?.email}</Text>
       <Text style={[styles2.fontInfo]}><Icon name='phone' size={25} /> {account?.phoneNumber}</Text>
+      <Text style={[styles2.fontInfo]}><Icon name='flag' size={25} /> {account?.country?.name.toString()}</Text>
+      <Text style={[styles2.fontInfo]}><Icon name='map-marker' size={25} /> {account?.city}</Text>
     </View>
   );
 };
