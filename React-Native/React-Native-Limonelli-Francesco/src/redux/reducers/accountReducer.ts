@@ -36,6 +36,11 @@ const accountReducer = (state = initialState, action: AccountAction) => {
           isLogged: false,
         },
       };
+      case ACCOUNT_ACTIONS.DELETE_ACCOUNT:
+      return {
+        ...state,
+        account: state,
+      };
     default:
       return state;
   }
