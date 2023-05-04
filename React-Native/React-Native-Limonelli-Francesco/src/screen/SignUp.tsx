@@ -31,7 +31,6 @@ const SignUp: ScreenFC<"SignUp"> = ({ navigation }) => {
 
     if (result.assets) {
       setImage(result.assets[0].uri);
-      console.log(result.assets[0].uri);
     }
   };
   return (
@@ -74,7 +73,7 @@ const SignUp: ScreenFC<"SignUp"> = ({ navigation }) => {
             date &&
             phoneNumber &&
             country &&
-            image&&
+            image &&
             dispatch(signUp({name, lastName, email, password, date, phoneNumber,country,image, isLogged: true }));
         }}
       />
