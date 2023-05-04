@@ -29,8 +29,9 @@ export const EditScreen: CustomScreenFC<"EditProfile"> = () => {
     const [date, setDate] = useState(new Date());
     const [phoneNumber, setPhoneNumber] = useState<string>();
     const [country, setCountry] = useState<Country>()
+    const [city, setCity] = useState<string>();
 
-    useEffect(()=>{
+    useEffect(() => {
         setImage(account.image)
         setName(account.name);
         setLastName(account.lastName);
@@ -38,31 +39,32 @@ export const EditScreen: CustomScreenFC<"EditProfile"> = () => {
         setPassword(account.password);
         setPhoneNumber(account.phoneNumber);
         setCountry(account.country);
+        setCity(account.city);
     }, []);
 
     const pickImage = async () => {
         ImagePicker.requestMediaLibraryPermissionsAsync()
         const result = await ImagePicker.launchImageLibraryAsync({
-          mediaTypes: ImagePicker.MediaTypeOptions.All,
-          allowsEditing: true,
-          aspect: [4, 3],
-          quality: 1,
+            mediaTypes: ImagePicker.MediaTypeOptions.All,
+            allowsEditing: true,
+            aspect: [4, 3],
+            quality: 1,
         });
-    
+
         if (result.assets) {
-          setImage(result.assets[0].uri);
+            setImage(result.assets[0].uri);
         }
-      };
+    };
     const handleSubmit = () => {
         dispatch(
-          editAccount({name, lastName, email, password, date, phoneNumber, country,image, isLogged: true })
+            editAccount({ name, lastName, email, password, date, phoneNumber, country, city, image, isLogged: true })
         );
-      };
+    };
     return (
         <View style={styles.container}>
             <Text style={styles.title}>Edit account</Text>
 
-            <TouchableOpacity onPress={pickImage}>{image ? <Image alt="image" source={{ uri: image }} style={{ width: 200, height: 200 }}/> : <Text style={styles.subTitle}>Click to select image</Text>}</TouchableOpacity>
+            <TouchableOpacity onPress={pickImage}>{image ? <Image alt="image" source={{ uri: image }} style={{ width: 200, height: 200 }} /> : <Text style={styles.subTitle}>Click to select image</Text>}</TouchableOpacity>
             <Text>Name:</Text>
             <TextInput
                 placeholder={account?.name}
@@ -92,11 +94,14 @@ export const EditScreen: CustomScreenFC<"EditProfile"> = () => {
                 country={account?.country}
                 setCountry={setCountry}
             />
-
+            <TextInput
+                placeholder="city"
+                onChangeText={(value) => setCity(value)}
+            />
             <Button
                 title="Save"
                 color="red"
-                onPress={handleSubmit}  
+                onPress={handleSubmit}
             />
         </View>
     )
