@@ -50,7 +50,7 @@ export const login = (account: Account) => {
 export const deleteAccount = (account: Account) => {
   return {
     type: ACCOUNT_ACTIONS.DELETE_ACCOUNT,
-    payload: account,
+    payload: account.email,
   };
 };
 export const logout = () => {
