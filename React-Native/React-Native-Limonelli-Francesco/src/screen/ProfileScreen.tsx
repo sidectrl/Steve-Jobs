@@ -13,13 +13,10 @@ const ProfileScreen: CustomScreenFC<"Profile"> = ({ navigation }) => {
   const [image, setImage] = useState<string>();
   const [type, setType] = useState(CameraType.back);
   const [permission, requestPermission] = Camera.useCameraPermissions();
-
   const dispatch = useDispatch();
-
   const { account } = useSelector(
     (state: { accountReducer: AccountProps }) => state.accountReducer
   );
-
   const pickImage = async () => {
     ImagePicker.requestMediaLibraryPermissionsAsync
     const result = await ImagePicker.launchImageLibraryAsync({
