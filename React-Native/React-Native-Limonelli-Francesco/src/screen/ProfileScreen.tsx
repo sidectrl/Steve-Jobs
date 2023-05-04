@@ -10,27 +10,11 @@ import { styles2 } from "./DetailScreen";
 import Icon from "react-native-vector-icons/FontAwesome";
 
 const ProfileScreen: CustomScreenFC<"Profile"> = ({ navigation }) => {
-  const [image, setImage] = useState<string>();
-  const [type, setType] = useState(CameraType.back);
-  const [permission, requestPermission] = Camera.useCameraPermissions();
-  const dispatch = useDispatch();
+
   const { account } = useSelector(
     (state: { accountReducer: AccountProps }) => state.accountReducer
   );
-  const pickImage = async () => {
-    ImagePicker.requestMediaLibraryPermissionsAsync()
-    const result = await ImagePicker.launchImageLibraryAsync({
-      mediaTypes: ImagePicker.MediaTypeOptions.All,
-      allowsEditing: true,
-      aspect: [4, 3],
-      quality: 1,
-    });
 
-    if (result.assets) {
-      setImage(result.assets[0].uri);
-    }
-  };
-  
   return (
     <View style={styles2.container}>
       <Text style={styles.title}>ProfileScreen</Text>
