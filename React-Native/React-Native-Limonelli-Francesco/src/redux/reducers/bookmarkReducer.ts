@@ -1,4 +1,4 @@
-import { Data, Result } from "../../models/Data";
+import { Result } from "../../models/Data";
 import {
   BOOKMARK_ACTIONS,
   BookmarkAction,
@@ -10,9 +10,6 @@ const initialState: BookmarkProps = {
 };
 
 const bookmarkReducer = (state = initialState, action: BookmarkAction) => {
-  // console.log('action', action);
-  // console.log('state', state);
-
   switch (action.type) {
     case BOOKMARK_ACTIONS.ADD_BOOKMARK:
       return {

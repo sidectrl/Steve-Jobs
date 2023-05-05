@@ -1,4 +1,4 @@
-import { Data, Result } from '../../models/Data';
+import { Result } from '../../models/Data';
 
 export interface BookmarkProps {
   bookmarks: Result[];

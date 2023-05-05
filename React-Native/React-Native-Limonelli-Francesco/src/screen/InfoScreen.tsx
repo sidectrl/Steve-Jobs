@@ -1,11 +1,7 @@
 import { View, Text, Image, Linking, TouchableOpacity } from "react-native";
 import { CustomScreenFC} from "../models/ScreenFC";
-
-import { HeartButton } from "../components/HeartButton/HeartButton";
 import { styles } from "./SignUp";
 import Icon from "react-native-vector-icons/FontAwesome";
-import { Link } from "@react-navigation/native";
-
 const InfoScreen: CustomScreenFC<"Info"> = () => {
   const supportedURL = "https://google.com";
   const privacyPolicy = async () => {

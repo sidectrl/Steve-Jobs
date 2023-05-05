@@ -1,13 +1,11 @@
-import React, { useState } from "react";
-import { View, Text, StyleSheet, Button, Image, Linking, TouchableOpacity } from "react-native";
+import React from "react";
+import { View, Text, Image } from "react-native";
 import { CustomScreenFC } from "../models/ScreenFC";
-import * as ImagePicker from "expo-image-picker";
-import { Camera, CameraType } from "expo-camera";
-import { useDispatch, useSelector } from "react-redux";
-import { AccountProps, logout } from "../redux/actions/accountActions";
+import { AccountProps } from "../redux/actions/accountActions";
 import { styles } from "./SignUp";
 import { styles2 } from "./DetailScreen";
 import Icon from "react-native-vector-icons/FontAwesome";
+import { useSelector } from "react-redux";
 
 const ProfileScreen: CustomScreenFC<"Profile"> = ({ navigation }) => {
 

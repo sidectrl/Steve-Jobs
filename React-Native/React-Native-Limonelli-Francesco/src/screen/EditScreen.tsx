@@ -1,7 +1,7 @@
 
 import { CustomScreenFC } from '../models/ScreenFC'
 import { useDispatch, useSelector } from 'react-redux';
-import { AccountProps, editAccount, signUp } from '../redux/actions/accountActions';
+import { AccountProps, editAccount } from '../redux/actions/accountActions';
 import { Button, TextInput, View, Text, TouchableOpacity, Image } from 'react-native';
 import { DateCard } from '../components/DatePicker/DateCard';
 import CountryPick from '../components/CountryPicker/CountryPicker';

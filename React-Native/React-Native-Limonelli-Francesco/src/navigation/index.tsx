@@ -1,26 +1,22 @@
-import { NavigationContainer, useNavigation } from "@react-navigation/native";
+import { NavigationContainer } from "@react-navigation/native";
 import {
-  StackNavigationProp,
   createStackNavigator,
 } from "@react-navigation/stack";
 import React, { useState } from "react";
 import RootStackParams from "../models/RootStackParams";
 import DetailScreen from "../screen/DetailScreen";
 import InfoScreen from "../screen/InfoScreen";
-
 import { DrawerContentScrollView, DrawerItemList, createDrawerNavigator } from "@react-navigation/drawer";
 import ProfileScreen from "../screen/ProfileScreen";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import ROUTES from "./routes";
 import { useDispatch, useSelector } from "react-redux";
-import { BookmarkProps } from "../redux/actions/bookmarkActions";
 import Login from "../screen/Login";
 import SignUp from "../screen/SignUp";
 import { AccountProps, deleteAccount, logout } from "../redux/actions/accountActions";
 import Icon from "react-native-vector-icons/FontAwesome";
 import { Button, Modal, View, StyleSheet, Text } from "react-native";
 import EditScreen from "../screen/EditScreen";
-import HomeScreen from "../screen/HomePage";
 import HomePage from "../screen/HomePage";
 import Favorites from "../screen/Favorites";
 
@@ -53,12 +49,6 @@ const MainStack: React.FC = () => {
 };
 
 const TabNavigation: React.FC = () => {
-  const { bookmarks } = useSelector(
-    (state: { bookmarkReducer: BookmarkProps }) => state.bookmarkReducer
-  );
-
-  const { navigate } =
-    useNavigation<StackNavigationProp<RootStackParams, ROUTES>>();
 
   return (
     <Tab.Navigator
@@ -130,12 +120,13 @@ const DrawerMenu: React.FC = () => {
           visible={modalVisible}
         >
           <View style={styles.modalView}>
-            <Text>Are you sure you want to delete your account?</Text>
+            <Text style={{fontSize:20}}>Are you sure you want to delete your account?</Text>
             <View style={styles.modalButtons}>
               <Button
                 title="Yes"
                 onPress={() => confirmDelete()}
-              />
+              /> 
+              <Text>    </Text>
               <Button
                 title="No"
                 onPress={() => setModalVisible(false)}
@@ -211,7 +202,7 @@ const styles = StyleSheet.create({
   },
   modalButtons: {
     flexDirection: "row",
-    marginHorizontal: 10,
+    marginTop: 10,
   },
 });
 

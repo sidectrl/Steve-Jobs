@@ -2,7 +2,7 @@ import React from "react";
 import { TouchableOpacity, View, Image, StyleSheet } from "react-native";
 import { Result } from "../../models/Data";
 import { HeartButton } from "../HeartButton/HeartButton";
-import bookmarkReducer from "../../redux/reducers/bookmarkReducer";
+
 import { useSelector } from "react-redux";
 import { BookmarkProps } from "../../redux/actions/bookmarkActions";
 
