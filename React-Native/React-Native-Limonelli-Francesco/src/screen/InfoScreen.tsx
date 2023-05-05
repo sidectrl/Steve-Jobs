@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, Image, Linking, TouchableOpacity } from "react-native";
+import { View, Text, Image, Linking, TouchableOpacity } from "react-native";
 import { CustomScreenFC} from "../models/ScreenFC";
 
 import { HeartButton } from "../components/HeartButton/HeartButton";
@@ -16,6 +16,7 @@ const InfoScreen: CustomScreenFC<"Info"> = () => {
   };
   return (
     <View style={styles.container}>
+      <Image style={{width: 150, height: 150, borderRadius:80}} source={require('../images/devloperImage.jpg')}/>
         <Text style={{fontSize: 25}}><Icon name='user' size={25} /> Francesco Limonelli</Text>
         <TouchableOpacity onPress={privacyPolicy}><Text style={{color:'blue', textDecorationLine:'underline'}}>Privacy policy</Text></TouchableOpacity>
     </View>
