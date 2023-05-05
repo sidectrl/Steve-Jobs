@@ -18,6 +18,7 @@ export const DateCard = ({date, setDate}: DateProps) => {
       value: date,
       onChange,
       mode: currentMode,
+      display:'spinner',
       is24Hour: true,
     });
   };

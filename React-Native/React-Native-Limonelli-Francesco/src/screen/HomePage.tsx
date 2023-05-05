@@ -6,22 +6,29 @@ import {
   FlatList,
   Text,
   StyleSheet,
+  ImageBackground,
 } from "react-native";
 import Card from "../components/Card/Card";
 import { Data } from "../models/Data";
-import { CustomScreenFC, ScreenFC } from "../models/ScreenFC";
+import { CustomScreenFC } from "../models/ScreenFC";
 import axios from "axios";
 
-const HomePage:  CustomScreenFC<"Home"> = ({ navigation }) => {
+const HomePage: CustomScreenFC<"Home"> = ({ navigation }) => {
   const [state, setState] = useState<Data>();
 
   useEffect(() => {
     getData();
+    const interval = setInterval(() => {
+      getData();
+    }, 20000);
+    return () => {
+      clearInterval(interval);
+    };
   }, []);
 
   const getData = async () => {
     try {
-      const { data } = await axios.get(`https://randomuser.me/api/?results=24&seed=contactgram&nat=us,fr,gb&exc=login,registered&noinfo`)
+      const { data } = await axios.get(`https://randomuser.me/api/?results=24`)
       console.log(data)
       setState(data)
     } catch (err) {
@@ -31,6 +38,7 @@ const HomePage:  CustomScreenFC<"Home"> = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
+      <ImageBackground style={{paddingHorizontal: 5}} source={require('../images/background.jpeg')}>
       <SafeAreaView />
       <StatusBar style="auto" />
       <View style={styles.buttonContainer}>
@@ -38,8 +46,9 @@ const HomePage:  CustomScreenFC<"Home"> = ({ navigation }) => {
       <View style={styles.shadow}>
         {state ? (
           <FlatList
+            numColumns={3}
             data={state.results}
-            showsVerticalScrollIndicator={false}
+            showsVerticalScrollIndicator={true}
             renderItem={({ item, index }) => (
               <Card
                 item={item}
@@ -58,6 +67,7 @@ const HomePage:  CustomScreenFC<"Home"> = ({ navigation }) => {
             </View>
           )}
       </View>
+      </ImageBackground>
     </View>
   );
 };
@@ -66,12 +76,12 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "rgb(79,172,217)",
-    paddingHorizontal: 20,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   buttonContainer: {
     flexDirection: "row",
     alignSelf: "center",
-    padding: 10,
   },
   shadow: {
     elevation: 2,

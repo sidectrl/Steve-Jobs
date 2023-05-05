@@ -2,6 +2,9 @@ import React from "react";
 import { TouchableOpacity, View, Image, StyleSheet } from "react-native";
 import { Result } from "../../models/Data";
 import { HeartButton } from "../HeartButton/HeartButton";
+import bookmarkReducer from "../../redux/reducers/bookmarkReducer";
+import { useSelector } from "react-redux";
+import { BookmarkProps } from "../../redux/actions/bookmarkActions";
 
 interface Props {
   item: Result;
@@ -10,6 +13,12 @@ interface Props {
   onPress?: () => void;
 }
 const Card = ({ item, index, disabled, onPress }: Props) => {
+  const { bookmarks } = useSelector(
+    (state: { bookmarkReducer: BookmarkProps }) => state.bookmarkReducer
+  );
+  const isFavorite = bookmarks.some(
+    (bookmark) => bookmark.id.value+bookmark.id.name === item.id.value+item.id.name
+  );
   return (
     <TouchableOpacity
       activeOpacity={0.5}
@@ -25,6 +34,7 @@ const Card = ({ item, index, disabled, onPress }: Props) => {
           style={styles.image}
         />
         <HeartButton 
+        isFavorite={isFavorite}
         item={item}
         />
         <View style={styles.card}>
@@ -38,30 +48,22 @@ const Card = ({ item, index, disabled, onPress }: Props) => {
 const styles = StyleSheet.create({
   cardContainer: {
     flexDirection: "row",
-    justifyContent: "space-between",
+    justifyContent: "center",
+    flexWrap: "wrap",
     backgroundColor: "#fff",
-    height: 170,
-    width: "100%",
-    padding: 15,
+    width: "40%",
     borderRadius: 30,
     alignItems: "center",
     marginVertical: 20,
+    marginLeft: 14
   },
   card: {
     flexDirection: "row",
   },
   image: {
-    height: 100,
-    width: 100,
+    height: 85,
+    width: 85,
     borderRadius: 80,
-  },
-  description: {
-    fontWeight: "bold",
-    padding: 4,
-  },
-  tail: {
-    padding: 4,
-    width: 120,
   },
 });
 

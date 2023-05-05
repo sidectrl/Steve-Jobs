@@ -8,14 +8,9 @@ import CountryPick from '../components/CountryPicker/CountryPicker';
 import { useEffect, useState } from 'react';
 import { Country } from 'react-native-country-picker-modal';
 import { styles } from './SignUp';
-import navigation from '../navigation';
-import { useNavigation } from '@react-navigation/native';
-import { StackNavigationProp } from '@react-navigation/stack';
-import RootStackParams from '../models/RootStackParams';
-import ROUTES from '../navigation/routes';
 import * as ImagePicker from "expo-image-picker";
 
-export const EditScreen: CustomScreenFC<"EditProfile"> = () => {
+export const EditScreen: CustomScreenFC<"EditProfile"> = ({navigation}) => {
     const { account } = useSelector(
         (state: { accountReducer: AccountProps }) => state.accountReducer
     );
@@ -40,7 +35,7 @@ export const EditScreen: CustomScreenFC<"EditProfile"> = () => {
         setPhoneNumber(account.phoneNumber);
         setCountry(account.country);
         setCity(account.city);
-        account.date ? setDate(new Date(account?.date)) : null
+        account.date ? setDate(new Date(account?.date)) : null;
     }, []);
 
     const pickImage = async () => {
@@ -58,8 +53,8 @@ export const EditScreen: CustomScreenFC<"EditProfile"> = () => {
     };
     const handleSubmit = () => {
         dispatch(
-            editAccount({ name, lastName, email, password, date, phoneNumber, country, city, image, isLogged: true })
-        );
+            editAccount({ name, lastName, email, password, date, phoneNumber, country, city, image, isLogged: true }));
+            navigation.navigate("Profile");
     };
     return (
         <View style={styles.container}>
@@ -101,7 +96,7 @@ export const EditScreen: CustomScreenFC<"EditProfile"> = () => {
             />
             <Button
                 title="Save"
-                color="red"
+                color="blue"
                 onPress={handleSubmit}
             />
         </View>
