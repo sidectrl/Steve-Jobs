@@ -8,10 +8,11 @@ import { Result } from '../../models/Data';
 
 type HeartButtonProps = {
   item: Result | undefined
+  isFavorite: boolean
 }
 
-export const HeartButton = ({ item }: HeartButtonProps) => {
-  const [isFavorite, setIsFavorite] = useState(false);
+export const HeartButton = ({ item, isFavorite }: HeartButtonProps) => {
+  const [  ,setIsFavorite] = useState(isFavorite);
   const dispatch = useDispatch();
   const handlePress = () => {
     setIsFavorite(!isFavorite);
