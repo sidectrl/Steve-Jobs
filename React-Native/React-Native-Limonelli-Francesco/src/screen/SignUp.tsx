@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Text, TextInput, View, StyleSheet, TouchableOpacity, Image } from "react-native";
+import { Button, Text, TextInput, View, StyleSheet, TouchableOpacity, Image, ImageBackground } from "react-native";
 import { ScreenFC } from "../models/ScreenFC";
 import { useDispatch } from "react-redux";
 import { signUp } from "../redux/actions/accountActions";
@@ -35,57 +35,66 @@ const SignUp: ScreenFC<"SignUp"> = ({ navigation }) => {
     }
   };
   return (
-    <View style={styles.container}>
+    <View style={{ flex: 1 }}>
+      <ImageBackground source={require('../images/backgroundLogin.jpeg')} style={{ flex: 1 }}>
+        <View style={styles.container}>
       <Text style={styles.title}>Registrati</Text>
-      <TouchableOpacity onPress={pickImage}>{image ? <Image alt="image" source={{ uri: image }} style={{ width: 200, height: 200 }}/> : <Text style={styles.subTitle}>Click to select image</Text>}</TouchableOpacity>
+      <TouchableOpacity onPress={pickImage}>{image ? <Image alt="image" source={{ uri: image }} style={{ width: 200, height: 200 }} /> : <Text style={styles.subTitle}>Click to select image</Text>}</TouchableOpacity>
       <TextInput
         placeholder="name"
+        style={{fontSize:25}}
         onChangeText={(value) => setName(value)}
       />
       <TextInput
         placeholder="last name"
+        style={{fontSize:25}}
         onChangeText={(value) => setLastName(value)}
       />
       <TextInput
         placeholder="email"
+        style={{fontSize:25}}
         onChangeText={(value) => setEmail(value)}
       />
       <TextInput
         placeholder="password"
+        style={{fontSize:25}}
         onChangeText={(value) => setPassword(value)}
       />
       <DateCard date={date} setDate={setDate} />
       <TextInput
         placeholder="phone number"
+        style={{fontSize:25}}
         onChangeText={(value) => setPhoneNumber(value)} />
       <CountryPick
-      country={country}
-      setCountry={setCountry}
+        country={country}
+        setCountry={setCountry}
       />
       <TextInput
         placeholder="city"
+        style={{fontSize:25, marginBottom:10}}
         onChangeText={(value) => setCity(value)}
       />
       <Button
         title="Registrati"
-        color="red"
         onPress={() => {
           name &&
-          lastName &&
-          email &&
+            lastName &&
+            email &&
             password &&
             date &&
             phoneNumber &&
             country &&
             city &&
             image &&
-            dispatch(signUp({name, lastName, email, password, date, phoneNumber,country, city,image, isLogged: true }));
+            dispatch(signUp({ name, lastName, email, password, date, phoneNumber, country, city, image, isLogged: true }));
         }}
       />
-      <View style={{ flexDirection: "row", alignItems: "center" }}>
-        <Text>Hai un account?</Text>
+      <View style={{ flexDirection: "row", alignItems: "center", marginTop: 10 }}>
+        <Text style={{fontSize:25}}>Hai un account? </Text>
         <Button title="Accedi" onPress={() => navigation.navigate("Login")} />
       </View>
+      </View>
+      </ImageBackground>
     </View>
   );
 };
@@ -97,9 +106,10 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  subTitle:{
-    fontSize: 20,
+  subTitle: {
+    fontSize: 35,
     fontWeight: 'bold',
+    marginBottom: 10,
   },
   title: {
     fontSize: 30,

@@ -10,7 +10,7 @@ import { Country } from 'react-native-country-picker-modal';
 import { styles } from './SignUp';
 import * as ImagePicker from "expo-image-picker";
 
-export const EditScreen: CustomScreenFC<"EditProfile"> = ({navigation}) => {
+export const EditScreen: CustomScreenFC<"EditProfile"> = ({ navigation }) => {
     const { account } = useSelector(
         (state: { accountReducer: AccountProps }) => state.accountReducer
     );
@@ -54,43 +54,52 @@ export const EditScreen: CustomScreenFC<"EditProfile"> = ({navigation}) => {
     const handleSubmit = () => {
         dispatch(
             editAccount({ name, lastName, email, password, date, phoneNumber, country, city, image, isLogged: true }));
-            navigation.navigate("Profile");
+        navigation.navigate("Profile");
     };
     return (
         <View style={styles.container}>
             <Text style={styles.title}>Edit account</Text>
 
-            <TouchableOpacity onPress={pickImage}>{image ? <Image alt="image" source={{ uri: image }} style={{ width: 150, height: 150, borderRadius:80 }} /> : <Text style={styles.subTitle}>Click to select image</Text>}</TouchableOpacity>
+            <TouchableOpacity onPress={pickImage}>{image ? <Image alt="image" source={{ uri: image }} style={{ width: 150, height: 150, borderRadius: 80 }} /> : <Text style={styles.subTitle}>Click to select image</Text>}</TouchableOpacity>
             <Text>Name:</Text>
             <TextInput
+                style={{ fontSize: 25 }}
                 placeholder={account?.name}
                 onChangeText={(value) => setName(value)}
             />
-            <Text>Last name:</Text>
+            <Text style={{ fontSize: 25 }}>Last name:</Text>
             <TextInput
+                style={{ fontSize: 25 }}
                 placeholder={account?.lastName}
                 onChangeText={(value) => setLastName(value)}
             />
-            <Text>Email:</Text>
+            <Text style={{ fontSize: 25 }}>Email:</Text>
             <TextInput
+                style={{ fontSize: 25 }}
                 placeholder={account?.email}
                 onChangeText={(value) => setEmail(value)}
             />
-            <Text>Password:</Text>
+            <Text style={{ fontSize: 25 }}>Password:</Text>
             <TextInput
+                style={{ fontSize: 25 }}
                 placeholder={account?.password}
                 onChangeText={(value) => setPassword(value)}
             />
-            <Text>Telephone:</Text>
+            <Text style={{ fontSize: 25 }}>Telephone:</Text>
             <TextInput
+                style={{ fontSize: 25 }}
                 placeholder={account?.phoneNumber}
                 onChangeText={(value) => setPhoneNumber(value)} />
+
+            <DateCard date={date} setDate={setDate} />
+
             <CountryPick
                 country={account?.country}
                 setCountry={setCountry}
             />
-            <DateCard date={date} setDate={setDate} />
+
             <TextInput
+                style={{ fontSize: 25, marginBottom: 10 }}
                 placeholder={account?.city}
                 onChangeText={(value) => setCity(value)}
             />

@@ -14,8 +14,8 @@ export default function CountryPick({country, setCountry }: CountryPickProps) {
         setCountry(country)
       }
     return (
-        <View>
-            <Text>Select your Country</Text>
+        <View style={{}}>
+            <Text style={{marginBottom:10, fontSize:30}}>Select your Country</Text>
             <CountryPicker
                 withFilter
                 withFlag

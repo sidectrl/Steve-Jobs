@@ -16,6 +16,7 @@ import axios from "axios";
 const HomePage: CustomScreenFC<"Home"> = ({ navigation }) => {
   const [state, setState] = useState<Data>();
 
+  
   useEffect(() => {
     getData();
     const interval = setInterval(() => {
@@ -38,7 +39,7 @@ const HomePage: CustomScreenFC<"Home"> = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-      <ImageBackground style={{paddingHorizontal: 5}} source={require('../images/background.jpeg')}>
+      <ImageBackground style={{paddingHorizontal: 5}} source={require('../images/background2.jpeg')}>
       <SafeAreaView />
       <StatusBar style="auto" />
       <View style={styles.buttonContainer}>
@@ -75,7 +76,6 @@ const HomePage: CustomScreenFC<"Home"> = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "rgb(79,172,217)",
     justifyContent: 'center',
     alignItems: 'center',
   },
