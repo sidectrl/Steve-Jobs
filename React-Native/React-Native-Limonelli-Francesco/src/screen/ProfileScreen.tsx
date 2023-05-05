@@ -20,7 +20,7 @@ const ProfileScreen: CustomScreenFC<"Profile"> = ({ navigation }) => {
       <Text style={styles.title}>ProfileScreen</Text>
       <Image alt='image' source={{ uri: account?.image }} style={{ width: 150, height: 150, borderRadius: 80 }} />
       <Text style={styles2.fontInfo}><Icon name='user' size={25} /> {account?.name} {account?.lastName}</Text>
-      <Text style={styles2.fontInfo}><Icon name='calendar' size={25} /> {account.date?.valueOf()}</Text>
+      <Text style={styles2.fontInfo}><Icon name='calendar' size={25} /> {account.date?.toLocaleString()}</Text>
       <Text style={styles2.fontInfo}><Icon name='envelope-o' size={25} /> {account?.email}</Text>
       <Text style={[styles2.fontInfo]}><Icon name='phone' size={25} /> {account?.phoneNumber}</Text>
       <Text style={[styles2.fontInfo]}><Icon name='flag' size={25} /> {account?.country?.name.toString()}</Text>
