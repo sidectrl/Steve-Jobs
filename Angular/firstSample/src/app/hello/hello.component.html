@@ -1,0 +1,10 @@
+<div>
+  <p *ngIf="isLogged; else noLogged">Benvenuto utente</p>
+  <ng-template #noLogged>
+    <h1>Benvenuto ospite</h1>
+  </ng-template>
+</div>
+
+<div *ngFor="let item of values">
+  <p>{{ item }}</p>
+</div>

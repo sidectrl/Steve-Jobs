@@ -4,19 +4,21 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
-import { HelloComponent } from './hello/hello.component';
-import { UserPipe } from '../Pipes/user.pipe';
+import { CommonModule } from '@angular/common';
+import { ExampleComponent } from './components/example/example.component';
+import { PipeModule } from './pipes/pipe.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HelloComponent,
-    UserPipe
+    ExampleComponent
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    PipeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

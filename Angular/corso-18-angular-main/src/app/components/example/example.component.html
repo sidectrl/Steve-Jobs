@@ -1,0 +1,45 @@
+<!--  DOCUMENTATION COMPONENT -->
+
+<!-- ? ngIf -->
+<!-- <div>
+  <p *ngIf="isLogged; else noLogged">Benvenuto utente</p>
+  <ng-template #noLogged>
+    <h1>Benvenuto ospite</h1>
+  </ng-template> 
+</div>
+-->
+<!-- ? ngSwitch  -->
+<!-- <button (click)="changeCounter('minus')" class="btn btn-primary">Diminuisci</button>
+<button (click)="changeCounter('add')" class="btn btn-danger">Aumenta</button>
+
+<div [ngSwitch]="counter">
+  <h1 *ngSwitchCase="0">Valore zero</h1>
+  <h1 *ngSwitchCase="1">Valore uno</h1>
+  <h1 *ngSwitchCase="2">Valore due</h1>
+  <div *ngSwitchDefault>Default</div>
+</div> -->
+
+<!-- ? ngFor - control exist array and style with ngClass -->
+<!-- <ng-container *ngIf="values && values.length > 0; else noValues">
+  <div *ngFor="let item of values; index as pippo">
+    <h1 [ngClass]="{
+      'text-success': item === 'Primo',
+      'text-danger': item === 'Secondo'
+    }">{{item}} - {{ pippo }}</h1>
+  </div>
+</ng-container>
+
+<ng-template #noValues>
+  <h1>{{'Non ho valori' | uppercase}}</h1>
+</ng-template> -->
+
+<!-- ? pipe array -->
+<!-- <div *ngFor="let user of users | userList">
+  <h1>{{ user }}</h1>
+</div> -->
+
+<!-- ? pipe object -->
+<div *ngFor="let user of users">
+  <h1>{{ user | userObj }}</h1>
+</div>
+
